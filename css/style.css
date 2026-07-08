@@ -303,3 +303,86 @@ transition:.3s;
 background:#1b1b1b;
 
 }
+/* ---------- ABOUT ---------- */
+
+.about{
+
+padding:100px 25px;
+
+display:flex;
+
+justify-content:center;
+
+}
+
+.about-box{
+
+width:100%;
+
+max-width:900px;
+
+background:#121212;
+
+border:1px solid #222;
+
+border-radius:18px;
+
+padding:60px;
+
+}
+
+.title-small{
+
+color:#777;
+
+font-size:13px;
+
+letter-spacing:3px;
+
+}
+
+.about-box h2{
+
+margin-top:15px;
+
+font-size:42px;
+
+letter-spacing:8px;
+
+}
+
+.about-box p{
+
+margin-top:30px;
+
+line-height:2.3;
+
+color:#a9a9a9;
+
+font-size:18px;
+
+}
+
+@media(max-width:768px){
+
+.about-box{
+
+padding:35px;
+
+}
+
+.about-box h2{
+
+font-size:28px;
+
+letter-spacing:4px;
+
+}
+
+.about-box p{
+
+font-size:16px;
+
+}
+
+}
