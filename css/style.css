@@ -799,3 +799,9 @@ font-size:17px;
 background:#1d1d1d;
 
 }
+const menuBtn = document.querySelector(".menu-btn");
+const sidebar = document.getElementById("sidebar");
+
+menuBtn.addEventListener("click", () => {
+    sidebar.classList.toggle("active");
+});
