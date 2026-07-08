@@ -1064,3 +1064,21 @@ transition:.4s;
 transform:scale(1.05);
 
 }
+.download-btn{
+    flex:1;
+    height:50px;
+    background:#222;
+    color:#fff;
+    border:1px solid #333;
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.download-btn:hover{
+    background:#333;
+}
