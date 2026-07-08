@@ -990,3 +990,46 @@ background:white;
 border-radius:10px;
 
 }
+.release-card{
+
+box-shadow:0 10px 35px rgba(0,0,0,.35);
+
+}
+
+.release-content{
+
+padding:30px;
+
+}
+
+.release-content h3{
+
+font-size:26px;
+
+margin-bottom:12px;
+
+}
+
+.release-content p{
+
+font-size:16px;
+
+line-height:1.8;
+
+color:#9b9b9b;
+
+}
+
+.release-buttons button{
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.release-buttons button:hover{
+
+transform:translateY(-2px);
+
+}
