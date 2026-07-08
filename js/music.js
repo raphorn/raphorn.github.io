@@ -1,28 +1,76 @@
+const audio = new Audio();
 
-const playlist = [
+const playerButton = document.querySelector(".player button");
+const trackName = document.querySelector(".track");
 
-{
-    title: "اولین موزیک",
-    artist: "RAPHORN",
-    cover: "images/cover1.jpg",
-    audio: "music/song1.mp3",
-    download: "music/song1.mp3"
-},
+let currentButton = null;
 
-{
-    title: "ریمیکس دوم",
-    artist: "RAPHORN",
-    cover: "images/cover2.jpg",
-    audio: "music/song2.mp3",
-    download: "music/song2.mp3"
-},
+document.querySelectorAll(".play-btn").forEach(button => {
 
-{
-    title: "ریمیکس سوم",
-    artist: "RAPHORN",
-    cover: "images/cover3.jpg",
-    audio: "music/song3.mp3",
-    download: "music/song3.mp3"
-}
+    button.addEventListener("click", () => {
 
-];
+        const file = button.dataset.track;
+
+        if (audio.src.includes(file) && !audio.paused) {
+
+            audio.pause();
+            playerButton.innerHTML = "▶";
+            button.innerHTML = "▶ پخش";
+            return;
+
+        }
+
+        audio.src = file;
+        audio.play();
+
+        if (currentButton) {
+            currentButton.innerHTML = "▶ پخش";
+        }
+
+        currentButton = button;
+
+        button.innerHTML = "❚❚ توقف";
+
+        playerButton.innerHTML = "❚❚";
+
+        trackName.innerHTML = button.closest(".release-content").querySelector("h3").innerText;
+
+    });
+
+});
+
+playerButton.addEventListener("click", () => {
+
+    if (!audio.src) return;
+
+    if (audio.paused) {
+
+        audio.play();
+        playerButton.innerHTML = "❚❚";
+
+        if(currentButton){
+            currentButton.innerHTML = "❚❚ توقف";
+        }
+
+    } else {
+
+        audio.pause();
+        playerButton.innerHTML = "▶";
+
+        if(currentButton){
+            currentButton.innerHTML = "▶ پخش";
+        }
+
+    }
+
+});
+
+audio.addEventListener("ended", () => {
+
+    playerButton.innerHTML = "▶";
+
+    if(currentButton){
+        currentButton.innerHTML = "▶ پخش";
+    }
+
+});
