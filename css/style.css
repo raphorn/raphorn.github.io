@@ -1082,3 +1082,32 @@ transform:scale(1.05);
 .download-btn:hover{
     background:#333;
 }
+.release-buttons{
+    display:flex;
+    gap:15px;
+}
+
+.release-buttons button,
+.release-buttons a{
+    flex:1;
+    height:50px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.release-buttons button{
+    background:#fff;
+    color:#000;
+    border:none;
+}
+
+.release-buttons a{
+    background:#222;
+    color:#fff;
+    border:1px solid #333;
+}
