@@ -1,21 +1,51 @@
 const songs = [
+
 {
 title: "ریمیکس اول",
 artist: "RAPHORN",
 file: "music/song1.mp3",
 cover: "images/cover1.jpg"
+},
+
+{
+title: "ریمیکس دوم",
+artist: "RAPHORN",
+file: "music/song2.mp3",
+cover: "images/cover2.jpg"
+},
+
+{
+title: "ریمیکس سوم",
+artist: "RAPHORN",
+file: "music/song3.mp3",
+cover: "images/cover3.jpg"
 }
+
 ];
 
 const list = document.getElementById("music-list");
+const audio = document.getElementById("audio");
 
-songs.forEach(song => {
+const playerTitle = document.getElementById("player-title");
+const playerArtist = document.getElementById("player-artist");
+const playerCover = document.getElementById("player-cover");
+
+let currentSong = 0;
+
+function showSongs(){
+
+list.innerHTML = "";
+
+songs.forEach((song,index)=>{
 
 list.innerHTML += `
+
 <div class="release-card">
 
 <div class="release-cover">
+
 <img src="${song.cover}" alt="${song.title}">
+
 </div>
 
 <div class="release-content">
@@ -26,12 +56,16 @@ list.innerHTML += `
 
 <div class="release-buttons">
 
-<button onclick="playSong('${song.file}')">
-پخش
+<button onclick="playSong(${index})">
+
+▶ پخش
+
 </button>
 
-<a href="${song.file}" download class="download-btn">
-دانلود
+<a href="${song.file}" download>
+
+⬇ دانلود
+
 </a>
 
 </div>
@@ -39,16 +73,27 @@ list.innerHTML += `
 </div>
 
 </div>
+
 `;
 
 });
 
-function playSong(file){
+}
 
-const audio = document.getElementById("audio");
+function playSong(index){
 
-audio.src = file;
+currentSong = index;
+
+audio.src = songs[index].file;
 
 audio.play();
 
+playerTitle.innerText = songs[index].title;
+
+playerArtist.innerText = songs[index].artist;
+
+playerCover.src = songs[index].cover;
+
 }
+
+showSongs();
