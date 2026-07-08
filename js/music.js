@@ -27,11 +27,11 @@ list.innerHTML += `
 <div class="release-buttons">
 
 <button onclick="playSong('${song.file}')">
-▶ پخش
+پخش
 </button>
 
 <a href="${song.file}" download class="download-btn">
-⬇ دانلود
+دانلود
 </a>
 
 </div>
