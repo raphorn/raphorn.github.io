@@ -30,7 +30,7 @@ list.innerHTML += `
 ▶ پخش
 </button>
 
-<a class="btn" href="${song.file}" download>
+<a href="${song.file}" download class="download-btn">
 ⬇ دانلود
 </a>
 
