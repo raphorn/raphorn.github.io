@@ -25,7 +25,15 @@ list.innerHTML += `
 <p>${song.artist}</p>
 
 <div class="release-buttons">
-<button onclick="playSong('${song.file}')">▶ پخش</button>
+
+<button onclick="playSong('${song.file}')">
+▶ پخش
+</button>
+
+<a class="btn" href="${song.file}" download>
+⬇ دانلود
+</a>
+
 </div>
 
 </div>
