@@ -3,7 +3,7 @@ const songs = [
 {
 title: "ریمیکس جديد بنام شوم از راشد",
 artist: "RAASHED",
-file: "music/musi/song1.mp3",
+file: "music/music/song1.mp3",
 cover: "images/file_000000008164722faab306d6308856f4.png"
 },
 
