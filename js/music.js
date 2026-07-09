@@ -1,8 +1,8 @@
 const songs = [
 
 {
-title: "ریمیکس اول",
-artist: "RAPHORN",
+title: "ریمیکس جديد بنام شوم از راشد",
+artist: "RAASHED",
 file: "music/song1.mp3",
 cover: "images/cover1.jpg"
 },
