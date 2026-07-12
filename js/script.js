@@ -60,3 +60,27 @@ audio.addEventListener("ended", () => {
     playSong(currentSong);
 
 });
+
+// بستن منو با کلیک روی بیرون
+document.addEventListener("click", (e) => {
+
+    if (
+        !sidebar.contains(e.target) &&
+        !menuBtn.contains(e.target)
+    ) {
+        sidebar.classList.remove("active");
+    }
+
+});
+
+
+// بستن منو بعد از انتخاب گزینه
+const menuLinks = document.querySelectorAll("#sidebar a");
+
+menuLinks.forEach(link => {
+
+    link.addEventListener("click", () => {
+        sidebar.classList.remove("active");
+    });
+
+});
