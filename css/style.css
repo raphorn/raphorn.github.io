@@ -687,3 +687,189 @@ height:8px;
 }
 
 }
+
+/* ===========================
+   RAPHORN MUSIC CARD PREMIUM
+=========================== */
+
+
+.music-card{
+
+    max-width:420px;
+    margin:auto;
+
+    background:
+    linear-gradient(
+        145deg,
+        #181818,
+        #0d0d0d
+    );
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+    0 25px 70px rgba(0,0,0,.65);
+
+    transition:.4s ease;
+
+}
+
+
+
+.music-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:
+    0 40px 90px rgba(0,0,0,.85);
+
+}
+
+
+
+
+.music-cover{
+
+    width:100%;
+
+    aspect-ratio:1/1;
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+
+
+.music-cover img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.6s ease;
+
+}
+
+
+
+.music-card:hover .music-cover img{
+
+    transform:scale(1.08);
+
+}
+
+
+
+
+.music-info{
+
+    padding:25px 25px 15px;
+
+}
+
+
+
+.music-info h3{
+
+    font-size:24px;
+
+    margin-bottom:8px;
+
+}
+
+
+
+.music-info p{
+
+    color:#999;
+
+    font-size:15px;
+
+}
+
+
+
+
+.music-progress{
+
+    padding:10px 25px 20px;
+
+}
+
+
+
+
+.seek-bar{
+
+    height:5px;
+
+    cursor:pointer;
+
+}
+
+
+
+.music-controls{
+
+    padding:0 25px 25px;
+
+    display:flex;
+
+    gap:12px;
+
+}
+
+
+
+.music-controls button{
+
+    height:50px;
+
+    border-radius:16px;
+
+    background:#1f1f1f;
+
+    border:1px solid #333;
+
+    color:white;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+
+
+.music-controls button:first-child{
+
+    background:white;
+
+    color:black;
+
+}
+
+
+
+.music-controls button:hover{
+
+    transform:translateY(-3px);
+
+}
+
+
+
+
+.equalizer span{
+
+    background:white;
+
+}
