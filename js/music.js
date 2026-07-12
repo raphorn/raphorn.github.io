@@ -192,24 +192,6 @@ document.querySelectorAll(".duration")[index].innerText = durationText;
 });
 
     
-function togglePlay(index){
-
-    if(currentSong === index && !audio.paused){
-
-        audio.pause();
-
-        event.target.innerText = "Play";
-
-    }else{
-
-        playSong(index);
-
-        event.target.innerText = "Pause";
-
-    }
-
-}
-
 audio.play();
 
 
@@ -217,6 +199,27 @@ playerTitle.innerText = songs[index].title;
 playerArtist.innerText = songs[index].artist;
 playerCover.src = songs[index].cover;
 
+
+}
+function togglePlay(index){
+
+    let button = document.querySelectorAll(".card-play")[index];
+
+
+    if(currentSong === index && !audio.paused){
+
+        audio.pause();
+
+        button.innerText = "Play";
+
+
+    }else{
+
+        playSong(index);
+
+        button.innerText = "Pause";
+
+    }
 
 }
 
