@@ -321,21 +321,19 @@ el.value =
 
 });
 
-
-
-console.log("before showSongs");
+console.log("MUSIC JS OK");
 
 showSongs();
 
 
 document.querySelectorAll(".seek-bar").forEach((bar)=>{
 
-    bar.addEventListener("input", function(){
+    bar.addEventListener("input",()=>{
 
         if(audio.duration){
 
             audio.currentTime =
-            (this.value / 100) * audio.duration;
+            (bar.value / 100) * audio.duration;
 
         }
 
