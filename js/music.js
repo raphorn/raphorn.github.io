@@ -168,6 +168,12 @@ function playSong(index){
 
 currentSong = index;
 
+    document.querySelectorAll(".music-card").forEach(card=>{
+    card.classList.remove("playing");
+});
+
+document.querySelectorAll(".music-card")[index].classList.add("playing");
+
 audio.src = songs[index].file;
 
 audio.load();
