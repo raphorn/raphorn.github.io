@@ -220,11 +220,15 @@ function togglePlay(index){
 
             buttons[index].innerText = "Pause";
 
+            document.querySelectorAll(".music-card")[index].classList.add("playing");
+
         }else{
 
             audio.pause();
 
             buttons[index].innerText = "Play";
+
+            document.querySelectorAll(".music-card")[index].classList.remove("playing");
 
         }
 
