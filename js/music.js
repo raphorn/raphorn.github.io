@@ -201,28 +201,40 @@ playerCover.src = songs[index].cover;
 
 
 }
+
 function togglePlay(index){
 
-    let button = document.querySelectorAll(".card-play")[index];
+    let buttons = document.querySelectorAll(".card-play");
 
+    if(currentSong === index){
 
-    if(currentSong === index && !audio.paused){
+        if(audio.paused){
 
-        audio.pause();
+            audio.play();
 
-        button.innerText = "Play";
+            buttons[index].innerText = "Pause";
 
+        }else{
+
+            audio.pause();
+
+            buttons[index].innerText = "Play";
+
+        }
 
     }else{
 
+        buttons.forEach(btn=>{
+            btn.innerText = "Play";
+        });
+
         playSong(index);
 
-        button.innerText = "Pause";
+        buttons[index].innerText = "Pause";
 
     }
 
 }
-
 
 
 function downloadSong(index){
