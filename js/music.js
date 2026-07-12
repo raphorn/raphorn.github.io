@@ -256,7 +256,73 @@ playSong(currentSong);
 
 
 });
+audio.addEventListener("loadedmetadata",()=>{
 
+let duration = audio.duration;
+
+let minutes = Math.floor(duration / 60);
+
+let seconds = Math.floor(duration % 60);
+
+document.querySelectorAll(".duration").forEach(el=>{
+
+el.innerText =
+minutes + ":" + 
+(seconds < 10 ? "0" + seconds : seconds);
+
+});
+
+});
+
+
+audio.addEventListener("timeupdate",()=>{
+
+
+let current = audio.currentTime;
+
+
+let minutes = Math.floor(current / 60);
+
+let seconds = Math.floor(current % 60);
+
+
+
+document.querySelectorAll(".current-time").forEach(el=>{
+
+el.innerText =
+minutes + ":" +
+(seconds < 10 ? "0" + seconds : seconds);
+
+});
+
+
+
+document.querySelectorAll(".seek-bar").forEach(el=>{
+
+el.value =
+(audio.currentTime / audio.duration) * 100 || 0;
+
+});
+
+
+});
+
+
+
+document.querySelectorAll(".seek-bar").forEach(bar=>{
+
+
+bar.addEventListener("input",()=>{
+
+
+audio.currentTime =
+(bar.value / 100) * audio.duration;
+
+
+});
+
+
+});
 
 
 console.log("MUSIC JS OK");
