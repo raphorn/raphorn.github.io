@@ -828,3 +828,71 @@ animation:equalizer 1s infinite ease-in-out;
 }
 
 
+/* ===========================
+   ACTIVE MUSIC EFFECT
+=========================== */
+
+.music-card.playing{
+
+    border:1px solid rgba(255,255,255,.4);
+
+    box-shadow:
+    0 0 40px rgba(255,255,255,.15),
+    0 30px 80px rgba(0,0,0,.8);
+
+}
+
+
+/* VINYL ROTATION */
+
+.music-card.playing .music-cover img{
+
+    animation:vinylRotate 8s linear infinite;
+
+}
+
+
+@keyframes vinylRotate{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+
+/* STOP ROTATION */
+
+.music-card:not(.playing) .music-cover img{
+
+    animation-play-state:paused;
+
+}
+
+
+/* EQUALIZER */
+
+.music-card .equalizer span{
+
+    animation-play-state:paused;
+
+    opacity:.4;
+
+}
+
+
+.music-card.playing .equalizer span{
+
+    animation-play-state:running;
+
+    opacity:1;
+
+}
