@@ -258,5 +258,5 @@ playSong(currentSong);
 
 
 
-
+console.log("MUSIC JS OK");
 showSongs();
