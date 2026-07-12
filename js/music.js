@@ -1,37 +1,3 @@
-const songs = [
-
-{
-title: "ریمیکس جديد بنام شوم از راشد",
-artist: "RAASHED",
-file: "music/music/beat_2.mp3 (Remix).mp3",
-cover: "images/file_000000008164722faab306d6308856f4.png"
-},
-
-{
-title: "ریمیکس دوم",
-artist: "RAPHORN",
-file: "music/song2.mp3",
-cover: "images/cover2.jpg"
-},
-
-{
-title: "ریمیکس سوم",
-artist: "RAPHORN",
-file: "music/song3.mp3",
-cover: "images/cover3.jpg"
-}
-
-];
-
-const list = document.getElementById("music-list");
-const audio = document.getElementById("audio");
-
-const playerTitle = document.getElementById("player-title");
-const playerArtist = document.getElementById("player-artist");
-const playerCover = document.getElementById("player-cover");
-
-let currentSong = 0;
-
 function showSongs(){
 
 list.innerHTML = "";
@@ -40,35 +6,71 @@ songs.forEach((song,index)=>{
 
 list.innerHTML += `
 
-<div class="release-card">
+<div class="music-card">
 
-<div class="release-cover">
+<div class="music-cover">
 
 <img src="${song.cover}" alt="${song.title}">
 
+<div class="vinyl"></div>
+
 </div>
 
-<div class="release-content">
+<div class="music-info">
 
 <h3>${song.title}</h3>
 
 <p>${song.artist}</p>
 
-<div class="release-buttons">
+</div>
 
-<button onclick="playSong(${index})">
+<div class="music-progress">
 
-▶ پخش
+<span class="current-time">0:00</span>
+
+<input
+type="range"
+min="0"
+max="100"
+value="0"
+class="seek-bar"
+id="seek-${index}"
+>
+
+<span class="duration">0:00</span>
+
+</div>
+
+<div class="music-controls">
+
+<button class="play-btn-card"
+onclick="playSong(${index})">
+
+Play
 
 </button>
 
-<a href="${song.file}" download>
+<button>
 
-⬇ دانلود
+Download
 
-</a>
+</button>
+
+<button>
+
+Share
+
+</button>
 
 </div>
+
+<div class="equalizer">
+
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
 
 </div>
 
@@ -79,21 +81,3 @@ list.innerHTML += `
 });
 
 }
-
-function playSong(index){
-
-currentSong = index;
-
-audio.src = songs[index].file;
-
-audio.play();
-
-playerTitle.innerText = songs[index].title;
-
-playerArtist.innerText = songs[index].artist;
-
-playerCover.src = songs[index].cover;
-
-}
-
-showSongs();
