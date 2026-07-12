@@ -104,7 +104,7 @@ id="seek-${index}"
 <div class="music-controls">
 
 
-<button onclick="playSong(${index})">
+<button class="card-play" onclick="togglePlay(${index})">
 
 Play
 
