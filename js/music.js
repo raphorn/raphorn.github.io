@@ -172,9 +172,13 @@ currentSong = index;
 
 audio.src = songs[index].file;
 
+audio.onloadedmetadata = function(){
+
+console.log("زمان آهنگ:", audio.duration);
+
+};
 
 audio.play();
-
 
 
 playerTitle.innerText = songs[index].title;
