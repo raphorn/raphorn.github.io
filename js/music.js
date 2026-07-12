@@ -345,7 +345,6 @@ showSongs();
 
 console.log("before showSongs");
 showSongs();
-console.log("after showSongs");
 
 document.querySelectorAll(".seek-bar").forEach((bar,index)=>{
 
