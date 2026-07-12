@@ -1,3 +1,4 @@
+console.log("music.js loaded");
 const songs = [
 
 {
@@ -260,3 +261,8 @@ playSong(currentSong);
 
 console.log("MUSIC JS OK");
 showSongs();
+
+
+console.log("before showSongs");
+showSongs();
+console.log("after showSongs");
