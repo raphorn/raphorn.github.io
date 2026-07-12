@@ -346,3 +346,18 @@ showSongs();
 console.log("before showSongs");
 showSongs();
 console.log("after showSongs");
+
+document.querySelectorAll(".seek-bar").forEach((bar,index)=>{
+
+    bar.addEventListener("input",()=>{
+
+        if(index === currentSong && audio.duration){
+
+            audio.currentTime =
+            (bar.value / 100) * audio.duration;
+
+        }
+
+    });
+
+});
