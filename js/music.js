@@ -166,31 +166,41 @@ Share
 
 function playSong(index){
 
-
 currentSong = index;
-
 
 audio.src = songs[index].file;
 
-audio.onloadedmetadata = function(){
+audio.load();
 
-console.log("زمان آهنگ:", audio.duration);
 
-};
+audio.addEventListener("loadedmetadata", function(){
+
+let duration = audio.duration;
+
+let min = Math.floor(duration / 60);
+
+let sec = Math.floor(duration % 60);
+
+
+let durationText =
+min + ":" + (sec < 10 ? "0" + sec : sec);
+
+
+document.querySelectorAll(".duration")[index].innerText = durationText;
+
+
+});
+
 
 audio.play();
 
 
 playerTitle.innerText = songs[index].title;
-
 playerArtist.innerText = songs[index].artist;
-
 playerCover.src = songs[index].cover;
 
 
-
 }
-
 
 
 
