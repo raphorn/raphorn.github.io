@@ -873,3 +873,9 @@ height:8px;
     background:white;
 
 }
+
+
+.music-card{
+    background:red !important;
+    border-radius:50px !important;
+}
