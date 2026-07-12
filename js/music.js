@@ -346,14 +346,15 @@ showSongs();
 console.log("before showSongs");
 showSongs();
 
-document.querySelectorAll(".seek-bar").forEach((bar,index)=>{
+document.querySelectorAll(".seek-bar").forEach((bar)=>{
 
-    bar.addEventListener("input",()=>{
+    bar.addEventListener("change", function(){
 
-        if(index === currentSong && audio.duration){
+        if(audio.duration){
 
-            audio.currentTime =
-            (bar.value / 100) * audio.duration;
+            let time = (this.value / 100) * audio.duration;
+
+            audio.currentTime = time;
 
         }
 
