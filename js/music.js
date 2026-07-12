@@ -323,38 +323,19 @@ el.value =
 
 
 
-document.querySelectorAll(".seek-bar").forEach(bar=>{
-
-
-bar.addEventListener("input",()=>{
-
-
-audio.currentTime =
-(bar.value / 100) * audio.duration;
-
-
-});
-
-
-});
-
-
-console.log("MUSIC JS OK");
-showSongs();
-
-
 console.log("before showSongs");
+
 showSongs();
+
 
 document.querySelectorAll(".seek-bar").forEach((bar)=>{
 
-    bar.addEventListener("change", function(){
+    bar.addEventListener("input", function(){
 
         if(audio.duration){
 
-            let time = (this.value / 100) * audio.duration;
-
-            audio.currentTime = time;
+            audio.currentTime =
+            (this.value / 100) * audio.duration;
 
         }
 
