@@ -191,6 +191,24 @@ document.querySelectorAll(".duration")[index].innerText = durationText;
 
 });
 
+    
+function togglePlay(index){
+
+    if(currentSong === index && !audio.paused){
+
+        audio.pause();
+
+        event.target.innerText = "Play";
+
+    }else{
+
+        playSong(index);
+
+        event.target.innerText = "Pause";
+
+    }
+
+}
 
 audio.play();
 
