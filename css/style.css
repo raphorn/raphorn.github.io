@@ -686,9 +686,9 @@ footer{
 
 .music-controls button:first-child{
 
-    background:white;
+    background:rgba(255,255,255,.08);
 
-    color:black;
+    color:white;
 
 }
 
