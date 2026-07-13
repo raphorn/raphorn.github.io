@@ -1,1036 +1,231 @@
-/* ===========================
-   RAPHORN PREMIUM STYLE
-   PART 1 / 4
-=========================== */
-
-
-/* RESET */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
+    font-family:'Montserrat',sans-serif;
 }
-
-
-html{
-    scroll-behavior:smooth;
-}
-
 
 body{
-
-    background:
-
-    radial-gradient(
-        circle at top left,
-        rgba(255,255,255,.05),
-        transparent 35%
-    ),
-
-    radial-gradient(
-        circle at bottom right,
-        rgba(255,255,255,.03),
-        transparent 40%
-    ),
-
-    linear-gradient(
-        180deg,
-        #111,
-        #070707
-    );
-
-
-    color:#fff;
-
-    font-family:'Montserrat',sans-serif;
-
-    overflow-x:hidden;
-
-    padding-bottom:90px;
-
+    background:#050505;
+    color:white;
+    direction:rtl;
+    min-height:100vh;
 }
 
 
-
-a{
-
-    text-decoration:none;
-
-    color:inherit;
-
-}
-
-
-img{
-
-    max-width:100%;
-
-    display:block;
-
-}
-
-
-/* ===========================
-        HEADER
-=========================== */
-
+/* HEADER */
 
 header{
-
-    position:sticky;
-
-    top:0;
-
-    width:100%;
-
     height:80px;
-
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
-
-
-    padding:0 25px;
-
-
-    background:
-
-    rgba(10,10,10,.75);
-
-
-    backdrop-filter:blur(20px);
-
-
-    border-bottom:
-
-    1px solid rgba(255,255,255,.08);
-
-
-    z-index:999;
-
+    padding:0 30px;
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:100;
+    background:rgba(0,0,0,.4);
+    backdrop-filter:blur(15px);
 }
-
 
 
 .logo{
-
     font-size:28px;
-
     font-weight:700;
-
-    letter-spacing:7px;
-
+    letter-spacing:4px;
 }
-
-
-
-
-.header-actions{
-
-    display:flex;
-
-    gap:12px;
-
-}
-
-
 
 
 .menu-btn,
 .search-btn{
 
-
-    width:46px;
-
-    height:46px;
-
-
-    border-radius:50%;
-
-
-    border:1px solid rgba(255,255,255,.15);
-
-
-    background:
-
-    rgba(255,255,255,.06);
-
-
+    background:none;
+    border:none;
     color:white;
-
-
+    font-size:25px;
     cursor:pointer;
 
-
-    font-size:20px;
-
-
-    transition:.3s;
-
 }
 
 
-
-.menu-btn:hover,
-.search-btn:hover{
-
-
-    background:white;
-
-    color:black;
-
-
-}
-
-
-
-/* ===========================
-        SIDEBAR
-=========================== */
-
+/* SIDEBAR */
 
 .sidebar{
 
-
     position:fixed;
-
-
     top:0;
-
-
     right:-300px;
-
-
-    width:280px;
-
-
+    width:270px;
     height:100%;
-
-
     background:#111;
-
-
-    border-left:
-
-    1px solid #222;
-
-
-    padding-top:90px;
-
-
+    padding:100px 30px;
     transition:.4s;
-
-
-    z-index:1000;
-
+    z-index:200;
 
 }
-
-
-
-.sidebar.active{
-
-    right:0;
-
-}
-
 
 
 .sidebar a{
 
-
     display:block;
-
-
-    padding:20px 30px;
-
-
-    border-bottom:
-
-    1px solid #222;
-
-
-    color:#ccc;
-
-
-    transition:.3s;
-
-
-}
-
-
-
-.sidebar a:hover{
-
-
-    background:#1b1b1b;
-
     color:white;
-
-
-}
-
-
-
-/* ===========================
-        GLOBAL BUTTONS
-=========================== */
-
-
-.btn{
-
-
-    padding:15px 35px;
-
-
-    border-radius:14px;
-
-
-    background:white;
-
-
-    color:black;
-
-
-    font-weight:700;
-
-
-    transition:.3s;
-
+    text-decoration:none;
+    padding:20px 0;
+    border-bottom:1px solid #333;
 
 }
 
 
-
-.btn-outline{
-
-
-    padding:15px 35px;
-
-
-    border-radius:14px;
-
-
-    border:
-
-    1px solid rgba(255,255,255,.25);
-
-
-    color:white;
-
-
-    transition:.3s;
-
-
-}
-
-
-
-.btn:hover,
-.btn-outline:hover{
-
-
-    transform:translateY(-4px);
-
-
-}
-
-/* ===========================
-        HERO SECTION
-        PART 2 / 4
-=========================== */
-
+/* HERO */
 
 .hero{
 
-    width:90%;
-
-    max-width:1200px;
-
-
-    min-height:600px;
-
-
-    margin:40px auto;
-
-
-    padding:50px 30px;
-
-
-    border-radius:45px;
-
-
+    min-height:100vh;
     display:flex;
-
     flex-direction:column;
-
     justify-content:center;
-
     align-items:center;
-
-
     text-align:center;
-
-
-    position:relative;
-
-
-    overflow:hidden;
-
-
+    padding:20px;
 
     background:
-
-    linear-gradient(
-        135deg,
-        rgba(255,255,255,.10),
-        rgba(255,255,255,.02)
-    );
-
-
-    border:
-
-    1px solid rgba(255,255,255,.18);
-
-
-
-    backdrop-filter:blur(35px);
-
-    -webkit-backdrop-filter:blur(35px);
-
-
-
-    box-shadow:
-
-    inset 0 1px 30px rgba(255,255,255,.08),
-
-    0 40px 120px rgba(0,0,0,.9);
+    radial-gradient(circle,#333,#050505 60%);
 
 }
-
-
-
-.hero::before{
-
-
-    content:"";
-
-
-    position:absolute;
-
-
-    width:500px;
-
-    height:500px;
-
-
-    top:-250px;
-
-    right:-150px;
-
-
-    background:
-
-    radial-gradient(
-        circle,
-        rgba(255,255,255,.15),
-        transparent 70%
-    );
-
-
-    filter:blur(60px);
-
-
-    opacity:.6;
-
-
-}
-
-
-
-
-.hero::after{
-
-
-    content:"";
-
-
-    position:absolute;
-
-
-    width:300px;
-
-    height:300px;
-
-
-    bottom:-150px;
-
-    left:-100px;
-
-
-    background:
-
-    radial-gradient(
-        circle,
-        rgba(255,255,255,.08),
-        transparent 70%
-    );
-
-
-    filter:blur(50px);
-
-
-}
-
-
-
-.hero>*{
-
-    position:relative;
-
-    z-index:2;
-
-}
-
-
 
 
 .hero h1{
 
-
-    font-size:72px;
-
-
-    letter-spacing:12px;
-
-
-    font-weight:800;
-
+    font-size:70px;
+    letter-spacing:10px;
 
 }
-
 
 
 .hero h3{
 
-
-    margin-top:20px;
-
-
-    color:#ddd;
-
-
-    font-size:22px;
-
-
-    font-weight:400;
-
+    color:#aaa;
+    margin:20px;
 
 }
-
 
 
 .hero p{
 
-
-    margin-top:25px;
-
-
-    max-width:700px;
-
-
-    color:#999;
-
-
-    line-height:2;
-
-
-    font-size:16px;
-
+    color:#bbb;
 
 }
-
 
 
 .hero-buttons{
 
-
     margin-top:40px;
 
-
-    display:flex;
-
-
-    gap:20px;
+}
 
 
-    flex-wrap:wrap;
+.btn,
+.btn-outline{
+
+    padding:15px 35px;
+    border-radius:40px;
+    text-decoration:none;
+    margin:10px;
+    display:inline-block;
+
+}
 
 
-    justify-content:center;
+.btn{
 
+    background:white;
+    color:black;
+
+}
+
+
+.btn-outline{
+
+    border:1px solid white;
+    color:white;
 
 }
 
 
 
-
-/* ===========================
-        ABOUT SECTION
-=========================== */
-
+/* ABOUT */
 
 .about{
 
-
-    width:90%;
-
-
-    max-width:1200px;
-
-
-    margin:80px auto;
-
+    padding:60px 20px;
 
 }
-
 
 
 .about-box{
 
-
-    padding:50px;
-
-
-    border-radius:35px;
-
-
-    background:
-
-    rgba(255,255,255,.04);
-
-
-    border:
-
-    1px solid rgba(255,255,255,.12);
-
-
-
-    backdrop-filter:blur(25px);
-
-
-
+    max-width:700px;
+    margin:auto;
+    background:rgba(255,255,255,.05);
+    padding:40px;
+    border-radius:30px;
+    backdrop-filter:blur(20px);
 }
-
 
 
 .title-small{
 
-
-    color:#777;
-
-
+    color:#aaa;
     letter-spacing:4px;
 
+}
 
-    font-size:13px;
 
+/* MUSIC */
+
+.latest{
+
+    padding:40px 20px;
+
+}
+
+
+.section-title{
+
+    margin-bottom:30px;
 
 }
 
 
 
-.about-box h2{
+.release-grid{
 
-
-    margin-top:15px;
-
-
-    font-size:42px;
-
-
-}
-
-
-
-.about-box p{
-
-
-    margin-top:25px;
-
-
-    color:#aaa;
-
-
-    line-height:2.2;
-
-
-    font-size:16px;
-
-
-}
-
-
-
-
-/* ===========================
-        RELEASE SECTION
-=========================== */
-
-
-.latest-container{
-
-
-    width:90%;
-
-
-    max-width:1200px;
-
-
-    margin:60px auto;
-
-
-    padding:40px;
-
-
-    border-radius:40px;
-
-
-
-    background:
-
-    rgba(255,255,255,.035);
-
-
-
-    border:
-
-    1px solid rgba(255,255,255,.12);
-
-
-
-    backdrop-filter:blur(25px);
-
-
-}
-
-
-
-.latest-header h3{
-
-
-    font-size:32px;
-
-
-    margin-bottom:10px;
-
-
-}
-
-
-
-.latest-header p{
-
-
-    color:#888;
-
-
-    margin-bottom:35px;
-
-
-}
-
-
-
-
-.release-slider{
-
-
-    display:flex;
-
-
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
     gap:25px;
 
-
-    overflow-x:auto;
-
-
-    padding-bottom:15px;
-
-
-    scroll-behavior:smooth;
-
-
 }
 
-
-
-.release-slider::-webkit-scrollbar{
-
-
-    display:none;
-
-
-}
-
-
-
-
-.release-item{
-
-
-    min-width:160px;
-
-
-}
-
-
-
-.release-item img{
-
-
-    width:160px;
-
-
-    height:160px;
-
-
-    object-fit:cover;
-
-
-    border-radius:25px;
-
-
-    border:
-
-    1px solid rgba(255,255,255,.15);
-
-
-    transition:.4s;
-
-
-}
-
-
-
-.release-item img:hover{
-
-
-    transform:translateY(-8px) scale(1.03);
-
-
-}
-
-
-
-
-.release-item h4{
-
-
-    margin-top:15px;
-
-
-    font-size:17px;
-
-
-}
-
-
-
-.release-item span{
-
-
-    display:block;
-
-
-    margin-top:5px;
-
-
-    color:#777;
-
-
-    font-size:13px;
-
-
-}
-
-/* ===========================
-        MUSIC CARD
-        PART 3 / 4
-=========================== */
-
-
-/* ACTIVE EFFECT */
-
-
-.music-card.playing{
-
-
-    border:
-
-    1px solid rgba(255,255,255,.45);
-
-
-
-    box-shadow:
-
-    0 0 40px rgba(255,255,255,.18),
-
-    0 0 120px rgba(255,255,255,.08);
-
-
-}
-
-
-
-/* ===========================
-        PREMIUM MUSIC CARD
-=========================== */
 
 
 .music-card{
 
-
-    width:100%;
-
-
-    max-width:420px;
-
-
-    margin:50px auto;
-
-
-
-    position:relative;
-
-
-    overflow:hidden;
-
-
-    border-radius:35px;
-
-
-
-    background:
-
-
-    linear-gradient(
-        145deg,
-        rgba(255,255,255,.12),
-        rgba(255,255,255,.03)
-    );
-
-
-
-    border:
-
-    1px solid rgba(255,255,255,.18);
-
-
-
-    backdrop-filter:blur(30px);
-
-
-    -webkit-backdrop-filter:blur(30px);
-
-
-
-    box-shadow:
-
-
-    0 30px 100px rgba(0,0,0,.8),
-
-    inset 0 0 30px rgba(255,255,255,.05);
-
-
-
-    transition:.5s;
-
-
+    background:rgba(255,255,255,.07);
+    border-radius:25px;
+    padding:20px;
+    backdrop-filter:blur(20px);
+    transition:.3s;
 
 }
 
 
+.music-card.playing{
 
-
-
-.music-card:hover{
-
-
-    transform:translateY(-8px);
-
-
-}
-
-
-
-/* ambient light */
-
-
-.music-card::before{
-
-
-    content:"";
-
-
-    position:absolute;
-
-
-    width:300px;
-
-
-    height:300px;
-
-
-
-    top:-150px;
-
-
-    left:50%;
-
-
-
-    transform:translateX(-50%);
-
-
-
-    background:
-
-
-    radial-gradient(
-        circle,
-        rgba(255,255,255,.2),
-        transparent 70%
-    );
-
-
-
-    filter:blur(60px);
-
-
-
-}
-
-
-
-
-/* COVER */
-
-
-.music-cover{
-
-
-    width:100%;
-
-
-    aspect-ratio:1/1;
-
-
-    overflow:hidden;
-
+    border:1px solid white;
+    transform:scale(1.03);
 
 }
 
@@ -1038,178 +233,22 @@ header{
 
 .music-cover img{
 
-
     width:100%;
-
-
-    height:100%;
-
-
-    object-fit:cover;
-
-
-    transition:.6s;
-
+    border-radius:20px;
 
 }
-
-
-
-.music-card:hover .music-cover img{
-
-
-    transform:scale(1.08);
-
-
-}
-
-
-
-
-/* INFO */
 
 
 .music-info{
 
-
-    padding:30px;
-
+    margin-top:15px;
 
 }
-
-
-
-
-.music-info h3{
-
-
-    font-size:26px;
-
-
-    margin-bottom:10px;
-
-
-}
-
 
 
 .music-info p{
 
-
-    color:#999;
-
-
-    font-size:15px;
-
-
-}
-
-
-
-/* ===========================
-        PROGRESS BAR
-=========================== */
-
-
-.music-progress{
-
-
-    padding:0 30px 20px;
-
-
-    display:flex;
-
-
-    align-items:center;
-
-
-    gap:12px;
-
-
-}
-
-
-
-.current-time,
-.duration{
-
-
-    font-size:13px;
-
-
-    color:#888;
-
-
-}
-
-
-
-.seek-bar{
-
-
-    flex:1;
-
-
-    height:5px;
-
-
-    appearance:none;
-
-
-    background:#333;
-
-
-    border-radius:20px;
-
-
-    cursor:pointer;
-
-
-}
-
-
-
-.seek-bar::-webkit-slider-thumb{
-
-
-    appearance:none;
-
-
-    width:16px;
-
-
-    height:16px;
-
-
-    background:white;
-
-
-    border-radius:50%;
-
-
-}
-
-
-
-
-
-/* ===========================
-        MUSIC CONTROLS
-=========================== */
-
-
-.music-controls{
-
-
-    display:flex;
-
-
-    gap:15px;
-
-
-    padding:0 30px 30px;
-
-
+    color:#aaa;
 
 }
 
@@ -1217,1147 +256,108 @@ header{
 
 .music-controls button{
 
-
-    flex:1;
-
-
-    height:52px;
-
-
-    border-radius:18px;
-
-
-    cursor:pointer;
-
-
-
-    color:white;
-
-
-
-    background:
-
-
-    rgba(255,255,255,.08);
-
-
-
-    border:
-
-
-    1px solid rgba(255,255,255,.15);
-
-
-
-    transition:.3s;
-
-
-
-    font-weight:600;
-
-
-}
-
-
-
-.music-controls button:hover{
-
-
     background:white;
-
-
     color:black;
-
-
-    transform:translateY(-4px);
-
-
-}
-
-
-
-
-
-/* ===========================
-        MINI SLIDER
-=========================== */
-
-
-
-.latest-slider{
-
-
-    width:90%;
-
-
-    margin:60px auto;
-
-
-}
-
-
-
-.latest-slider h3{
-
-
-    font-size:25px;
-
-
-    margin-bottom:25px;
-
-
-}
-
-
-
-
-.slider{
-
-
-    display:flex;
-
-
-    gap:20px;
-
-
-    overflow-x:auto;
-
-
-    padding-bottom:15px;
-
-
-    direction:ltr;
-
-
-    scroll-behavior:smooth;
-
-
-}
-
-
-
-.slider::-webkit-scrollbar{
-
-
-    display:none;
-
-
-}
-
-
-
-
-.slider img{
-
-
-    width:110px;
-
-
-    height:110px;
-
-
-    flex:none;
-
-
-    object-fit:cover;
-
-
-    border-radius:22px;
-
-
-
-    border:
-
-
-    1px solid rgba(255,255,255,.15);
-
-
-
+    border:none;
+    padding:10px 15px;
+    border-radius:20px;
+    margin:5px;
     cursor:pointer;
 
-
-    transition:.4s;
-
-
 }
 
 
 
-.slider img:hover{
-
-
-    transform:translateY(-8px);
-
-
-}
-
-
-
-
-
-/* ===========================
-        FIXED PLAYER
-=========================== */
-
+/* PLAYER */
 
 .player{
 
-
     position:fixed;
+    bottom:20px;
+    left:50%;
+    transform:translateX(-50%);
+    width:90%;
+    max-width:600px;
 
+    background:rgba(20,20,20,.8);
+    backdrop-filter:blur(20px);
 
-    bottom:0;
-
-
-    left:0;
-
-
-
-    width:100%;
-
-
-    height:85px;
-
-
-
-    background:
-
-
-    rgba(15,15,15,.85);
-
-
-
-    backdrop-filter:blur(25px);
-
-
-
-    border-top:
-
-
-    1px solid rgba(255,255,255,.12);
-
-
+    border-radius:30px;
+    padding:15px;
 
     display:flex;
-
-
+    justify-content:space-between;
     align-items:center;
 
-
-    justify-content:space-between;
-
-
-
-    padding:0 25px;
-
-
-
-    z-index:999;
-
-
 }
-
-
-
 
 
 .player-left{
 
-
     display:flex;
-
-
     align-items:center;
-
-
     gap:15px;
 
-
 }
 
 
-
-.player-left img{
-
+#player-cover{
 
     width:60px;
-
-
     height:60px;
-
-
-    border-radius:12px;
-
-
+    border-radius:15px;
     object-fit:cover;
 
-
 }
-
-
-
-
-.player-text h4{
-
-
-    font-size:16px;
-
-
-}
-
-
-
-.player-text p{
-
-
-    margin-top:5px;
-
-
-    color:#888;
-
-
-    font-size:13px;
-
-
-}
-
-
-
-
-
-.player-center{
-
-
-    display:flex;
-
-
-    gap:12px;
-
-
-}
-
-
 
 
 .player-center button{
 
-
-    width:45px;
-
-
-    height:45px;
-
-
-    border-radius:50%;
-
-
+    background:none;
     border:none;
-
-
-
-    background:white;
-
-
-    color:black;
-
-
-
+    color:white;
+    font-size:30px;
     cursor:pointer;
 
-
-    font-size:18px;
-
-
-    transition:.3s;
-
-
 }
 
 
-
-.player-center button:hover{
-
-
-    transform:scale(1.1);
-
-
-}
-
-/* ===========================
-        CONTACT
-        PART 4 / 4
-=========================== */
-
-
-.contact{
-
-
-    width:90%;
-
-
-    max-width:1200px;
-
-
-    margin:80px auto;
-
-
-
-}
-
-
-
-.contact-box{
-
-
-    padding:50px;
-
-
-
-    border-radius:35px;
-
-
-
-    text-align:center;
-
-
-
-    background:
-
-
-    rgba(255,255,255,.04);
-
-
-
-    border:
-
-
-    1px solid rgba(255,255,255,.12);
-
-
-
-    backdrop-filter:blur(25px);
-
-
-
-}
-
-
-
-.contact-box h2{
-
-
-    font-size:38px;
-
-
-    margin-bottom:20px;
-
-
-}
-
-
-
-.contact-box p{
-
-
-    color:#999;
-
-
-    line-height:2;
-
-
-    margin-bottom:35px;
-
-
-}
-
-
-
-.social-links{
-
-
-    display:flex;
-
-
-    justify-content:center;
-
-
-    gap:20px;
-
-
-    flex-wrap:wrap;
-
-
-}
-
-
-
-.social-links a{
-
-
-    padding:15px 30px;
-
-
-    border-radius:15px;
-
-
-
-    background:
-
-
-    rgba(255,255,255,.06);
-
-
-
-    border:
-
-
-    1px solid rgba(255,255,255,.15);
-
-
-
-    transition:.3s;
-
-
-}
-
-
-
-.social-links a:hover{
-
-
-    background:white;
-
-
-    color:black;
-
-
-    transform:translateY(-5px);
-
-
-}
-
-
-
-/* ===========================
-        FOOTER
-=========================== */
-
+/* FOOTER */
 
 footer{
 
-
-    width:90%;
-
-
-    margin:70px auto 0;
-
-
-
-    padding:40px 20px;
-
-
-
+    padding:60px 20px;
     text-align:center;
-
-
-
-    border-top:
-
-
-    1px solid rgba(255,255,255,.1);
-
+    color:#aaa;
 
 }
-
-
-
-.footer-links{
-
-
-    display:flex;
-
-
-    justify-content:center;
-
-
-    gap:25px;
-
-
-    flex-wrap:wrap;
-
-
-    margin-bottom:25px;
-
-
-}
-
 
 
 .footer-links a{
 
-
-    color:#888;
-
-
-    transition:.3s;
-
-
-}
-
-
-
-.footer-links a:hover{
-
-
     color:white;
-
-
-}
-
-
-
-.copyright{
-
-
-    color:#555;
-
-
-    font-size:14px;
-
+    margin:10px;
+    text-decoration:none;
 
 }
 
 
 
+/* MOBILE */
 
-
-/* ===========================
-        ANIMATION
-=========================== */
-
-
-
-@keyframes fadeUp{
-
-
-    from{
-
-
-        opacity:0;
-
-
-        transform:translateY(30px);
-
-
-    }
-
-
-    to{
-
-
-        opacity:1;
-
-
-        transform:translateY(0);
-
-
-    }
-
-
-}
-
-
-
-
-.hero,
-.about-box,
-.latest-container,
-.music-card,
-.contact-box{
-
-
-    animation:
-
-
-    fadeUp .8s ease forwards;
-
-
-}
-
-
-
-
-/* ===========================
-        MOBILE
-=========================== */
-
-
-
-@media(max-width:768px){
-
-
-
-header{
-
-
-    height:70px;
-
-
-    padding:0 15px;
-
-
-}
-
-
-
-.logo{
-
-
-    font-size:22px;
-
-
-    letter-spacing:5px;
-
-
-}
-
-
-
-
-.hero{
-
-
-    width:92%;
-
-
-    min-height:520px;
-
-
-    padding:35px 20px;
-
-
-    border-radius:30px;
-
-
-}
-
-
-
+@media(max-width:600px){
 
 .hero h1{
 
-
-    font-size:42px;
-
-
-    letter-spacing:5px;
-
+font-size:45px;
 
 }
-
-
-
-
-.hero h3{
-
-
-    font-size:18px;
-
-
-}
-
-
-
-
-.hero p{
-
-
-    font-size:14px;
-
-
-}
-
-
-
-.hero-buttons{
-
-
-    width:100%;
-
-
-    flex-direction:column;
-
-
-}
-
-
-
-.btn,
-.btn-outline{
-
-
-    width:100%;
-
-
-    text-align:center;
-
-
-}
-
-
-
-
-.about{
-
-
-    width:92%;
-
-
-}
-
-
-
-.about-box{
-
-
-    padding:30px;
-
-
-}
-
-
-
-.about-box h2{
-
-
-    font-size:30px;
-
-
-}
-
-
-
-
-.latest-container{
-
-
-    width:92%;
-
-
-    padding:25px;
-
-
-    border-radius:30px;
-
-
-}
-
-
-
-.latest-header h3{
-
-
-    font-size:25px;
-
-
-}
-
-
-
-
-
-.release-item{
-
-
-    min-width:130px;
-
-
-}
-
-
-
-.release-item img{
-
-
-    width:130px;
-
-
-    height:130px;
-
-
-}
-
-
-
-
-
-.music-card{
-
-
-    width:92%;
-
-
-    border-radius:28px;
-
-
-}
-
-
-
-
-.music-info{
-
-
-    padding:22px;
-
-
-}
-
-
-
-.music-info h3{
-
-
-    font-size:22px;
-
-
-}
-
-
-
-.music-progress{
-
-
-    padding:0 22px 20px;
-
-
-}
-
-
-
-.music-controls{
-
-
-    padding:0 22px 25px;
-
-
-}
-
 
 
 .player{
 
-
-    height:75px;
-
-
-    padding:0 12px;
-
+width:95%;
 
 }
-
-
-
-.player-left img{
-
-
-    width:48px;
-
-
-    height:48px;
-
-
-}
-
-
-
-.player-text h4{
-
-
-    font-size:14px;
-
-
-}
-
-
-
-.player-text p{
-
-
-    font-size:12px;
-
-
-}
-
-
-
-.player-center{
-
-
-    gap:8px;
-
-
-}
-
-
-
-.player-center button{
-
-
-    width:38px;
-
-
-    height:38px;
-
-
-    font-size:15px;
-
-
-}
-
-
-
-.latest-slider{
-
-
-    width:92%;
-
-
-}
-
-
-
-.slider img{
-
-
-    width:90px;
-
-
-    height:90px;
-
-
-}
-
-
-
-
-.contact{
-
-
-    width:92%;
-
-
-}
-
-
-
-.contact-box{
-
-
-    padding:30px 20px;
-
-
-}
-
-
-
-.contact-box h2{
-
-
-    font-size:30px;
-
-
-}
-
-
-
-}
-
-
-
-
-/* ===========================
-        SMALL MOBILE
-=========================== */
-
-
-
-@media(max-width:420px){
-
-
-
-.hero h1{
-
-
-    font-size:34px;
-
-
-}
-
-
-
-.logo{
-
-
-    font-size:19px;
-
-
-}
-
-
-
-.player-text{
-
-
-    display:none;
-
-
-}
-
-
-
-.music-controls button{
-
-
-    font-size:13px;
-
-
-}
-
-
-
-}
-
-
-
-
-
-/* ===========================
-        SMOOTH EFFECTS
-=========================== */
-
-
-
-button,
-a,
-img{
-
-
-    -webkit-tap-highlight-color:transparent;
-
-
-}
-
-
-
-
-::selection{
-
-
-    background:white;
-
-
-    color:black;
-
 
 }
