@@ -909,7 +909,9 @@ padding:0 25px 25px;
 
 display:flex;
 
-gap:12px;
+gap:15px;
+
+direction:rtl;
 
 }
 
@@ -921,21 +923,29 @@ height:50px;
 
 border-radius:16px;
 
+
 background:
 
-rgba(255,255,255,.08);
+rgba(255,255,255,.06);
+
 
 border:
 
 1px solid rgba(255,255,255,.15);
 
+
+backdrop-filter:blur(20px);
+
+-webkit-backdrop-filter:blur(20px);
+
+
 color:white;
+
 
 font-weight:600;
 
-cursor:pointer;
 
-transition:.3s;
+cursor:pointer;
 
 }
 
