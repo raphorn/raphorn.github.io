@@ -376,7 +376,6 @@ white ${percent}%,
 });
 
 
-});
 
 console.log("MUSIC JS OK");
 
