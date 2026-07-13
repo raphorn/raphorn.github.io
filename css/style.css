@@ -1261,3 +1261,21 @@ footer{
     z-index:2;
 
 }
+
+
+/* FIX LATEST RELEASE COVERS */
+
+.latest-slider .slider img{
+
+    width:100px !important;
+    height:100px !important;
+
+    max-width:none;
+
+    object-fit:cover;
+
+    flex:none;
+
+    border-radius:18px;
+
+}
