@@ -331,19 +331,29 @@ audio.addEventListener("timeupdate",()=>{
 
 let current = audio.currentTime;
 
-
 let minutes = Math.floor(current / 60);
 
 let seconds = Math.floor(current % 60);
 
 
-
 document.querySelectorAll(".current-time")[currentSong].innerText =
 minutes + ":" +
 (seconds < 10 ? "0" + seconds : seconds);
-el.innerText =
-minutes + ":" +
-(seconds < 10 ? "0" + seconds : seconds);
+
+
+let percent =
+(audio.currentTime / audio.duration) * 100 || 0;
+
+
+document.querySelectorAll(".seek-bar")[currentSong].value = percent;
+
+
+document.querySelectorAll(".seek-bar")[currentSong].style.background =
+`linear-gradient(
+90deg,
+white ${percent}%,
+#333 ${percent}%
+)`;
 
 });
 
