@@ -989,7 +989,7 @@ border:1px solid rgba(255,255,255,.15);
 
 .music-card{
     display:block;
-    min-height:520px;
+    min-height:auto;
 }
 
 .hero-buttons{
