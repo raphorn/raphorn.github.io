@@ -2,7 +2,7 @@ console.log("music.js loaded");
 const songs = [
 
 {
-title: "ریمیکس جدید بنام شوم از راشد",
+title: "ریمیکس شوم از راشد",
 artist: "RAASHED",
 file: "music/music/beat_2.mp3 (Remix).mp3",
 cover: "images/file_000000008164722faab306d6308856f4.png"
