@@ -488,19 +488,6 @@ footer{
 
 
 
-@keyframes shine{
-
-    0%{
-        transform:translateX(-60%) rotate(25deg);
-    }
-
-    50%{
-        transform:translateX(60%) rotate(25deg);
-    }
-
-    100%{
-        transform:translateX(60%) rotate(25deg);
-    }
 
 }
 
@@ -522,18 +509,7 @@ footer{
 
 
 
-@keyframes glowMove{
 
-    0%{
-        transform:rotate(0deg);
-    }
-
-
-    100%{
-        transform:rotate(360deg);
-    }
-
-}
 
 
 
