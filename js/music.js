@@ -9,10 +9,10 @@ cover: "images/file_000000008164722faab306d6308856f4.png"
 },
 
 {
-title: "ریمیکس دوم",
+title: "بیت",
 artist: "RAPHORN",
 file: "music/music/song1.mp3",
-cover: "images/cover2.jpg"
+cover: "images/cover2.png"
 },
 
 {
