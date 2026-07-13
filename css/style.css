@@ -608,17 +608,10 @@ footer{
     flex:1;
     height:5px;
     appearance:none;
-    background:linear-gradient(
-        to right,
-        white 0%,
-        white 0%,
-        #333 0%,
-        #333 100%
-    );
+    background:#333;
     border-radius:20px;
     cursor:pointer;
     direction:ltr;
-
 }
 
 
