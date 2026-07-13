@@ -359,22 +359,6 @@ white ${percent}%,
 
 
 
-document.querySelectorAll(".seek-bar").forEach(el=>{
-
-let percent =
-(audio.currentTime / audio.duration) * 100 || 0;
-
-el.value = percent;
-
-el.style.background =
-`linear-gradient(
-90deg,
-white ${percent}%,
-#333 ${percent}%
-)`;
-
-});
-
 
 
 console.log("MUSIC JS OK");
