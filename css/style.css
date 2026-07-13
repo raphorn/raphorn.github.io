@@ -484,13 +484,7 @@ footer{
 
 
 
-.music-card::after{
 
-
-
-
-
-}
 
 
 
@@ -792,10 +786,6 @@ footer{
 }
 /* EXTRA GLASS LIGHT */
 
-.music-card{
-    position:relative;
-    overflow:hidden;
-}
 
 
 .music-card::before{
