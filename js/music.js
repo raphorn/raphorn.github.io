@@ -99,6 +99,18 @@ id="seek-${index}"
 </div>
 
 
+<div class="sound-wave">
+
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+
+</div>
+
 
 
 <div class="music-controls">
