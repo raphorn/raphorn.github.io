@@ -668,17 +668,23 @@ margin:auto;
 padding-bottom:5px;
 
 background:
+
 linear-gradient(
 145deg,
-rgba(255,255,255,.16),
-rgba(255,255,255,.04) 40%,
-rgba(255,255,255,.02)
+rgba(255,255,255,.10),
+rgba(255,255,255,.03)
+),
+
+linear-gradient(
+135deg,
+rgba(220,120,50,.04),
+transparent 45%
 );
 
 backdrop-filter:blur(40px);
 -webkit-backdrop-filter:blur(40px);
 
-border-radius:32px;
+border-radius:35px;
 
 border:1px solid rgba(255,255,255,.18);
 
