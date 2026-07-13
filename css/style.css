@@ -765,138 +765,388 @@ animation:equalizer 1s infinite ease-in-out;
 
     box-shadow:
     0 0 40px rgba(255,255,255,.15),
-    0 30px 80px rgba(0,0,0,.8);
+       }
+/* ===========================
+   RAPHORN PREMIUM GLASS MUSIC CARD
+=========================== */
 
-}
-
-
-/* VINYL ROTATION */
-
-.music-card.playing .music-cover img{
-
-    animation:vinylRotate 8s linear infinite;
-
-}
-
-
-@keyframes vinylRotate{
-
-    from{
-
-        transform:rotate(0deg);
-
-    }
-
-    to{
-
-        transform:rotate(360deg);
-
-    }
-
-}
-
-
-/* STOP ROTATION */
-
-.music-card:not(.playing) .music-cover img{
-
-    animation-play-state:paused;
-
-}
-
-
-/* EQUALIZER */
-
-.music-card .equalizer span{
-
-    animation-play-state:paused;
-
-    opacity:.4;
-
-}
-
-
-.music-card.playing .equalizer span{
-
-    animation-play-state:running;
-
-    opacity:1;
-
-}
 
 .music-card{
 
+    position:relative;
+
+    width:100%;
     max-width:420px;
+
     margin:auto;
 
     background:
-    rgba(255,255,255,0.06);
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.12),
+        rgba(255,255,255,.03)
+    );
 
     backdrop-filter:blur(25px);
     -webkit-backdrop-filter:blur(25px);
+
 
     border-radius:30px;
 
     overflow:hidden;
 
-    border:
-    1px solid rgba(255,255,255,0.15);
+
+    border:1px solid rgba(255,255,255,.18);
+
 
     box-shadow:
-    0 25px 80px rgba(0,0,0,.7),
-    inset 0 0 30px rgba(255,255,255,.04);
 
-    transition:.4s ease;
+    0 0 25px rgba(255,255,255,.08),
+    0 0 80px rgba(255,255,255,.05),
+    0 30px 90px rgba(0,0,0,.85);
+
+
+    transition:.5s ease;
 
 }
+
+
+
+.music-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-2px;
+
+    border-radius:32px;
+
+    background:
+
+    linear-gradient(
+        45deg,
+        transparent,
+        rgba(255,255,255,.35),
+        transparent
+    );
+
+
+    opacity:.35;
+
+    z-index:-1;
+
+    animation:
+    glowMove 5s linear infinite;
+
+}
+
+
 
 
 .music-card:hover{
 
     transform:translateY(-12px) scale(1.02);
 
-    border-color:
-    rgba(255,255,255,.3);
 
     box-shadow:
-    0 40px 100px rgba(0,0,0,.9),
-    0 0 40px rgba(255,255,255,.08);
+
+    0 0 40px rgba(255,255,255,.15),
+    0 0 100px rgba(255,255,255,.08),
+    0 40px 120px rgba(0,0,0,.95);
+
+}
+
+
+
+@keyframes glowMove{
+
+    0%{
+        transform:rotate(0deg);
+    }
+
+
+    100%{
+        transform:rotate(360deg);
+    }
+
+}
+
+
+
+
+
+/* COVER */
+
+
+.music-cover{
+
+    width:100%;
+
+    aspect-ratio:1/1;
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+
+
+.music-cover img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.6s ease;
+
+}
+
+
+
+.music-card:hover .music-cover img{
+
+    transform:scale(1.08);
+
+}
+
+
+
+
+/* INFO */
+
+
+.music-info{
+
+    padding:25px;
 
 }
 
 
 .music-info h3{
 
-    text-shadow:
-    0 0 20px rgba(255,255,255,.15);
+    font-size:24px;
+
+    margin-bottom:8px;
 
 }
+
+
+.music-info p{
+
+    color:#aaa;
+
+    font-size:15px;
+
+}
+
+
+
+
+/* PROGRESS */
+
+
+.music-progress{
+
+    padding:0 25px 20px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+
+.current-time,
+.duration{
+
+    color:#aaa;
+
+    font-size:13px;
+
+}
+
 
 
 .seek-bar{
 
-    background:
-    rgba(255,255,255,.15);
+    flex:1;
+
+    height:5px;
+
+    appearance:none;
+
+    background:#333;
+
+    border-radius:20px;
+
+    cursor:pointer;
 
 }
+
+
+
+.seek-bar::-webkit-slider-thumb{
+
+    appearance:none;
+
+    width:17px;
+
+    height:17px;
+
+    border-radius:50%;
+
+    background:white;
+
+}
+
+
+
+
+
+/* BUTTONS */
+
+
+.music-controls{
+
+    padding:0 25px 25px;
+
+    display:flex;
+
+    gap:12px;
+
+}
+
 
 
 .music-controls button{
 
+    flex:1;
+
+    height:50px;
+
+
+    border-radius:16px;
+
+
     background:
+
     rgba(255,255,255,.08);
 
-    backdrop-filter:blur(15px);
 
     border:
-    1px solid rgba(255,255,255,.12);
+
+    1px solid rgba(255,255,255,.15);
+
+
+    color:white;
+
+
+    font-weight:600;
+
+
+    cursor:pointer;
+
+
+    transition:.3s;
 
 }
 
 
-.music-controls button:hover{
+
+.music-controls button:first-child{
 
     background:white;
+
     color:black;
+
+}
+
+
+
+.music-controls button:hover{
+
+    transform:translateY(-4px);
+
+    background:white;
+
+    color:black;
+
+}
+
+
+
+
+
+/* EQUALIZER */
+
+
+.equalizer{
+
+    height:40px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-end;
+
+    gap:5px;
+
+    padding-bottom:25px;
+
+}
+
+
+
+.equalizer span{
+
+    width:5px;
+
+    height:10px;
+
+    background:white;
+
+    border-radius:10px;
+
+    animation:eq 1s infinite ease-in-out;
+
+}
+
+
+.equalizer span:nth-child(2){
+    animation-delay:.15s;
+}
+
+.equalizer span:nth-child(3){
+    animation-delay:.3s;
+}
+
+.equalizer span:nth-child(4){
+    animation-delay:.45s;
+}
+
+.equalizer span:nth-child(5){
+    animation-delay:.6s;
+}
+
+
+
+@keyframes eq{
+
+    0%,100%{
+        height:8px;
+    }
+
+    50%{
+        height:28px;
+    }
 
 }
