@@ -646,79 +646,6 @@ animation:equalizer 1s infinite ease-in-out;
 =========================== */
 
 
-.music-card{
-
-    max-width:420px;
-    margin:auto;
-
-    background:
-    linear-gradient(
-        145deg,
-        #181818,
-        #0d0d0d
-    );
-
-    border-radius:28px;
-
-    overflow:hidden;
-
-    border:1px solid rgba(255,255,255,.08);
-
-    box-shadow:
-    0 25px 70px rgba(0,0,0,.65);
-
-    transition:.4s ease;
-
-}
-
-
-
-.music-card:hover{
-
-    transform:translateY(-12px);
-
-    box-shadow:
-    0 40px 90px rgba(0,0,0,.85);
-
-}
-
-
-
-
-.music-cover{
-
-    width:100%;
-
-    aspect-ratio:1/1;
-
-    overflow:hidden;
-
-    position:relative;
-
-}
-
-
-
-.music-cover img{
-
-    width:100%;
-
-    height:100%;
-
-    object-fit:cover;
-
-    transition:.6s ease;
-
-}
-
-
-
-.music-card:hover .music-cover img{
-
-    transform:scale(1.08);
-
-}
-
 
 
 
@@ -894,5 +821,82 @@ animation:equalizer 1s infinite ease-in-out;
     animation-play-state:running;
 
     opacity:1;
+
+}
+
+.music-card{
+
+    max-width:420px;
+    margin:auto;
+
+    background:
+    rgba(255,255,255,0.06);
+
+    backdrop-filter:blur(25px);
+    -webkit-backdrop-filter:blur(25px);
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    border:
+    1px solid rgba(255,255,255,0.15);
+
+    box-shadow:
+    0 25px 80px rgba(0,0,0,.7),
+    inset 0 0 30px rgba(255,255,255,.04);
+
+    transition:.4s ease;
+
+}
+
+
+.music-card:hover{
+
+    transform:translateY(-12px) scale(1.02);
+
+    border-color:
+    rgba(255,255,255,.3);
+
+    box-shadow:
+    0 40px 100px rgba(0,0,0,.9),
+    0 0 40px rgba(255,255,255,.08);
+
+}
+
+
+.music-info h3{
+
+    text-shadow:
+    0 0 20px rgba(255,255,255,.15);
+
+}
+
+
+.seek-bar{
+
+    background:
+    rgba(255,255,255,.15);
+
+}
+
+
+.music-controls button{
+
+    background:
+    rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+    border:
+    1px solid rgba(255,255,255,.12);
+
+}
+
+
+.music-controls button:hover{
+
+    background:white;
+    color:black;
 
 }
