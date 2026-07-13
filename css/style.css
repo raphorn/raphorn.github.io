@@ -584,15 +584,11 @@ RAPHORN PREMIUM GLASS MUSIC CARD
 
 .music-card.playing{
 
-    transform:translateY(-5px);
-
-    border-color:rgba(255,255,255,.5);
+    transform:translateY(-4px);
 
     box-shadow:
-
-    0 0 60px rgba(255,255,255,.15),
-
-    0 30px 80px rgba(0,0,0,.8);
+    0 0 50px rgba(255,255,255,.12),
+    0 40px 100px rgba(0,0,0,.9);
 
 }
 
