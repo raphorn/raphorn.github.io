@@ -273,13 +273,14 @@ header{
 
 .player{
 
-position:fixed;
-bottom:20px;
-left:50%;
-transform:translateX(-50%);
+position:relative;
 
 width:95%;
 max-width:430px;
+
+margin:40px auto;
+
+transform:none;
 
 background:
 linear-gradient(
