@@ -853,28 +853,7 @@ footer{
 }
 
 
-/* cover cards */
 
-.slider img{
-
-    width:120px !important;
-
-    height:120px !important;
-
-    object-fit:cover;
-
-    flex:none;
-
-    border-radius:22px;
-
-    border:1px solid rgba(255,255,255,.15);
-
-    box-shadow:
-    0 10px 30px rgba(0,0,0,.6);
-
-    transition:.35s ease;
-
-}
 
 
 /* hover / touch effect */
@@ -893,16 +872,7 @@ footer{
 }
 
 
-.slider img{
 
-    width:105px !important;
-
-    height:105px !important;
-
-}
-
-
-}
 
 /* ===========================
    RAPHORN PREMIUM HERO CONTAINER
@@ -1055,19 +1025,7 @@ footer{
 
 
 
-.release-item img{
 
-    width:150px;
-
-    height:150px;
-
-    object-fit:cover;
-
-    border-radius:22px;
-
-    border:1px solid #222;
-
-}
 
 
 
