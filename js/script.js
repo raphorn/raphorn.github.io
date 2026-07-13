@@ -14,9 +14,11 @@ playBtn.addEventListener("click", () => {
         if(audio.paused){
             audio.play();
             playBtn.innerHTML = "⏸";
+            playBtn.classList.add("active");
         }else{
             audio.pause();
             playBtn.innerHTML = "▶";
+            playBtn.classList.remove("active");
         }
     }
 });
