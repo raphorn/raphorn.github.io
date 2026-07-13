@@ -1453,3 +1453,87 @@ box-shadow:
 0 40px 100px rgba(0,0,0,.9);
 
 }
+
+
+/* ==========================
+FINAL APPLE MUSIC CARD FIX
+========================== */
+
+.music-card{
+    padding:20px !important;
+    border-radius:38px !important;
+    background:
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.12),
+        rgba(255,255,255,.03)
+    ) !important;
+
+    box-shadow:
+    inset 0 1px 25px rgba(255,255,255,.12),
+    0 35px 100px rgba(0,0,0,.9) !important;
+}
+
+
+/* کاور داخل قاب */
+.music-cover{
+
+    width:calc(100% - 20px) !important;
+
+    margin:0 auto 30px !important;
+
+    border-radius:28px !important;
+
+    overflow:hidden;
+
+}
+
+
+.music-cover img{
+
+    border-radius:28px !important;
+
+}
+
+
+/* حذف زوم موقع پلی */
+
+.music-card.playing{
+
+    transform:translateY(-3px) !important;
+
+}
+
+
+/* اطلاعات آهنگ */
+
+.music-info{
+
+    padding:5px 15px 25px !important;
+
+}
+
+
+/* پنل دکمه ها */
+
+.music-controls{
+
+    background:
+    rgba(255,255,255,.06) !important;
+
+    border-radius:25px !important;
+
+    padding:8px !important;
+
+    border:1px solid rgba(255,255,255,.15);
+
+}
+
+
+.music-controls button{
+
+    border-radius:20px !important;
+
+    height:55px !important;
+
+}
