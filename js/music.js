@@ -231,7 +231,7 @@ rgba(220,120,50,.18) 100%
 )`;
 
     
-
+});
 
 document.querySelectorAll(".seek-bar").forEach((bar)=>{
 
@@ -248,7 +248,6 @@ bar.addEventListener("input",()=>{
 
 });
 
-});
 
     console.log("MUSIC JS OK");
 
