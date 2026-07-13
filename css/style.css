@@ -458,8 +458,9 @@ font-size:15px;
 }
 
 .hero-buttons{
-flex-direction:column;
-width:100%;
+    flex-direction:column;
+    width:100%;
+    gap:15px;
 }
 
 .btn,
@@ -959,4 +960,44 @@ border:1px solid rgba(255,255,255,.15);
 .music-card{
     display:block;
     min-height:520px;
+}
+
+.hero-buttons{
+    margin-top:35px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    flex-wrap:wrap;
+    position:relative;
+    z-index:5;
+}
+
+.btn,
+.btn-outline{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    min-width:180px;
+    height:55px;
+    padding:0 30px;
+    border-radius:14px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.btn{
+    background:#fff;
+    color:#000;
+}
+
+.btn-outline{
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.2);
+    color:#fff;
+}
+
+.btn:hover,
+.btn-outline:hover{
+    transform:translateY(-4px);
 }
