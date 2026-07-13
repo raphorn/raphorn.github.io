@@ -15,19 +15,6 @@ file: "music/music/song1.mp3",
 cover: "images/cover2.png"
 },
 
-{
-title: "ریمیکس سوم",
-artist: "RAPHORN",
-file: "music/song3.mp3",
-cover: "images/cover3.jpg"
-},
-    
-{
-title: "اسم آهنگ جدید",
-artist: "اسم خواننده",
-file: "music/music/song4.mp3",
-cover: "images/cover4.png"
-}
 
 ];
 
