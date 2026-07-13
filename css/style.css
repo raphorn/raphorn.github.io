@@ -506,6 +506,23 @@ font-size:16px;
 
 }
 
+.music-cover{
+
+    width:calc(100% - 24px);
+
+    margin-top:12px;
+
+    border-radius:22px;
+
+}
+
+
+.music-cover img{
+
+    border-radius:22px;
+
+}
+
 /* ===========================
 ACTIVE MUSIC EFFECT
 =========================== */
