@@ -868,9 +868,9 @@ background:
 linear-gradient(
 90deg,
 transparent,
-rgba(220,120,50,.55),
-rgba(220,120,50,.9),
-rgba(220,120,50,.55),
+rgba(220,120,50,.35),
+rgba(220,120,50,.75),
+rgba(220,120,50,.35),
 transparent
 );
 
@@ -879,7 +879,6 @@ border-radius:20px;
 cursor:pointer;
 
 direction:rtl;
-
 }
 
 .seek-bar::-webkit-slider-thumb{
