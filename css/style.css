@@ -1509,8 +1509,7 @@ border-radius:45px 0 0 45px;
 padding:45px 30px;
 
 
-
-  will-change:transform;
+transition:.4s;
 
 
 z-index:1000;
