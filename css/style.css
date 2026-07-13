@@ -887,7 +887,7 @@ border-radius:20px;
 
 cursor:pointer;
 
-direction:rtl;
+direction:ltr;
 }
 
 .seek-bar::-webkit-slider-thumb{
