@@ -992,3 +992,80 @@ footer{
 
 
 }
+
+/* ===========================
+   RAPHORN PREMIUM HERO CONTAINER
+=========================== */
+
+.hero{
+
+    width:90%;
+    max-width:1200px;
+
+    margin:40px auto;
+
+    min-height:600px;
+
+    border-radius:40px;
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.06),
+        rgba(255,255,255,.015)
+    );
+
+    border:1px solid rgba(255,255,255,.12);
+
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+
+    box-shadow:
+    0 30px 100px rgba(0,0,0,.8);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+/* نور خیلی ظریف داخل کانتینر */
+
+.hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:400px;
+    height:400px;
+
+    background:
+    radial-gradient(
+        circle,
+        rgba(255,255,255,.12),
+        transparent 70%
+    );
+
+    top:-150px;
+    left:-100px;
+
+    filter:blur(50px);
+
+    opacity:.5;
+
+}
+
+
+/* متن بالای نور قرار بگیرد */
+
+.hero h1,
+.hero h3,
+.hero p,
+.hero-buttons{
+
+    position:relative;
+    z-index:2;
+
+}
