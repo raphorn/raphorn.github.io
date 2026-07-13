@@ -847,40 +847,4 @@ footer{
 
 
 
-/* ===========================
-   PLAYING AUDIO PULSE
-=========================== */
 
-
-
-
-@keyframes cardPulse{
-
-
-    0%{
-
-        box-shadow:
-        0 0 30px rgba(255,255,255,.15),
-        0 30px 90px rgba(0,0,0,.8);
-
-    }
-
-
-    50%{
-
-        box-shadow:
-        0 0 80px rgba(255,255,255,.35),
-        0 40px 120px rgba(0,0,0,.9);
-
-    }
-
-
-    100%{
-
-        box-shadow:
-        0 0 30px rgba(255,255,255,.15),
-        0 30px 90px rgba(0,0,0,.8);
-
-    }
-
-}
