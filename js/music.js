@@ -11,7 +11,7 @@ cover: "images/file_000000008164722faab306d6308856f4.png"
 {
 title: "ریمیکس دوم",
 artist: "RAPHORN",
-file: "music/song2.mp3",
+file: "music/music/song1.mp3",
 cover: "images/cover2.jpg"
 },
 
