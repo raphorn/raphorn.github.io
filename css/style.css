@@ -966,6 +966,14 @@ color:#000;
 
 }
 
+.music-controls button.active{
+
+background:#fff;
+
+color:#000;
+
+}
+
 .music-controls button:first-child{
 
 background:rgba(255,255,255,.08);
