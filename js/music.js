@@ -92,17 +92,7 @@ id="seek-${index}"
 </div>
 
 
-<div class="sound-wave">
 
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-<span></span>
-
-</div>
 
 
 
@@ -138,19 +128,7 @@ Share
 
 
 
-<div class="equalizer">
 
-<span></span>
-
-<span></span>
-
-<span></span>
-
-<span></span>
-
-<span></span>
-
-</div>
 
 
 
