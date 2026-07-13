@@ -14,7 +14,21 @@ html{
 }
 
 body{
-    background:#0b0b0b;
+    background:
+    radial-gradient(circle at top left,
+    rgba(255,255,255,.04),
+    transparent 35%),
+
+    radial-gradient(circle at bottom right,
+    rgba(255,255,255,.025),
+    transparent 45%),
+
+    linear-gradient(
+    180deg,
+    #111111 0%,
+    #0b0b0b 35%,
+    #060606 100%);
+
     color:#fff;
     font-family:'Montserrat',sans-serif;
     overflow-x:hidden;
