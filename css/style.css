@@ -878,6 +878,45 @@ footer{
 
 }
 
+/* آخرین انتشارها */
 
+.latest-slider{
+    margin:40px 20px;
+}
+
+
+.latest-slider h3{
+    font-size:22px;
+    margin-bottom:20px;
+}
+
+
+.slider{
+    display:flex;
+    gap:15px;
+    overflow-x:auto;
+    direction:ltr;
+}
+
+
+.slider::-webkit-scrollbar{
+    display:none;
+}
+
+
+.slider img{
+
+    width:100px !important;
+    height:100px !important;
+
+    max-width:none;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+    flex:none;
+
+}
 
 
