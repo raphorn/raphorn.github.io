@@ -780,28 +780,10 @@ footer{
     }
 
 }
-/* EXTRA GLASS LIGHT */
 
 
 
-.music-card::before{
 
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    background:
-    radial-gradient(
-        circle at top left,
-        rgba(255,255,255,.15),
-        transparent 40%
-    );
-
-    pointer-events:none;
-
-}
 
 /* ===========================
    CARD AMBIENT GLOW
