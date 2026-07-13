@@ -45,7 +45,7 @@ songs.forEach((song,index)=>{
 list.innerHTML += `
 
 
-<div class="music-card">
+<div class="music-card" id="song-${index}">
 
 
 <div class="music-cover">
