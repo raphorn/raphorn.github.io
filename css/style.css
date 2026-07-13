@@ -1,550 +1,994 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+/* ===========================
+RAPHORN STYLE.CSS
+PART 1
+=========================== */
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Montserrat',sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 body{
-    background:#050505;
-    color:white;
-    direction:rtl;
-    min-height:100vh;
+background:
+radial-gradient(circle at top left,
+rgba(255,255,255,.04),
+transparent 35%),
+
+radial-gradient(circle at bottom right,  
+rgba(255,255,255,.025),  
+transparent 45%),  
+
+linear-gradient(  
+180deg,  
+#111111 0%,  
+#0b0b0b 35%,  
+#060606 100%);  
+
+color:#fff;  
+font-family:'Montserrat',sans-serif;  
+overflow-x:hidden;  
+padding-bottom:90px;
+
 }
 
+a{
+color:inherit;
+text-decoration:none;
+}
 
-/* HEADER */
+img{
+display:block;
+max-width:100%;
+}
+
+/* ================= HEADER ================= */
 
 header{
-    height:80px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:0 30px;
-    position:fixed;
-    top:0;
-    width:100%;
-    z-index:100;
-    background:rgba(0,0,0,.4);
-    backdrop-filter:blur(15px);
+position:sticky;
+top:0;
+width:100%;
+height:80px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:0 20px;
+background:rgba(11,11,11,.95);
+backdrop-filter:blur(10px);
+border-bottom:1px solid #222;
+z-index:999;
 }
-
 
 .logo{
-    font-size:28px;
-    font-weight:700;
-    letter-spacing:4px;
+font-size:28px;
+font-weight:700;
+letter-spacing:6px;
 }
-
 
 .menu-btn,
 .search-btn{
-
-    background:none;
-    border:none;
-    color:white;
-    font-size:25px;
-    cursor:pointer;
-
+width:46px;
+height:46px;
+border:none;
+border-radius:50%;
+background:#181818;
+color:#fff;
+font-size:20px;
+cursor:pointer;
+transition:.3s;
 }
 
+.menu-btn:hover,
+.search-btn:hover{
+background:#fff;
+color:#000;
+}
 
-/* SIDEBAR */
+/* ================= SIDEBAR ================= */
 
 .sidebar{
-
-    position:fixed;
-    top:0;
-    right:-300px;
-    width:270px;
-    height:100%;
-    background:#111;
-    padding:100px 30px;
-    transition:.4s;
-    z-index:200;
-
+position:fixed;
+top:0;
+right:-280px;
+width:260px;
+height:100%;
+background:#111;
+border-left:1px solid #222;
+padding-top:90px;
+transition:.35s;
+z-index:1000;
 }
 
+.sidebar.active{
+right:0;
+}
 
 .sidebar a{
-
-    display:block;
-    color:white;
-    text-decoration:none;
-    padding:20px 0;
-    border-bottom:1px solid #333;
-
+display:block;
+padding:18px 25px;
+border-bottom:1px solid #222;
+transition:.3s;
 }
 
-
-/* HERO */
-
-.hero{
-
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:20px;
-
-    background:
-    radial-gradient(circle,#333,#050505 60%);
-
+.sidebar a:hover{
+background:#1c1c1c;
 }
 
+/* ================= HERO ================= */
 
 .hero h1{
-
-    font-size:70px;
-    letter-spacing:10px;
-
+font-size:68px;
+letter-spacing:10px;
 }
-
 
 .hero h3{
-
-    color:#aaa;
-    margin:20px;
-
+margin-top:15px;
+color:#ddd;
+font-weight:400;
 }
-
 
 .hero p{
-
-    color:#bbb;
-
+margin-top:20px;
+max-width:650px;
+color:#888;
+line-height:2;
 }
 
-
-.hero-buttons{
-
-    margin-top:40px;
-
 }
-
 
 .btn,
 .btn-outline{
-
-    padding:15px 35px;
-    border-radius:40px;
-    text-decoration:none;
-    margin:10px;
-    display:inline-block;
-
+padding:14px 35px;
+border-radius:10px;
+font-weight:bold;
+transition:.3s;
 }
-
 
 .btn{
-
-    background:white;
-    color:black;
-
+background:#fff;
+color:#000;
 }
-
 
 .btn-outline{
-
-    border:1px solid white;
-    color:white;
-
+border:1px solid #444;
 }
 
+.btn:hover,
+.btn-outline:hover{
+transform:translateY(-3px);
+}
 
-
-/* ABOUT */
+/* ================= ABOUT ================= */
 
 .about{
-
-    padding:60px 20px;
-
+padding:80px 20px;
+display:flex;
+justify-content:center;
 }
-
 
 .about-box{
-
-    max-width:700px;
-    margin:auto;
-    background:rgba(255,255,255,.05);
-    padding:40px;
-    border-radius:30px;
-    backdrop-filter:blur(20px);
+width:100%;
+max-width:900px;
+background:#141414;
+border:1px solid #222;
+border-radius:18px;
+padding:45px;
 }
-
 
 .title-small{
-
-    color:#aaa;
-    letter-spacing:4px;
-
+color:#888;
+letter-spacing:3px;
+font-size:13px;
 }
 
+.about-box h2{
+margin-top:12px;
+font-size:38px;
+}
 
-/* MUSIC */
+.about-box p{
+margin-top:20px;
+color:#aaa;
+line-height:2;
+}
+
+/* ================= MUSIC ================= */
 
 .latest{
-
-    padding:40px 20px;
-
+max-width:1200px;
+margin:auto;
+padding:70px 20px;
 }
-
 
 .section-title{
-
-    margin-bottom:30px;
-
+text-align:center;
+font-size:34px;
+margin-bottom:40px;
 }
-
-
 
 .release-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
 
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
+/* ================= CONTACT ================= */
+
+.contact{
+padding:80px 20px;
+display:flex;
+justify-content:center;
+}
+
+.contact-box{
+width:100%;
+max-width:900px;
+background:#141414;
+border:1px solid #222;
+border-radius:18px;
+padding:45px;
+text-align:center;
+}
+
+.contact-box h2{
+font-size:34px;
+margin-bottom:20px;
+}
+
+.contact-box p{
+color:#aaa;
+line-height:2;
+margin-bottom:30px;
+}
+
+.social-links{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.social-links a{
+background:#1c1c1c;
+border:1px solid #333;
+padding:14px 25px;
+border-radius:10px;
+transition:.3s;
+}
+
+.social-links a:hover{
+background:#fff;
+color:#000;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+margin-top:70px;
+padding:35px 20px;
+border-top:1px solid #222;
+text-align:center;
+}
+
+.footer-links{
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+margin-bottom:20px;
+}
+
+.footer-links a{
+color:#999;
+transition:.3s;
+}
+
+.footer-links a:hover{
+color:#fff;
+}
+
+.copyright{
+color:#666;
+font-size:14px;
+}
+
+/* ================= PLAYER ================= */
+
+.player{
+position:fixed;
+left:0;
+bottom:0;
+width:100%;
+height:80px;
+background:#111;
+border-top:1px solid #222;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:0 20px;
+z-index:999;
+}
+
+.player-left{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.player-left img{
+width:55px;
+height:55px;
+border-radius:8px;
+object-fit:cover;
+}
+
+.player-text h4{
+font-size:16px;
+margin-bottom:4px;
+}
+
+.player-text p{
+font-size:13px;
+color:#888;
+}
+
+.player-center{
+display:flex;
+gap:12px;
+}
+
+.player-center button{
+width:46px;
+height:46px;
+border:none;
+border-radius:50%;
+background:#fff;
+color:#000;
+font-size:18px;
+cursor:pointer;
+transition:.3s;
+}
+
+.player-center button:hover{
+transform:scale(1.08);
+}
+
+.latest-slider{
+
+margin:40px 20px;
 
 }
 
+.latest-slider h3{
 
+font-size:22px;  
 
-.music-card{
+margin-bottom:18px;  
 
-    background:rgba(255,255,255,.07);
-    border-radius:25px;
-    padding:20px;
-    backdrop-filter:blur(20px);
-    transition:.3s;
+font-weight:700;
 
 }
 
+.slider{
+
+display:flex;  
+
+gap:14px;  
+
+overflow-x:auto;  
+
+scroll-behavior:smooth;  
+
+padding-bottom:10px;
+
+}
+
+.slider::-webkit-scrollbar{
+
+display:none;
+
+}
+
+.slider img{
+
+width:95px;  
+
+height:95px;  
+
+border-radius:18px;  
+
+object-fit:cover;  
+
+flex:none;  
+
+cursor:pointer;  
+
+transition:.3s;
+
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+.logo{
+font-size:22px;
+letter-spacing:4px;
+}
+
+.hero h1{
+font-size:42px;
+letter-spacing:4px;
+}
+
+.hero h3{
+font-size:20px;
+}
+
+.hero p{
+font-size:15px;
+}
+
+.hero-buttons{
+flex-direction:column;
+width:100%;
+}
+
+.btn,
+.btn-outline{
+width:100%;
+text-align:center;
+}
+
+.about-box,
+.contact-box{
+padding:30px;
+}
+
+.release-grid{
+grid-template-columns:1fr;
+}
+
+.player{
+height:75px;
+padding:0 10px;
+}
+
+.player-left img{
+width:45px;
+height:45px;
+}
+
+.player-text h4{
+font-size:14px;
+}
+
+.player-text p{
+font-size:12px;
+}
+
+.player-center button{
+width:40px;
+height:40px;
+font-size:16px;
+}
+
+}
+
+/* ===========================
+ACTIVE MUSIC EFFECT
+=========================== */
 
 .music-card.playing{
 
-    border:1px solid white;
-    transform:scale(1.03);
+border:1px solid rgba(255,255,255,.4);  
+
+box-shadow:  
+0 0 40px rgba(255,255,255,.15);
 
 }
 
+/* ===========================
+RAPHORN PREMIUM GLASS MUSIC CARD
+=========================== */
+
+.music-card{
+
+position:relative;  
+
+width:100%;  
+max-width:420px;  
+
+margin:auto;  
+
+background:  
+linear-gradient(  
+    145deg,  
+    rgba(255,255,255,.12),  
+    rgba(255,255,255,.03)  
+);  
+
+backdrop-filter:blur(25px);  
+-webkit-backdrop-filter:blur(25px);  
 
 
-.music-cover img{
+border-radius:30px;  
 
-    width:100%;
-    border-radius:20px;
-
-}
+overflow:hidden;  
 
 
-.music-info{
-
-    margin-top:15px;
-
-}
+border:1px solid rgba(255,255,255,.18);  
 
 
-.music-info p{
+box-shadow:  
 
-    color:#aaa;
-
-}
-
-
-
-.music-controls button{
-
-    background:white;
-    color:black;
-    border:none;
-    padding:10px 15px;
-    border-radius:20px;
-    margin:5px;
-    cursor:pointer;
-
-}
+0 0 25px rgba(255,255,255,.08),  
+0 0 80px rgba(255,255,255,.05),  
+0 30px 90px rgba(0,0,0,.85);  
 
 
-
-/* ================= PLAYER DESIGN ================= */
-
-
-.player{
-
-position:relative;
-
-width:95%;
-max-width:430px;
-
-margin:40px auto;
-
-transform:none;
-
-background:
-linear-gradient(
-145deg,
-rgba(255,255,255,.12),
-rgba(255,255,255,.03)
-);
-
-border:1px solid rgba(255,255,255,.15);
-
-backdrop-filter:blur(25px);
-
-border-radius:35px;
-
-padding:25px;
-
-z-index:300;
-
-box-shadow:
-0 20px 60px rgba(0,0,0,.7);
+transition:.5s ease;
 
 }
-
-
 
 /* COVER */
 
+.music-cover{
 
-.player-cover-box{
+width:100%;  
 
-display:flex;
-justify-content:center;
-}
+aspect-ratio:1/1;  
 
+overflow:hidden;  
 
-.player-cover-box img{
-
-width:280px;
-height:280px;
-
-object-fit:cover;
-
-border-radius:25px;
-
-
-box-shadow:
-0 0 40px rgba(255,255,255,.25);
-
+position:relative;
 
 }
 
+.music-cover img{
 
+width:100%;  
 
-/* TEXT */
+height:100%;  
 
+object-fit:cover;  
 
-.player-info{
+display:block;  
 
-text-align:center;
-margin-top:20px;
-
-}
-
-
-.player-info h3{
-
-font-size:22px;
+transition:.6s ease;
 
 }
 
+/* INFO */
 
-.player-info p{
+.music-info{
 
-color:#aaa;
-margin-top:8px;
+padding:25px;
 
 }
 
+.music-info h3{
 
+font-size:24px;  
 
+margin-bottom:8px;
+
+}
+
+.music-info p{
+
+color:#aaa;  
+
+font-size:15px;
+
+}
 
 /* PROGRESS */
 
+.music-progress{
 
-.progress-area{
+padding:0 25px 20px;  
 
-margin-top:25px;
+display:flex;  
 
-display:flex;
-align-items:center;
-gap:10px;
+align-items:center;  
+
+gap:12px;
+
+}
+
+.current-time,
+.duration{
+
+color:#aaa;  
 
 font-size:13px;
-color:#aaa;
 
 }
 
-
-#main-progress{
-
-width:100%;
-
+.seek-bar{
+flex:1;
+height:5px;
 appearance:none;
-
-height:4px;
-
-background:#555;
-
+background:#333;
 border-radius:20px;
-
 cursor:pointer;
-
+direction:ltr;
 }
 
+.seek-bar::-webkit-slider-thumb{
 
+appearance:none;  
 
-#main-progress::-webkit-slider-thumb{
+width:17px;  
 
-appearance:none;
+height:17px;  
 
-width:14px;
-height:14px;
+border-radius:50%;  
 
 background:white;
 
-border-radius:50%;
-
 }
-
-
-
 
 /* BUTTONS */
 
+.music-controls{
 
-.player-buttons{
+padding:0 25px 25px;  
 
-display:flex;
+display:flex;  
 
-justify-content:center;
-
-align-items:center;
-
-gap:35px;
-
-margin-top:30px;
+gap:12px;
 
 }
 
+.music-controls button{
+
+flex:1;  
+
+height:50px;  
 
 
-.player-buttons button{
+border-radius:16px;  
 
 
-background:none;
+background:  
 
-border:none;
-
-color:white;
-
-font-size:28px;
-
-cursor:pointer;
+rgba(255,255,255,.08);  
 
 
-}
+border:  
+
+1px solid rgba(255,255,255,.15);  
 
 
-
-.main-play{
-
-width:75px;
-height:75px;
-
-border-radius:50%!important;
+color:white;  
 
 
-background:white!important;
-
-color:black!important;
-
-font-size:35px!important;
+font-weight:600;  
 
 
-box-shadow:
+cursor:pointer;  
 
-0 0 30px rgba(255,255,255,.4);
 
+transition:.3s;
 
 }
 
+.music-controls button:first-child{
 
+background:rgba(255,255,255,.08);  
 
-
-
-/* ACTION BUTTONS */
-
-
-.player-actions{
-
-
-display:flex;
-
-margin-top:25px;
-
+color:white;  
 
 border:1px solid rgba(255,255,255,.15);
 
-border-radius:25px;
+}
 
-overflow:hidden;
+.music-controls button:hover{
 
+transform:translateY(-4px);  
+
+background:white;  
+
+color:black;
 
 }
 
+/* EQUALIZER */
 
+/* ===========================
+CARD AMBIENT GLOW
+=========================== */
 
-.player-actions button{
+.music-card::after{
 
+content:"";  
 
-flex:1;
+position:absolute;  
 
-background:none;
+inset:-40px;  
 
-border:none;
+background:  
+radial-gradient(  
+    circle,  
+    rgba(255,255,255,.18),  
+    transparent 65%  
+);  
 
-color:white;
+filter:blur(45px);  
 
-padding:18px;
+opacity:.35;  
 
-font-size:14px;
+z-index:-1;  
 
-cursor:pointer;
-
-
-}
-
-
-
-.player-actions button:first-child{
-
-border-left:1px solid rgba(255,255,255,.15);
-
-}
-
-
-
-/* MOBILE */
-
-
-@media(max-width:500px){
-
-.player-cover-box img{
-
-width:230px;
-height:230px;
+transition:.5s;
 
 }
 
+/* ===========================
+RAPHORN LATEST RELEASES
+=========================== */
 
-.player{
+.latest-slider{
 
-bottom:10px;
+margin:60px 20px;
 
 }
+
+.latest-slider h3{
+
+font-size:24px;  
+
+margin-bottom:25px;  
+
+text-align:right;  
+
+letter-spacing:1px;
+
+}
+
+/* horizontal music rail */
+
+.slider{
+
+display:flex;  
+
+gap:18px;  
+
+overflow-x:auto;  
+
+direction:ltr;  
+
+padding:10px 5px 20px;  
+
+scroll-behavior:smooth;
+
+}
+
+.slider::-webkit-scrollbar{
+
+display:none;
+
+}
+
+/* hover / touch effect */
+
+/* mobile */
+
+@media(max-width:768px){
+
+.latest-slider{
+
+margin:40px 15px;
+
+}
+
+}
+
+/* نور خیلی ظریف داخل کانتینر */
+
+.hero::before{
+
+content:"";  
+
+position:absolute;  
+
+width:400px;  
+height:400px;  
+
+background:  
+radial-gradient(  
+    circle,  
+    rgba(255,255,255,.12),  
+    transparent 70%  
+);  
+
+top:-150px;  
+left:-100px;  
+
+filter:blur(50px);  
+
+opacity:.5;
+
+}
+
+/* متن بالای نور قرار بگیرد */
+
+.hero h1,
+.hero h3,
+.hero p,
+.hero-buttons{
+
+position:relative;  
+z-index:2;
+
+}
+/* ===========================
+PREMIUM RELEASE SECTION
+=========================== */
+
+.latest-container{
+
+width:90%;  
+max-width:1200px;  
+
+margin:50px auto;  
+
+padding:35px;  
+
+background:  
+rgba(255,255,255,.03);  
+
+border:1px solid rgba(255,255,255,.1);  
+
+border-radius:35px;
+
+}
+
+.latest-header h3{
+
+font-size:28px;  
+
+margin-bottom:8px;
+
+}
+
+.latest-header p{
+
+color:#888;  
+
+font-size:14px;  
+
+margin-bottom:30px;
+
+}
+
+.release-slider{
+
+display:flex;  
+
+gap:25px;  
+
+overflow-x:auto;
+
+}
+
+.release-slider::-webkit-scrollbar{
+
+display:none;
+
+}
+
+.release-item{
+
+min-width:150px;
+
+}
+
+.release-item h4{
+
+margin-top:12px;  
+
+font-size:16px;
+
+}
+
+.release-item span{
+
+color:#888;  
+
+font-size:13px;
+
+}
+
+/* نور مخفی داخل شیشه */
+
+.hero::before{
+
+content:"";  
+
+position:absolute;  
+
+width:500px;  
+height:500px;  
+
+
+background:  
+
+radial-gradient(  
+    circle,  
+    rgba(255,255,255,.12),  
+    transparent 70%  
+);  
+
+
+top:-250px;  
+right:-150px;  
+
+
+filter:blur(60px);
+
+}
+
+/* محتوا روی شیشه */
+
+.hero{
+
+width:90%;  
+max-width:1200px;  
+
+margin:40px auto;  
+
+min-height:600px;  
+
+border-radius:45px;  
+
+background:  
+linear-gradient(  
+    135deg,  
+    rgba(255,255,255,.10),  
+    rgba(255,255,255,.02)  
+);  
+
+border:1px solid rgba(255,255,255,.18);  
+
+backdrop-filter:blur(35px);  
+-webkit-backdrop-filter:blur(35px);  
+
+box-shadow:  
+inset 0 1px 20px rgba(255,255,255,.08),  
+0 40px 120px rgba(0,0,0,.9);  
+
+overflow:hidden;  
+
+position:relative;  
+
+display:flex;  
+justify-content:center;  
+align-items:center;  
+text-align:center;  
+padding:40px;
+
+}
+
+/* FIX LATEST RELEASE COVERS */
+
+.latest-slider .slider img{
+
+width:110px;  
+height:110px;  
+
+object-fit:cover;  
+
+flex:0 0 auto;  
+
+border-radius:20px;  
+
+border:1px solid rgba(255,255,255,.15);
 
 }
