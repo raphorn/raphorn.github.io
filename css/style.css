@@ -851,12 +851,6 @@ footer{
    PLAYING AUDIO PULSE
 =========================== */
 
-.music-card.playing{
-
-    animation:
-    cardPulse 2s infinite ease-in-out;
-
-}
 
 
 
