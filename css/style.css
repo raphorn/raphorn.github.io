@@ -90,32 +90,215 @@ color:#000;
 
 /* ================= SIDEBAR ================= */
 
+/* ================= PREMIUM GLASS SIDEBAR ================= */
+
+
 .sidebar{
+
 position:fixed;
-top:0;
-right:-280px;
-width:260px;
-height:100%;
-background:#111;
-border-left:1px solid #222;
-padding-top:90px;
-transition:.35s;
+
+top:20px;
+right:-340px;
+
+width:320px;
+height:calc(100% - 40px);
+
+
+background:
+
+linear-gradient(
+135deg,
+rgba(255,255,255,.13),
+rgba(255,255,255,.03)
+);
+
+
+backdrop-filter:blur(45px);
+-webkit-backdrop-filter:blur(45px);
+
+
+border:
+
+1px solid rgba(255,255,255,.18);
+
+
+border-radius:45px 0 0 45px;
+
+
+padding:45px 30px;
+
+
+transition:.4s;
+
+
 z-index:1000;
+
+
+box-shadow:
+
+-30px 0 100px rgba(0,0,0,.8),
+
+inset 0 0 50px rgba(255,255,255,.05);
+
+overflow:hidden;
+
 }
+
+
 
 .sidebar.active{
-right:0;
+
+right:20px;
+
 }
 
-.sidebar a{
+
+
+/* لوگو */
+
+.side-logo{
+
+font-size:30px;
+
+font-weight:700;
+
+letter-spacing:6px;
+
+margin-bottom:8px;
+
+}
+
+
+
+.side-logo span{
+
 display:block;
-padding:18px 25px;
-border-bottom:1px solid #222;
-transition:.3s;
+
+font-size:12px;
+
+letter-spacing:3px;
+
+color:#888;
+
+margin-top:10px;
+
 }
 
-.sidebar a:hover{
-background:#1c1c1c;
+
+
+/* منو */
+
+.side-menu{
+
+margin-top:45px;
+
+}
+
+
+
+.side-menu a{
+
+position:relative;
+
+display:flex;
+
+align-items:center;
+
+gap:18px;
+
+
+padding:20px 5px;
+
+
+color:#ddd;
+
+
+font-size:16px;
+
+
+}
+
+
+
+.side-menu a span{
+
+font-size:22px;
+
+color:#fff;
+
+}
+
+
+
+/* خط نارنجی محو */
+
+.side-menu a:not(:last-child)::after{
+
+content:"";
+
+
+position:absolute;
+
+
+bottom:0;
+
+left:50%;
+
+
+transform:translateX(-50%);
+
+
+width:130px;
+
+
+height:1px;
+
+
+background:
+
+linear-gradient(
+90deg,
+transparent,
+#d47a3a,
+transparent
+);
+
+
+opacity:.5;
+
+}
+
+
+
+/* شبکه اجتماعی */
+
+
+.side-social{
+
+position:absolute;
+
+bottom:45px;
+
+display:flex;
+
+gap:25px;
+
+}
+
+
+.side-social a{
+
+color:#aaa;
+
+font-size:14px;
+
+}
+
+
+.side-social a:hover{
+
+color:white;
+
 }
 
 /* ================= HERO ================= */
