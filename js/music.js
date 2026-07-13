@@ -230,6 +230,7 @@ rgba(220,120,50,.18) ${percent}%,
 rgba(220,120,50,.18) 100%
 )`;
 
+    
 console.log("MUSIC JS OK");
 
 showSongs();
