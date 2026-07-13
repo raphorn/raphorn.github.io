@@ -219,7 +219,7 @@ let percent =
 document.querySelectorAll(".seek-bar")[currentSong].value = percent;
 
 document.querySelectorAll(".seek-bar")[currentSong].style.background =
-linear-gradient(   90deg,   white ${percent}%,   #333 ${percent}%   );
+`linear-gradient(90deg, white ${percent}%, #333 ${percent}%)`;
 
 });
 
