@@ -1,10 +1,11 @@
 console.log("music.js loaded");
+
 const songs = [
 
 {
 title: "ریمیکس شوم از راشد",
 artist: "RAASHED",
-file: "music/music/beat_2.mp3 (Remix).mp3",
+file: "music/music/beat_2.mp3",
 cover: "images/file_000000008164722faab306d6308856f4.png"
 },
 
@@ -17,337 +18,140 @@ cover: "images/cover2.png"
 
 ];
 
-
 const list = document.getElementById("music-list");
-
 const audio = document.getElementById("audio");
 
-
 const playerTitle = document.getElementById("player-title");
-
 const playerArtist = document.getElementById("player-artist");
-
 const playerCover = document.getElementById("player-cover");
 
+const playBtn = document.getElementById("play-btn");
+const nextBtn = document.getElementById("next-btn");
+const prevBtn = document.getElementById("prev-btn");
+
+const mainProgress = document.getElementById("main-progress");
+const currentTimeText = document.getElementById("current-time");
+const totalTimeText = document.getElementById("total-time");
 
 let currentSong = 0;
 
-
-
 function showSongs(){
 
-list.innerHTML = "";
-
+list.innerHTML="";
 
 songs.forEach((song,index)=>{
 
+list.innerHTML+=`
 
-list.innerHTML += `
-
-
-<div class="music-card" id="song-${index}">
-
+<div class="music-card">
 
 <div class="music-cover">
-
 <img src="${song.cover}" alt="${song.title}">
-
 </div>
-
-
 
 <div class="music-info">
-
 <h3>${song.title}</h3>
-
 <p>${song.artist}</p>
-
 </div>
-
-
 
 <div class="music-progress">
 
-
-<span class="current-time">
-0:00
-</span>
-
+<span class="current-time">0:00</span>
 
 <input
 type="range"
+class="seek-bar"
 min="0"
 max="100"
 value="0"
-class="seek-bar"
-id="seek-${index}"
->
+id="seek-${index}">
 
-
-<span class="duration">
-0:00
-</span>
-
+<span class="duration">0:00</span>
 
 </div>
-
-
-
-
-
 
 <div class="music-controls">
 
-
 <button class="card-play" onclick="togglePlay(${index})">
-
 Play
-
 </button>
-
-
 
 <button onclick="downloadSong(${index})">
-
 Download
-
 </button>
-
-
 
 <button onclick="shareSong(${index})">
-
 Share
-
 </button>
 
-
-
 </div>
 
-
-
-
-
-
-
-
 </div>
-
-
 
 `;
 
-
 });
 
+bindSeekBars();
 
 }
 
-
-
-
 function playSong(index){
 
-currentSong = index;
+currentSong=index;
 
-    document.querySelectorAll(".music-card").forEach(card=>{
-    card.classList.remove("playing");
+document.querySelectorAll(".music-card").forEach(card=>{
+card.classList.remove("playing");
 });
 
 document.querySelectorAll(".music-card")[index].classList.add("playing");
 
-audio.src = songs[index].file;
+audio.src=songs[index].file;
+
+playerTitle.innerText=songs[index].title;
+playerArtist.innerText=songs[index].artist;
+playerCover.src=songs[index].cover;
 
 audio.load();
 
-
-
-
-    
 audio.play();
 
+document.querySelectorAll(".card-play").forEach(btn=>{
+btn.innerText="Play";
+});
 
-playerTitle.innerText = songs[index].title;
-playerArtist.innerText = songs[index].artist;
-playerCover.src = songs[index].cover;
+document.querySelectorAll(".card-play")[index].innerText="Pause";
 
+playBtn.innerText="⏸";
 
 }
 
 function togglePlay(index){
 
-    let buttons = document.querySelectorAll(".card-play");
+if(currentSong!==index){
 
-    if(currentSong === index){
+playSong(index);
 
-        if(audio.paused){
-
-            audio.play();
-
-            buttons[index].innerText = "Pause";
-
-            document.querySelectorAll(".music-card")[index].classList.add("playing");
-
-        }else{
-
-            audio.pause();
-
-            buttons[index].innerText = "Play";
-
-            document.querySelectorAll(".music-card")[index].classList.remove("playing");
-
-        }
-
-    }else{
-
-        buttons.forEach(btn=>{
-            btn.innerText = "Play";
-        });
-
-        playSong(index);
-
-        buttons[index].innerText = "Pause";
-
-    }
+return;
 
 }
 
+if(audio.paused){
 
-function downloadSong(index){
+audio.play();
 
+playBtn.innerText="⏸";
 
-const link = document.createElement("a");
-
-
-link.href = songs[index].file;
-
-
-link.download = songs[index].title;
-
-
-link.click();
-
-
-}
-
-
-
-
-function shareSong(index){
-
-
-if(navigator.share){
-
-
-navigator.share({
-
-title:songs[index].title,
-
-url:window.location.href
-
-});
-
+document.querySelectorAll(".card-play")[index].innerText="Pause";
 
 }else{
 
+audio.pause();
 
-alert("لینک صفحه را کپی کنید");
+playBtn.innerText="▶";
 
-
-}
-
-
-}
-
-
-
-
-audio.addEventListener("ended",()=>{
-
-
-currentSong++;
-
-
-if(currentSong >= songs.length){
-
-currentSong = 0;
+document.querySelectorAll(".card-play")[index].innerText="Play";
 
 }
 
-
-playSong(currentSong);
-
-
-});
-audio.addEventListener("loadedmetadata",()=>{
-
-let duration = audio.duration;
-
-let minutes = Math.floor(duration / 60);
-
-let seconds = Math.floor(duration % 60);
-
-
-document.querySelectorAll(".duration")[currentSong].innerText =
-minutes + ":" +
-(seconds < 10 ? "0" + seconds : seconds);
-
-
-});
-
-
-audio.addEventListener("timeupdate",()=>{
-
-
-let current = audio.currentTime;
-
-let minutes = Math.floor(current / 60);
-
-let seconds = Math.floor(current % 60);
-
-
-document.querySelectorAll(".current-time")[currentSong].innerText =
-minutes + ":" +
-(seconds < 10 ? "0" + seconds : seconds);
-
-
-let percent =
-(audio.currentTime / audio.duration) * 100 || 0;
-
-
-document.querySelectorAll(".seek-bar")[currentSong].value = percent;
-
-
-document.querySelectorAll(".seek-bar")[currentSong].style.background =
-`linear-gradient(
-90deg,
-white ${percent}%,
-#333 ${percent}%
-)`;
-
-});
-
-
-
-
-
-console.log("MUSIC JS OK");
-
-showSongs();
-
-
-document.querySelectorAll(".seek-bar").forEach((bar)=>{
-
-    bar.addEventListener("input",()=>{
-
-        if(audio.duration){
-
-            audio.currentTime =
-            (bar.value / 100) * audio.duration;
-
-        }
-
-    });
-
-});
+}
