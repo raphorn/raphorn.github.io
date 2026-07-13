@@ -368,8 +368,19 @@ minutes + ":" +
 
 document.querySelectorAll(".seek-bar").forEach(el=>{
 
-el.value =
+let percent =
 (audio.currentTime / audio.duration) * 100 || 0;
+
+el.value = percent;
+
+el.style.background =
+`linear-gradient(
+to right,
+white 0%,
+white ${percent}%,
+#333 ${percent}%,
+#333 100%
+)`;
 
 });
 
