@@ -1,3 +1,5 @@
+ببین درست گذاشتم
+
 /* ===========================
 RAPHORN STYLE.CSS
 PART 1
@@ -19,19 +21,19 @@ radial-gradient(circle at top left,
 rgba(255,255,255,.04),
 transparent 35%),
 
-radial-gradient(circle at bottom right,  
-rgba(255,255,255,.025),  
-transparent 45%),  
+radial-gradient(circle at bottom right,
+rgba(255,255,255,.025),
+transparent 45%),
 
-linear-gradient(  
-180deg,  
-#111111 0%,  
-#0b0b0b 35%,  
-#060606 100%);  
+linear-gradient(
+180deg,
+#111111 0%,
+#0b0b0b 35%,
+#060606 100%);
 
-color:#fff;  
-font-family:'Montserrat',sans-serif;  
-overflow-x:hidden;  
+color:#fff;
+font-family:'Montserrat',sans-serif;
+overflow-x:hidden;
 padding-bottom:90px;
 
 }
@@ -180,8 +182,6 @@ max-width:650px;
 color:#888;
 line-height:2;
 }
-
-
 
 .btn,
 .btn-outline{
@@ -400,18 +400,15 @@ transition:.3s;
 transform:scale(1.08);
 }
 
-
 .latest-slider h3{
 
-font-size:22px;  
+font-size:22px;
 
-margin-bottom:18px;  
+margin-bottom:18px;
 
 font-weight:700;
 
 }
-
-
 
 .slider::-webkit-scrollbar{
 
@@ -421,17 +418,17 @@ display:none;
 
 .slider img{
 
-width:95px;  
+width:95px;
 
-height:95px;  
+height:95px;
 
-border-radius:18px;  
+border-radius:18px;
 
-object-fit:cover;  
+object-fit:cover;
 
-flex:none;  
+flex:none;
 
-cursor:pointer;  
+cursor:pointer;
 
 transition:.3s;
 
@@ -460,9 +457,9 @@ font-size:15px;
 }
 
 .hero-buttons{
-    flex-direction:column;
-    width:100%;
-    gap:15px;
+flex-direction:column;
+width:100%;
+gap:15px;
 }
 
 .btn,
@@ -508,18 +505,17 @@ font-size:16px;
 
 .music-cover{
 
-    width:calc(100% - 24px);
+width:calc(100% - 24px);  
 
-    margin-top:12px;
+margin-top:12px;  
 
-    border-radius:22px;
+border-radius:22px;
 
 }
 
-
 .music-cover img{
 
-    border-radius:22px;
+border-radius:22px;
 
 }
 
@@ -529,9 +525,9 @@ ACTIVE MUSIC EFFECT
 
 .music-card.playing{
 
-border:1px solid rgba(255,255,255,.4);  
+border:1px solid rgba(255,255,255,.4);
 
-box-shadow:  
+box-shadow:
 0 0 40px rgba(255,255,255,.15);
 
 }
@@ -542,116 +538,118 @@ RAPHORN PREMIUM GLASS MUSIC CARD
 
 .music-card{
 
-    position:relative;
+position:relative;  
 
-    width:100%;
-    max-width:420px;
+width:100%;  
+max-width:420px;  
 
-    margin:auto;
+margin:auto;  
 
-    padding-bottom:5px;
+padding-bottom:5px;  
 
-    background:
-    linear-gradient(
-        145deg,
-        rgba(255,255,255,.16),
-        rgba(255,255,255,.04) 40%,
-        rgba(255,255,255,.02)
-    );
+background:  
+linear-gradient(  
+    145deg,  
+    rgba(255,255,255,.16),  
+    rgba(255,255,255,.04) 40%,  
+    rgba(255,255,255,.02)  
+);  
 
-    backdrop-filter:blur(35px);
-    -webkit-backdrop-filter:blur(35px);
+backdrop-filter:blur(35px);  
+-webkit-backdrop-filter:blur(35px);  
 
-    border-radius:32px;
+border-radius:32px;  
 
-    border:1px solid rgba(255,255,255,.18);
-
-
-    box-shadow:
-
-    inset 0 1px 20px rgba(255,255,255,.12),
-
-    inset 0 -20px 40px rgba(0,0,0,.4),
-
-    0 30px 100px rgba(0,0,0,.8);
+border:1px solid rgba(255,255,255,.18);  
 
 
-    overflow:hidden;
+box-shadow:  
 
-    transition:.5s ease;
+inset 0 1px 20px rgba(255,255,255,.12),  
+
+inset 0 -20px 40px rgba(0,0,0,.4),  
+
+0 30px 100px rgba(0,0,0,.8);  
+
+
+overflow:hidden;  
+
+transition:.5s ease;
 
 }
 
 .music-card.playing{
 
-    transform:translateY(-4px);
+transform:translateY(-8px) scale(1.02);  
 
-    box-shadow:
-    0 0 50px rgba(255,255,255,.12),
-    0 40px 100px rgba(0,0,0,.9);
+
+box-shadow:  
+
+0 0 60px rgba(255,255,255,.18),  
+
+0 40px 120px rgba(0,0,0,.9);
 
 }
 
 .music-card::before{
 
-    content:"";
+content:"";  
 
-    position:absolute;
+position:absolute;  
 
-    width:250px;
-    height:250px;
-
-
-    top:-80px;
-    right:-80px;
+width:250px;  
+height:250px;  
 
 
-    background:
-
-    radial-gradient(
-        circle,
-        rgba(255,255,255,.35),
-        transparent 70%
-    );
+top:-80px;  
+right:-80px;  
 
 
-    filter:blur(50px);
+background:  
 
-    opacity:.45;
+radial-gradient(  
+    circle,  
+    rgba(255,255,255,.35),  
+    transparent 70%  
+);  
 
-    pointer-events:none;
+
+filter:blur(50px);  
+
+opacity:.45;  
+
+pointer-events:none;
 
 }
 
-
 .music-card::after{
 
-    content:"";
+content:"";  
 
-    position:absolute;
+position:absolute;  
 
-    width:220px;
-    height:220px;
-
-
-    bottom:-80px;
-    left:-80px;
+width:220px;  
+height:220px;  
 
 
-    background:
-
-    radial-gradient(
-        circle,
-        rgba(255,255,255,.18),
-        transparent 70%
-    );
+bottom:-80px;  
+left:-80px;  
 
 
-    filter:blur(60px);
+background:  
 
-    opacity:.35;
+radial-gradient(  
+    circle,  
+    rgba(255,255,255,.18),  
+    transparent 70%  
+);  
 
-    pointer-events:none;
+
+filter:blur(60px);  
+
+opacity:.35;  
+
+pointer-events:none;
 
 }
 
@@ -659,40 +657,38 @@ RAPHORN PREMIUM GLASS MUSIC CARD
 
 .music-cover{
 
-    width:calc(100% - 36px);
+width:calc(100% - 36px);  
 
-    aspect-ratio:1;
+aspect-ratio:1;  
 
-    margin:18px auto;
+margin:18px auto;  
 
-    border-radius:26px;
+border-radius:26px;  
 
-    overflow:hidden;
+overflow:hidden;  
 
 
-    box-shadow:
+box-shadow:  
 
-    0 20px 50px rgba(0,0,0,.6),
+0 20px 50px rgba(0,0,0,.6),  
 
-    0 0 40px rgba(255,255,255,.08);
+0 0 40px rgba(255,255,255,.08);
 
 }
 
-
-
 .music-cover img{
 
-    width:100%;
+width:100%;  
 
-    height:100%;
+height:100%;  
 
-    object-fit:cover;
+object-fit:cover;  
 
-    display:block;
+display:block;  
 
-    border-radius:24px;
+border-radius:24px;  
 
-    transition:.6s ease;
+transition:.6s ease;
 
 }
 
@@ -706,7 +702,7 @@ padding:25px;
 
 .music-info h3{
 
-font-size:24px;  
+font-size:24px;
 
 margin-bottom:8px;
 
@@ -714,7 +710,7 @@ margin-bottom:8px;
 
 .music-info p{
 
-color:#aaa;  
+color:#aaa;
 
 font-size:15px;
 
@@ -724,11 +720,11 @@ font-size:15px;
 
 .music-progress{
 
-padding:0 25px 20px;  
+padding:0 25px 20px;
 
-display:flex;  
+display:flex;
 
-align-items:center;  
+align-items:center;
 
 gap:12px;
 
@@ -737,7 +733,7 @@ gap:12px;
 .current-time,
 .duration{
 
-color:#aaa;  
+color:#aaa;
 
 font-size:13px;
 
@@ -755,13 +751,13 @@ direction:ltr;
 
 .seek-bar::-webkit-slider-thumb{
 
-appearance:none;  
+appearance:none;
 
-width:17px;  
+width:17px;
 
-height:17px;  
+height:17px;
 
-border-radius:50%;  
+border-radius:50%;
 
 background:white;
 
@@ -771,9 +767,9 @@ background:white;
 
 .music-controls{
 
-padding:0 25px 25px;  
+padding:0 25px 25px;
 
-display:flex;  
+display:flex;
 
 gap:12px;
 
@@ -781,32 +777,25 @@ gap:12px;
 
 .music-controls button{
 
-flex:1;  
+flex:1;
 
-height:50px;  
+height:50px;
 
+border-radius:16px;
 
-border-radius:16px;  
+background:
 
+rgba(255,255,255,.08);
 
-background:  
+border:
 
-rgba(255,255,255,.08);  
+1px solid rgba(255,255,255,.15);
 
+color:white;
 
-border:  
+font-weight:600;
 
-1px solid rgba(255,255,255,.15);  
-
-
-color:white;  
-
-
-font-weight:600;  
-
-
-cursor:pointer;  
-
+cursor:pointer;
 
 transition:.3s;
 
@@ -814,9 +803,9 @@ transition:.3s;
 
 .music-controls button:first-child{
 
-background:rgba(255,255,255,.08);  
+background:rgba(255,255,255,.08);
 
-color:white;  
+color:white;
 
 border:1px solid rgba(255,255,255,.15);
 
@@ -824,14 +813,13 @@ border:1px solid rgba(255,255,255,.15);
 
 .music-controls button:hover{
 
-transform:translateY(-4px);  
+transform:translateY(-4px);
 
-background:white;  
+background:white;
 
 color:black;
 
 }
-
 
 /* ===========================
 CARD AMBIENT GLOW
@@ -839,24 +827,24 @@ CARD AMBIENT GLOW
 
 .music-card::after{
 
-content:"";  
+content:"";
 
-position:absolute;  
+position:absolute;
 
-inset:-40px;  
+inset:-40px;
 
-background:  
-radial-gradient(  
-    circle,  
-    rgba(255,255,255,.18),  
-    transparent 65%  
-);  
+background:
+radial-gradient(
+circle,
+rgba(255,255,255,.18),
+transparent 65%
+);
 
-filter:blur(45px);  
+filter:blur(45px);
 
-opacity:.35;  
+opacity:.35;
 
-z-index:-1;  
+z-index:-1;
 
 transition:.5s;
 
@@ -874,11 +862,11 @@ margin:60px 20px;
 
 .latest-slider h3{
 
-font-size:24px;  
+font-size:24px;
 
-margin-bottom:25px;  
+margin-bottom:25px;
 
-text-align:right;  
+text-align:right;
 
 letter-spacing:1px;
 
@@ -888,15 +876,15 @@ letter-spacing:1px;
 
 .slider{
 
-display:flex;  
+display:flex;
 
-gap:18px;  
+gap:18px;
 
-overflow-x:auto;  
+overflow-x:auto;
 
-direction:ltr;  
+direction:ltr;
 
-padding:10px 5px 20px;  
+padding:10px 5px 20px;
 
 scroll-behavior:smooth;
 
@@ -922,7 +910,6 @@ margin:40px 15px;
 
 }
 
-
 /* متن بالای نور قرار بگیرد */
 
 .hero h1,
@@ -930,7 +917,7 @@ margin:40px 15px;
 .hero p,
 .hero-buttons{
 
-position:relative;  
+position:relative;
 z-index:2;
 
 }
@@ -940,17 +927,17 @@ PREMIUM RELEASE SECTION
 
 .latest-container{
 
-width:90%;  
-max-width:1200px;  
+width:90%;
+max-width:1200px;
 
-margin:50px auto;  
+margin:50px auto;
 
-padding:35px;  
+padding:35px;
 
-background:  
-rgba(255,255,255,.03);  
+background:
+rgba(255,255,255,.03);
 
-border:1px solid rgba(255,255,255,.1);  
+border:1px solid rgba(255,255,255,.1);
 
 border-radius:35px;
 
@@ -958,7 +945,7 @@ border-radius:35px;
 
 .latest-header h3{
 
-font-size:28px;  
+font-size:28px;
 
 margin-bottom:8px;
 
@@ -966,9 +953,9 @@ margin-bottom:8px;
 
 .latest-header p{
 
-color:#888;  
+color:#888;
 
-font-size:14px;  
+font-size:14px;
 
 margin-bottom:30px;
 
@@ -976,9 +963,9 @@ margin-bottom:30px;
 
 .release-slider{
 
-display:flex;  
+display:flex;
 
-gap:25px;  
+gap:25px;
 
 overflow-x:auto;
 
@@ -998,7 +985,7 @@ min-width:150px;
 
 .release-item h4{
 
-margin-top:12px;  
+margin-top:12px;
 
 font-size:16px;
 
@@ -1006,7 +993,7 @@ font-size:16px;
 
 .release-item span{
 
-color:#888;  
+color:#888;
 
 font-size:13px;
 
@@ -1040,500 +1027,70 @@ z-index:0;
 
 }
 
-
-
 /* FIX LATEST RELEASE COVERS */
 
 .latest-slider .slider img{
 
-width:110px;  
-height:110px;  
+width:110px;
+height:110px;
 
-object-fit:cover;  
+object-fit:cover;
 
-flex:0 0 auto;  
+flex:0 0 auto;
 
-border-radius:20px;  
+border-radius:20px;
 
 border:1px solid rgba(255,255,255,.15);
 
 }
 .release-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:30px;
-    align-items:start;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+align-items:start;
 }
 
 .music-card{
-    display:block;
-    min-height:auto;
+display:block;
+min-height:auto;
 }
 
 .hero-buttons{
-    margin-top:35px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:20px;
-    flex-wrap:wrap;
-    position:relative;
-    z-index:5;
+margin-top:35px;
+display:flex;
+justify-content:center;
+align-items:center;
+gap:20px;
+flex-wrap:wrap;
+position:relative;
+z-index:5;
 }
 
 .btn,
 .btn-outline{
-    display:inline-flex;
-    justify-content:center;
-    align-items:center;
-    min-width:180px;
-    height:55px;
-    padding:0 30px;
-    border-radius:14px;
-    font-weight:700;
-    transition:.3s;
+display:inline-flex;
+justify-content:center;
+align-items:center;
+min-width:180px;
+height:55px;
+padding:0 30px;
+border-radius:14px;
+font-weight:700;
+transition:.3s;
 }
 
 .btn{
-    background:#fff;
-    color:#000;
+background:#fff;
+color:#000;
 }
 
 .btn-outline{
-    background:rgba(255,255,255,.05);
-    border:1px solid rgba(255,255,255,.2);
-    color:#fff;
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.2);
+color:#fff;
 }
 
 .btn:hover,
 .btn-outline:hover{
-    transform:translateY(-4px);
-}
-
-/* APPLE STYLE MUSIC CARD */
-
-.music-card{
-
-background:
-linear-gradient(
-145deg,
-rgba(255,255,255,.18),
-rgba(255,255,255,.04)
-);
-
-border-radius:38px;
-
-border:1px solid rgba(255,255,255,.22);
-
-backdrop-filter:blur(40px);
--webkit-backdrop-filter:blur(40px);
-
-box-shadow:
-
-inset 0 1px 20px rgba(255,255,255,.15),
-
-inset 0 -30px 50px rgba(0,0,0,.5),
-
-0 40px 120px rgba(0,0,0,.85);
-
-padding:18px;
-
-overflow:hidden;
-
-}
-
-
-/* COVER INSIDE FRAME */
-
-.music-cover{
-
-width:100%;
-
-aspect-ratio:1/1;
-
-margin:0 auto 25px;
-
-border-radius:30px;
-
-overflow:hidden;
-
-box-shadow:
-
-0 25px 60px rgba(0,0,0,.7);
-
-}
-
-
-.music-cover img{
-
-width:100%;
-
-height:100%;
-
-object-fit:cover;
-
-border-radius:30px;
-
-}
-
-
-/* TITLE */
-
-.music-info{
-
-text-align:right;
-
-padding:10px 10px 25px;
-
-}
-
-
-.music-info h3{
-
-font-size:28px;
-
-font-weight:800;
-
-}
-
-
-.music-info p{
-
-font-size:16px;
-
-color:#999;
-
-letter-spacing:2px;
-
-}
-
-
-
-/* PROGRESS */
-
-.music-progress{
-
-padding:0 10px 25px;
-
-}
-
-
-.seek-bar{
-
-height:4px;
-
-background:
-
-linear-gradient(
-90deg,
-#fff,
-#777
-);
-
-}
-
-
-
-/* BUTTON AREA */
-
-.music-controls{
-
-padding:15px 10px;
-
-background:
-
-rgba(255,255,255,.04);
-
-border-radius:25px;
-
-border:1px solid rgba(255,255,255,.12);
-
-}
-
-
-.music-controls button{
-
-background:transparent;
-
-border:none;
-
-font-size:14px;
-
-text-transform:uppercase;
-
-letter-spacing:1px;
-
-}
-
-
-
-/* GLASS LIGHT EDGE */
-
-.music-card::before{
-
-content:"";
-
-position:absolute;
-
-inset:0;
-
-border-radius:38px;
-
-background:
-
-linear-gradient(
-120deg,
-rgba(255,255,255,.25),
-transparent 30%
-);
-
-pointer-events:none;
-
-}
-
-/* PREMIUM APPLE MUSIC CARD */
-
-.music-card{
-
-background:
-linear-gradient(
-145deg,
-rgba(255,255,255,.14),
-rgba(255,255,255,.03)
-);
-
-border:1px solid rgba(255,255,255,.15);
-
-border-radius:38px;
-
-padding:18px;
-
-backdrop-filter:blur(40px);
-
--webkit-backdrop-filter:blur(40px);
-
-box-shadow:
-
-inset 0 1px 20px rgba(255,255,255,.12),
-
-0 30px 80px rgba(0,0,0,.8);
-
-}
-
-
-/* COVER FLOAT */
-
-.music-cover{
-
-width:100%;
-
-margin:0 auto 30px;
-
-border-radius:30px;
-
-overflow:hidden;
-
-box-shadow:
-
-0 25px 60px rgba(0,0,0,.7);
-
-}
-
-
-.music-cover img{
-
-border-radius:30px;
-
-}
-
-
-/* INFO CENTER */
-
-.music-info{
-
-padding:0 10px 25px;
-
-text-align:left;
-
-}
-
-
-.music-info h3{
-
-font-size:30px;
-
-font-weight:700;
-
-}
-
-
-.music-info p{
-
-font-size:16px;
-
-letter-spacing:3px;
-
-margin-top:8px;
-
-}
-
-
-/* PROGRESS BAR */
-
-.seek-bar{
-
-height:4px;
-
-background:
-
-linear-gradient(
-90deg,
-#fff,
-#777
-);
-
-}
-
-
-/* CONTROL AREA */
-
-.music-controls{
-
-background:
-
-rgba(255,255,255,.05);
-
-border:
-
-1px solid rgba(255,255,255,.12);
-
-border-radius:25px;
-
-padding:10px;
-
-margin:0 5px 5px;
-
-}
-
-
-.music-controls button{
-
-height:55px;
-
-background:transparent;
-
-border:none;
-
-font-size:15px;
-
-letter-spacing:1px;
-
-}
-
-
-.music-controls button:hover{
-
-background:rgba(255,255,255,.15);
-
-color:white;
-
-}
-
-
-/* PLAYING EFFECT WITHOUT ZOOM */
-
-.music-card.playing{
-
-transform:translateY(-6px);
-
-box-shadow:
-
-0 0 50px rgba(255,255,255,.12),
-
-0 40px 100px rgba(0,0,0,.9);
-
-}
-
-
-/* ==========================
-FINAL APPLE MUSIC CARD FIX
-========================== */
-
-.music-card{
-    padding:20px !important;
-    border-radius:38px !important;
-    background:
-    linear-gradient(
-        145deg,
-        rgba(255,255,255,.12),
-        rgba(255,255,255,.03)
-    ) !important;
-
-    box-shadow:
-    inset 0 1px 25px rgba(255,255,255,.12),
-    0 35px 100px rgba(0,0,0,.9) !important;
-}
-
-
-/* کاور داخل قاب */
-.music-cover{
-
-    width:calc(100% - 20px) !important;
-
-    margin:0 auto 30px !important;
-
-    border-radius:28px !important;
-
-    overflow:hidden;
-
-}
-
-
-.music-cover img{
-
-    border-radius:28px !important;
-
-}
-
-
-/* حذف زوم موقع پلی */
-
-.music-card.playing{
-
-    transform:translateY(-3px) !important;
-
-}
-
-
-/* اطلاعات آهنگ */
-
-.music-info{
-
-    padding:5px 15px 25px !important;
-
-}
-
-
-/* پنل دکمه ها */
-
-.music-controls{
-
-    background:
-    rgba(255,255,255,.06) !important;
-
-    border-radius:25px !important;
-
-    padding:8px !important;
-
-    border:1px solid rgba(255,255,255,.15);
-
-}
-
-
-.music-controls button{
-
-    border-radius:20px !important;
-
-    height:55px !important;
-
+transform:translateY(-4px);
 }
