@@ -617,6 +617,8 @@ footer{
     );
     border-radius:20px;
     cursor:pointer;
+    direction:ltr;
+
 }
 
 
