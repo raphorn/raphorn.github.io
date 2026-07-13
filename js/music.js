@@ -375,7 +375,7 @@ el.value = percent;
 
 el.style.background =
 `linear-gradient(
-to right,
+90deg,
 white ${percent}%,
 #333 ${percent}%
 )`;
