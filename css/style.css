@@ -1,7 +1,10 @@
 /* ===========================
-   RAPHORN STYLE.CSS
-   PART 1
+   RAPHORN PREMIUM STYLE
+   PART 1 / 4
 =========================== */
+
+
+/* RESET */
 
 *{
     margin:0;
@@ -9,546 +12,944 @@
     box-sizing:border-box;
 }
 
+
 html{
     scroll-behavior:smooth;
 }
 
-body{
-    background:
-    radial-gradient(circle at top left,
-    rgba(255,255,255,.04),
-    transparent 35%),
 
-    radial-gradient(circle at bottom right,
-    rgba(255,255,255,.025),
-    transparent 45%),
+body{
+
+    background:
+
+    radial-gradient(
+        circle at top left,
+        rgba(255,255,255,.05),
+        transparent 35%
+    ),
+
+    radial-gradient(
+        circle at bottom right,
+        rgba(255,255,255,.03),
+        transparent 40%
+    ),
 
     linear-gradient(
-    180deg,
-    #111111 0%,
-    #0b0b0b 35%,
-    #060606 100%);
+        180deg,
+        #111,
+        #070707
+    );
+
 
     color:#fff;
+
     font-family:'Montserrat',sans-serif;
+
     overflow-x:hidden;
+
     padding-bottom:90px;
+
 }
+
+
 
 a{
-    color:inherit;
+
     text-decoration:none;
+
+    color:inherit;
+
 }
+
 
 img{
-    display:block;
+
     max-width:100%;
+
+    display:block;
+
 }
 
-/* ================= HEADER ================= */
+
+/* ===========================
+        HEADER
+=========================== */
+
 
 header{
+
     position:sticky;
+
     top:0;
+
     width:100%;
+
     height:80px;
+
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
-    padding:0 20px;
-    background:rgba(11,11,11,.95);
-    backdrop-filter:blur(10px);
-    border-bottom:1px solid #222;
+
+
+    padding:0 25px;
+
+
+    background:
+
+    rgba(10,10,10,.75);
+
+
+    backdrop-filter:blur(20px);
+
+
+    border-bottom:
+
+    1px solid rgba(255,255,255,.08);
+
+
     z-index:999;
+
 }
 
+
+
 .logo{
+
     font-size:28px;
+
     font-weight:700;
-    letter-spacing:6px;
+
+    letter-spacing:7px;
+
 }
+
+
+
+
+.header-actions{
+
+    display:flex;
+
+    gap:12px;
+
+}
+
+
+
 
 .menu-btn,
 .search-btn{
+
+
     width:46px;
+
     height:46px;
-    border:none;
+
+
     border-radius:50%;
-    background:#181818;
-    color:#fff;
-    font-size:20px;
+
+
+    border:1px solid rgba(255,255,255,.15);
+
+
+    background:
+
+    rgba(255,255,255,.06);
+
+
+    color:white;
+
+
     cursor:pointer;
+
+
+    font-size:20px;
+
+
     transition:.3s;
+
 }
+
+
 
 .menu-btn:hover,
 .search-btn:hover{
-    background:#fff;
-    color:#000;
+
+
+    background:white;
+
+    color:black;
+
+
 }
 
-/* ================= SIDEBAR ================= */
+
+
+/* ===========================
+        SIDEBAR
+=========================== */
+
 
 .sidebar{
+
+
     position:fixed;
+
+
     top:0;
-    right:-280px;
-    width:260px;
+
+
+    right:-300px;
+
+
+    width:280px;
+
+
     height:100%;
+
+
     background:#111;
-    border-left:1px solid #222;
+
+
+    border-left:
+
+    1px solid #222;
+
+
     padding-top:90px;
-    transition:.35s;
+
+
+    transition:.4s;
+
+
     z-index:1000;
+
+
 }
+
+
 
 .sidebar.active{
+
     right:0;
+
 }
+
+
 
 .sidebar a{
+
+
     display:block;
-    padding:18px 25px;
-    border-bottom:1px solid #222;
+
+
+    padding:20px 30px;
+
+
+    border-bottom:
+
+    1px solid #222;
+
+
+    color:#ccc;
+
+
     transition:.3s;
+
+
 }
+
+
 
 .sidebar a:hover{
-    background:#1c1c1c;
+
+
+    background:#1b1b1b;
+
+    color:white;
+
+
 }
 
-/* ================= HERO ================= */
 
-.hero{
-    min-height:60vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:40px 20px;
-}
 
-.hero h1{
-    font-size:68px;
-    letter-spacing:10px;
-}
+/* ===========================
+        GLOBAL BUTTONS
+=========================== */
 
-.hero h3{
-    margin-top:15px;
-    color:#ddd;
-    font-weight:400;
-}
-
-.hero p{
-    margin-top:20px;
-    max-width:650px;
-    color:#888;
-    line-height:2;
-}
-
-.hero-buttons{
-    margin-top:35px;
-    display:flex;
-    gap:20px;
-    flex-wrap:wrap;
-}
-
-.btn,
-.btn-outline{
-    padding:14px 35px;
-    border-radius:10px;
-    font-weight:bold;
-    transition:.3s;
-}
 
 .btn{
-    background:#fff;
-    color:#000;
-}
 
-.btn-outline{
-    border:1px solid #444;
-}
 
-.btn:hover,
-.btn-outline:hover{
-    transform:translateY(-3px);
-}
+    padding:15px 35px;
 
-/* ================= ABOUT ================= */
 
-.about{
-    padding:80px 20px;
-    display:flex;
-    justify-content:center;
-}
+    border-radius:14px;
 
-.about-box{
-    width:100%;
-    max-width:900px;
-    background:#141414;
-    border:1px solid #222;
-    border-radius:18px;
-    padding:45px;
-}
 
-.title-small{
-    color:#888;
-    letter-spacing:3px;
-    font-size:13px;
-}
+    background:white;
 
-.about-box h2{
-    margin-top:12px;
-    font-size:38px;
-}
 
-.about-box p{
-    margin-top:20px;
-    color:#aaa;
-    line-height:2;
-}
+    color:black;
 
-/* ================= MUSIC ================= */
-
-.latest{
-    max-width:1200px;
-    margin:auto;
-    padding:70px 20px;
-}
-
-.section-title{
-    text-align:center;
-    font-size:34px;
-    margin-bottom:40px;
-}
-
-.release-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:30px;
-}
-
-/* ================= CONTACT ================= */
-
-.contact{
-    padding:80px 20px;
-    display:flex;
-    justify-content:center;
-}
-
-.contact-box{
-    width:100%;
-    max-width:900px;
-    background:#141414;
-    border:1px solid #222;
-    border-radius:18px;
-    padding:45px;
-    text-align:center;
-}
-
-.contact-box h2{
-    font-size:34px;
-    margin-bottom:20px;
-}
-
-.contact-box p{
-    color:#aaa;
-    line-height:2;
-    margin-bottom:30px;
-}
-
-.social-links{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
-}
-
-.social-links a{
-    background:#1c1c1c;
-    border:1px solid #333;
-    padding:14px 25px;
-    border-radius:10px;
-    transition:.3s;
-}
-
-.social-links a:hover{
-    background:#fff;
-    color:#000;
-}
-
-/* ================= FOOTER ================= */
-
-footer{
-    margin-top:70px;
-    padding:35px 20px;
-    border-top:1px solid #222;
-    text-align:center;
-}
-
-.footer-links{
-    display:flex;
-    justify-content:center;
-    gap:25px;
-    flex-wrap:wrap;
-    margin-bottom:20px;
-}
-
-.footer-links a{
-    color:#999;
-    transition:.3s;
-}
-
-.footer-links a:hover{
-    color:#fff;
-}
-
-.copyright{
-    color:#666;
-    font-size:14px;
-}
-
-/* ================= PLAYER ================= */
-
-.player{
-    position:fixed;
-    left:0;
-    bottom:0;
-    width:100%;
-    height:80px;
-    background:#111;
-    border-top:1px solid #222;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:0 20px;
-    z-index:999;
-}
-
-.player-left{
-    display:flex;
-    align-items:center;
-    gap:15px;
-}
-
-.player-left img{
-    width:55px;
-    height:55px;
-    border-radius:8px;
-    object-fit:cover;
-}
-
-.player-text h4{
-    font-size:16px;
-    margin-bottom:4px;
-}
-
-.player-text p{
-    font-size:13px;
-    color:#888;
-}
-
-.player-center{
-    display:flex;
-    gap:12px;
-}
-
-.player-center button{
-    width:46px;
-    height:46px;
-    border:none;
-    border-radius:50%;
-    background:#fff;
-    color:#000;
-    font-size:18px;
-    cursor:pointer;
-    transition:.3s;
-}
-
-.player-center button:hover{
-    transform:scale(1.08);
-}
-
-.latest-slider{
-
-    margin:40px 20px;
-
-}
-
-.latest-slider h3{
-
-    font-size:22px;
-
-    margin-bottom:18px;
 
     font-weight:700;
 
-}
-
-.slider{
-
-    display:flex;
-
-    gap:14px;
-
-    overflow-x:auto;
-
-    scroll-behavior:smooth;
-
-    padding-bottom:10px;
-
-}
-
-.slider::-webkit-scrollbar{
-
-    display:none;
-
-}
-
-.slider img{
-
-    width:95px;
-
-    height:95px;
-
-    border-radius:18px;
-
-    object-fit:cover;
-
-    flex:none;
-
-    cursor:pointer;
 
     transition:.3s;
 
+
 }
 
 
 
-/* ================= MOBILE ================= */
-
-@media(max-width:768px){
-
-.logo{
-    font-size:22px;
-    letter-spacing:4px;
-}
-
-.hero h1{
-    font-size:42px;
-    letter-spacing:4px;
-}
-
-.hero h3{
-    font-size:20px;
-}
-
-.hero p{
-    font-size:15px;
-}
-
-.hero-buttons{
-    flex-direction:column;
-    width:100%;
-}
-
-.btn,
 .btn-outline{
-    width:100%;
-    text-align:center;
+
+
+    padding:15px 35px;
+
+
+    border-radius:14px;
+
+
+    border:
+
+    1px solid rgba(255,255,255,.25);
+
+
+    color:white;
+
+
+    transition:.3s;
+
+
 }
 
-.about-box,
-.contact-box{
-    padding:30px;
-}
 
-.release-grid{
-    grid-template-columns:1fr;
-}
 
-.player{
-    height:75px;
-    padding:0 10px;
-}
+.btn:hover,
+.btn-outline:hover{
 
-.player-left img{
-    width:45px;
-    height:45px;
-}
 
-.player-text h4{
-    font-size:14px;
-}
+    transform:translateY(-4px);
 
-.player-text p{
-    font-size:12px;
-}
-
-.player-center button{
-    width:40px;
-    height:40px;
-    font-size:16px;
-}
 
 }
 
 /* ===========================
-   ACTIVE MUSIC EFFECT
+        HERO SECTION
+        PART 2 / 4
 =========================== */
+
+
+.hero{
+
+    width:90%;
+
+    max-width:1200px;
+
+
+    min-height:600px;
+
+
+    margin:40px auto;
+
+
+    padding:50px 30px;
+
+
+    border-radius:45px;
+
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    text-align:center;
+
+
+    position:relative;
+
+
+    overflow:hidden;
+
+
+
+    background:
+
+    linear-gradient(
+        135deg,
+        rgba(255,255,255,.10),
+        rgba(255,255,255,.02)
+    );
+
+
+    border:
+
+    1px solid rgba(255,255,255,.18);
+
+
+
+    backdrop-filter:blur(35px);
+
+    -webkit-backdrop-filter:blur(35px);
+
+
+
+    box-shadow:
+
+    inset 0 1px 30px rgba(255,255,255,.08),
+
+    0 40px 120px rgba(0,0,0,.9);
+
+}
+
+
+
+.hero::before{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    width:500px;
+
+    height:500px;
+
+
+    top:-250px;
+
+    right:-150px;
+
+
+    background:
+
+    radial-gradient(
+        circle,
+        rgba(255,255,255,.15),
+        transparent 70%
+    );
+
+
+    filter:blur(60px);
+
+
+    opacity:.6;
+
+
+}
+
+
+
+
+.hero::after{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    width:300px;
+
+    height:300px;
+
+
+    bottom:-150px;
+
+    left:-100px;
+
+
+    background:
+
+    radial-gradient(
+        circle,
+        rgba(255,255,255,.08),
+        transparent 70%
+    );
+
+
+    filter:blur(50px);
+
+
+}
+
+
+
+.hero>*{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+
+
+
+.hero h1{
+
+
+    font-size:72px;
+
+
+    letter-spacing:12px;
+
+
+    font-weight:800;
+
+
+}
+
+
+
+.hero h3{
+
+
+    margin-top:20px;
+
+
+    color:#ddd;
+
+
+    font-size:22px;
+
+
+    font-weight:400;
+
+
+}
+
+
+
+.hero p{
+
+
+    margin-top:25px;
+
+
+    max-width:700px;
+
+
+    color:#999;
+
+
+    line-height:2;
+
+
+    font-size:16px;
+
+
+}
+
+
+
+.hero-buttons{
+
+
+    margin-top:40px;
+
+
+    display:flex;
+
+
+    gap:20px;
+
+
+    flex-wrap:wrap;
+
+
+    justify-content:center;
+
+
+}
+
+
+
+
+/* ===========================
+        ABOUT SECTION
+=========================== */
+
+
+.about{
+
+
+    width:90%;
+
+
+    max-width:1200px;
+
+
+    margin:80px auto;
+
+
+}
+
+
+
+.about-box{
+
+
+    padding:50px;
+
+
+    border-radius:35px;
+
+
+    background:
+
+    rgba(255,255,255,.04);
+
+
+    border:
+
+    1px solid rgba(255,255,255,.12);
+
+
+
+    backdrop-filter:blur(25px);
+
+
+
+}
+
+
+
+.title-small{
+
+
+    color:#777;
+
+
+    letter-spacing:4px;
+
+
+    font-size:13px;
+
+
+}
+
+
+
+.about-box h2{
+
+
+    margin-top:15px;
+
+
+    font-size:42px;
+
+
+}
+
+
+
+.about-box p{
+
+
+    margin-top:25px;
+
+
+    color:#aaa;
+
+
+    line-height:2.2;
+
+
+    font-size:16px;
+
+
+}
+
+
+
+
+/* ===========================
+        RELEASE SECTION
+=========================== */
+
+
+.latest-container{
+
+
+    width:90%;
+
+
+    max-width:1200px;
+
+
+    margin:60px auto;
+
+
+    padding:40px;
+
+
+    border-radius:40px;
+
+
+
+    background:
+
+    rgba(255,255,255,.035);
+
+
+
+    border:
+
+    1px solid rgba(255,255,255,.12);
+
+
+
+    backdrop-filter:blur(25px);
+
+
+}
+
+
+
+.latest-header h3{
+
+
+    font-size:32px;
+
+
+    margin-bottom:10px;
+
+
+}
+
+
+
+.latest-header p{
+
+
+    color:#888;
+
+
+    margin-bottom:35px;
+
+
+}
+
+
+
+
+.release-slider{
+
+
+    display:flex;
+
+
+    gap:25px;
+
+
+    overflow-x:auto;
+
+
+    padding-bottom:15px;
+
+
+    scroll-behavior:smooth;
+
+
+}
+
+
+
+.release-slider::-webkit-scrollbar{
+
+
+    display:none;
+
+
+}
+
+
+
+
+.release-item{
+
+
+    min-width:160px;
+
+
+}
+
+
+
+.release-item img{
+
+
+    width:160px;
+
+
+    height:160px;
+
+
+    object-fit:cover;
+
+
+    border-radius:25px;
+
+
+    border:
+
+    1px solid rgba(255,255,255,.15);
+
+
+    transition:.4s;
+
+
+}
+
+
+
+.release-item img:hover{
+
+
+    transform:translateY(-8px) scale(1.03);
+
+
+}
+
+
+
+
+.release-item h4{
+
+
+    margin-top:15px;
+
+
+    font-size:17px;
+
+
+}
+
+
+
+.release-item span{
+
+
+    display:block;
+
+
+    margin-top:5px;
+
+
+    color:#777;
+
+
+    font-size:13px;
+
+
+}
+
+/* ===========================
+        MUSIC CARD
+        PART 3 / 4
+=========================== */
+
+
+/* ACTIVE EFFECT */
+
 
 .music-card.playing{
 
-    border:1px solid rgba(255,255,255,.4);
+
+    border:
+
+    1px solid rgba(255,255,255,.45);
+
+
 
     box-shadow:
-    0 0 40px rgba(255,255,255,.15);
+
+    0 0 40px rgba(255,255,255,.18),
+
+    0 0 120px rgba(255,255,255,.08);
+
 
 }
 
+
+
 /* ===========================
-   RAPHORN PREMIUM GLASS MUSIC CARD
+        PREMIUM MUSIC CARD
 =========================== */
 
 
 .music-card{
 
-    position:relative;
 
     width:100%;
+
+
     max-width:420px;
 
-    margin:auto;
+
+    margin:50px auto;
+
+
+
+    position:relative;
+
+
+    overflow:hidden;
+
+
+    border-radius:35px;
+
+
 
     background:
+
+
     linear-gradient(
         145deg,
         rgba(255,255,255,.12),
         rgba(255,255,255,.03)
     );
 
-    backdrop-filter:blur(25px);
-    -webkit-backdrop-filter:blur(25px);
 
 
-    border-radius:30px;
+    border:
 
-    overflow:hidden;
+    1px solid rgba(255,255,255,.18);
 
 
-    border:1px solid rgba(255,255,255,.18);
+
+    backdrop-filter:blur(30px);
+
+
+    -webkit-backdrop-filter:blur(30px);
+
 
 
     box-shadow:
 
-    0 0 25px rgba(255,255,255,.08),
-    0 0 80px rgba(255,255,255,.05),
-    0 30px 90px rgba(0,0,0,.85);
+
+    0 30px 100px rgba(0,0,0,.8),
+
+    inset 0 0 30px rgba(255,255,255,.05);
 
 
-    transition:.5s ease;
+
+    transition:.5s;
+
+
 
 }
 
@@ -556,15 +957,62 @@ footer{
 
 
 
+.music-card:hover{
+
+
+    transform:translateY(-8px);
+
+
+}
 
 
 
+/* ambient light */
+
+
+.music-card::before{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    width:300px;
+
+
+    height:300px;
 
 
 
+    top:-150px;
+
+
+    left:50%;
 
 
 
+    transform:translateX(-50%);
+
+
+
+    background:
+
+
+    radial-gradient(
+        circle,
+        rgba(255,255,255,.2),
+        transparent 70%
+    );
+
+
+
+    filter:blur(60px);
+
+
+
+}
 
 
 
@@ -574,13 +1022,15 @@ footer{
 
 .music-cover{
 
+
     width:100%;
+
 
     aspect-ratio:1/1;
 
+
     overflow:hidden;
 
-    position:relative;
 
 }
 
@@ -588,21 +1038,30 @@ footer{
 
 .music-cover img{
 
+
     width:100%;
+
 
     height:100%;
 
+
     object-fit:cover;
 
-    display:block;
 
-    transition:.6s ease;
+    transition:.6s;
+
 
 }
 
 
 
+.music-card:hover .music-cover img{
 
+
+    transform:scale(1.08);
+
+
+}
 
 
 
@@ -612,81 +1071,121 @@ footer{
 
 .music-info{
 
-    padding:25px;
+
+    padding:30px;
+
 
 }
+
+
 
 
 .music-info h3{
 
-    font-size:24px;
 
-    margin-bottom:8px;
+    font-size:26px;
+
+
+    margin-bottom:10px;
+
 
 }
+
 
 
 .music-info p{
 
-    color:#aaa;
+
+    color:#999;
+
 
     font-size:15px;
+
 
 }
 
 
 
-
-/* PROGRESS */
+/* ===========================
+        PROGRESS BAR
+=========================== */
 
 
 .music-progress{
 
-    padding:0 25px 20px;
+
+    padding:0 30px 20px;
+
 
     display:flex;
 
+
     align-items:center;
+
 
     gap:12px;
 
+
 }
+
 
 
 .current-time,
 .duration{
 
-    color:#aaa;
 
     font-size:13px;
+
+
+    color:#888;
+
 
 }
 
 
 
 .seek-bar{
+
+
     flex:1;
+
+
     height:5px;
+
+
     appearance:none;
+
+
     background:#333;
+
+
     border-radius:20px;
+
+
     cursor:pointer;
-    direction:ltr;
+
+
 }
 
 
 
 .seek-bar::-webkit-slider-thumb{
 
+
     appearance:none;
 
-    width:17px;
 
-    height:17px;
+    width:16px;
+
+
+    height:16px;
+
+
+    background:white;
+
 
     border-radius:50%;
 
-    background:white;
 
 }
 
@@ -694,16 +1193,23 @@ footer{
 
 
 
-/* BUTTONS */
+/* ===========================
+        MUSIC CONTROLS
+=========================== */
 
 
 .music-controls{
 
-    padding:0 25px 25px;
 
     display:flex;
 
-    gap:12px;
+
+    gap:15px;
+
+
+    padding:0 30px 30px;
+
+
 
 }
 
@@ -711,46 +1217,44 @@ footer{
 
 .music-controls button{
 
+
     flex:1;
 
-    height:50px;
+
+    height:52px;
 
 
-    border-radius:16px;
-
-
-    background:
-
-    rgba(255,255,255,.08);
-
-
-    border:
-
-    1px solid rgba(255,255,255,.15);
-
-
-    color:white;
-
-
-    font-weight:600;
+    border-radius:18px;
 
 
     cursor:pointer;
 
 
-    transition:.3s;
-
-}
-
-
-
-.music-controls button:first-child{
-
-    background:rgba(255,255,255,.08);
 
     color:white;
 
-    border:1px solid rgba(255,255,255,.15);
+
+
+    background:
+
+
+    rgba(255,255,255,.08);
+
+
+
+    border:
+
+
+    1px solid rgba(255,255,255,.15);
+
+
+
+    transition:.3s;
+
+
+
+    font-weight:600;
+
 
 }
 
@@ -758,97 +1262,132 @@ footer{
 
 .music-controls button:hover{
 
-    transform:translateY(-4px);
 
     background:white;
 
+
     color:black;
 
+
+    transform:translateY(-4px);
+
+
 }
 
 
 
 
 
-/* EQUALIZER */
-
 /* ===========================
-   CARD AMBIENT GLOW
+        MINI SLIDER
 =========================== */
 
-.music-card::after{
 
-    content:"";
-
-    position:absolute;
-
-    inset:-40px;
-
-    background:
-    radial-gradient(
-        circle,
-        rgba(255,255,255,.18),
-        transparent 65%
-    );
-
-    filter:blur(45px);
-
-    opacity:.35;
-
-    z-index:-1;
-
-    transition:.5s;
-
-}
-
-
-
-/* ===========================
-   RAPHORN LATEST RELEASES
-=========================== */
 
 .latest-slider{
 
-    margin:60px 20px;
+
+    width:90%;
+
+
+    margin:60px auto;
+
 
 }
+
 
 
 .latest-slider h3{
 
-    font-size:24px;
+
+    font-size:25px;
+
 
     margin-bottom:25px;
 
-    text-align:right;
-
-    letter-spacing:1px;
 
 }
 
 
-/* horizontal music rail */
+
 
 .slider{
 
+
     display:flex;
 
-    gap:18px;
+
+    gap:20px;
+
 
     overflow-x:auto;
 
+
+    padding-bottom:15px;
+
+
     direction:ltr;
 
-    padding:10px 5px 20px;
 
     scroll-behavior:smooth;
 
+
 }
+
 
 
 .slider::-webkit-scrollbar{
 
+
     display:none;
+
+
+}
+
+
+
+
+.slider img{
+
+
+    width:110px;
+
+
+    height:110px;
+
+
+    flex:none;
+
+
+    object-fit:cover;
+
+
+    border-radius:22px;
+
+
+
+    border:
+
+
+    1px solid rgba(255,255,255,.15);
+
+
+
+    cursor:pointer;
+
+
+    transition:.4s;
+
+
+}
+
+
+
+.slider img:hover{
+
+
+    transform:translateY(-8px);
+
 
 }
 
@@ -856,122 +1395,660 @@ footer{
 
 
 
-/* hover / touch effect */
+/* ===========================
+        FIXED PLAYER
+=========================== */
+
+
+.player{
+
+
+    position:fixed;
+
+
+    bottom:0;
+
+
+    left:0;
+
+
+
+    width:100%;
+
+
+    height:85px;
+
+
+
+    background:
+
+
+    rgba(15,15,15,.85);
+
+
+
+    backdrop-filter:blur(25px);
+
+
+
+    border-top:
+
+
+    1px solid rgba(255,255,255,.12);
+
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:space-between;
+
+
+
+    padding:0 25px;
+
+
+
+    z-index:999;
+
+
+}
 
 
 
 
-/* mobile */
+
+.player-left{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:15px;
+
+
+}
+
+
+
+.player-left img{
+
+
+    width:60px;
+
+
+    height:60px;
+
+
+    border-radius:12px;
+
+
+    object-fit:cover;
+
+
+}
+
+
+
+
+.player-text h4{
+
+
+    font-size:16px;
+
+
+}
+
+
+
+.player-text p{
+
+
+    margin-top:5px;
+
+
+    color:#888;
+
+
+    font-size:13px;
+
+
+}
+
+
+
+
+
+.player-center{
+
+
+    display:flex;
+
+
+    gap:12px;
+
+
+}
+
+
+
+
+.player-center button{
+
+
+    width:45px;
+
+
+    height:45px;
+
+
+    border-radius:50%;
+
+
+    border:none;
+
+
+
+    background:white;
+
+
+    color:black;
+
+
+
+    cursor:pointer;
+
+
+    font-size:18px;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.player-center button:hover{
+
+
+    transform:scale(1.1);
+
+
+}
+
+/* ===========================
+        CONTACT
+        PART 4 / 4
+=========================== */
+
+
+.contact{
+
+
+    width:90%;
+
+
+    max-width:1200px;
+
+
+    margin:80px auto;
+
+
+
+}
+
+
+
+.contact-box{
+
+
+    padding:50px;
+
+
+
+    border-radius:35px;
+
+
+
+    text-align:center;
+
+
+
+    background:
+
+
+    rgba(255,255,255,.04);
+
+
+
+    border:
+
+
+    1px solid rgba(255,255,255,.12);
+
+
+
+    backdrop-filter:blur(25px);
+
+
+
+}
+
+
+
+.contact-box h2{
+
+
+    font-size:38px;
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+.contact-box p{
+
+
+    color:#999;
+
+
+    line-height:2;
+
+
+    margin-bottom:35px;
+
+
+}
+
+
+
+.social-links{
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    gap:20px;
+
+
+    flex-wrap:wrap;
+
+
+}
+
+
+
+.social-links a{
+
+
+    padding:15px 30px;
+
+
+    border-radius:15px;
+
+
+
+    background:
+
+
+    rgba(255,255,255,.06);
+
+
+
+    border:
+
+
+    1px solid rgba(255,255,255,.15);
+
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.social-links a:hover{
+
+
+    background:white;
+
+
+    color:black;
+
+
+    transform:translateY(-5px);
+
+
+}
+
+
+
+/* ===========================
+        FOOTER
+=========================== */
+
+
+footer{
+
+
+    width:90%;
+
+
+    margin:70px auto 0;
+
+
+
+    padding:40px 20px;
+
+
+
+    text-align:center;
+
+
+
+    border-top:
+
+
+    1px solid rgba(255,255,255,.1);
+
+
+}
+
+
+
+.footer-links{
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    gap:25px;
+
+
+    flex-wrap:wrap;
+
+
+    margin-bottom:25px;
+
+
+}
+
+
+
+.footer-links a{
+
+
+    color:#888;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.footer-links a:hover{
+
+
+    color:white;
+
+
+}
+
+
+
+.copyright{
+
+
+    color:#555;
+
+
+    font-size:14px;
+
+
+}
+
+
+
+
+
+/* ===========================
+        ANIMATION
+=========================== */
+
+
+
+@keyframes fadeUp{
+
+
+    from{
+
+
+        opacity:0;
+
+
+        transform:translateY(30px);
+
+
+    }
+
+
+    to{
+
+
+        opacity:1;
+
+
+        transform:translateY(0);
+
+
+    }
+
+
+}
+
+
+
+
+.hero,
+.about-box,
+.latest-container,
+.music-card,
+.contact-box{
+
+
+    animation:
+
+
+    fadeUp .8s ease forwards;
+
+
+}
+
+
+
+
+/* ===========================
+        MOBILE
+=========================== */
+
+
 
 @media(max-width:768px){
 
-.latest-slider{
 
-    margin:40px 15px;
+
+header{
+
+
+    height:70px;
+
+
+    padding:0 15px;
+
 
 }
 
+
+
+.logo{
+
+
+    font-size:22px;
+
+
+    letter-spacing:5px;
+
+
 }
 
 
 
-
-/* ===========================
-   RAPHORN PREMIUM HERO CONTAINER
-=========================== */
 
 .hero{
 
-    width:90%;
-    max-width:1200px;
 
-    margin:40px auto;
+    width:92%;
 
-    min-height:600px;
 
-    border-radius:40px;
+    min-height:520px;
 
-    background:
-    linear-gradient(
-        145deg,
-        rgba(255,255,255,.06),
-        rgba(255,255,255,.015)
-    );
 
-    border:1px solid rgba(255,255,255,.12);
+    padding:35px 20px;
 
-    backdrop-filter:blur(20px);
-    -webkit-backdrop-filter:blur(20px);
 
-    box-shadow:
-    0 30px 100px rgba(0,0,0,.8);
+    border-radius:30px;
 
-    position:relative;
-
-    overflow:hidden;
 
 }
 
 
-/* نور خیلی ظریف داخل کانتینر */
 
-.hero::before{
 
-    content:"";
+.hero h1{
 
-    position:absolute;
 
-    width:400px;
-    height:400px;
+    font-size:42px;
 
-    background:
-    radial-gradient(
-        circle,
-        rgba(255,255,255,.12),
-        transparent 70%
-    );
 
-    top:-150px;
-    left:-100px;
+    letter-spacing:5px;
 
-    filter:blur(50px);
-
-    opacity:.5;
 
 }
 
 
-/* متن بالای نور قرار بگیرد */
 
-.hero h1,
-.hero h3,
-.hero p,
+
+.hero h3{
+
+
+    font-size:18px;
+
+
+}
+
+
+
+
+.hero p{
+
+
+    font-size:14px;
+
+
+}
+
+
+
 .hero-buttons{
 
-    position:relative;
-    z-index:2;
+
+    width:100%;
+
+
+    flex-direction:column;
+
 
 }
-/* ===========================
-   PREMIUM RELEASE SECTION
-=========================== */
+
+
+
+.btn,
+.btn-outline{
+
+
+    width:100%;
+
+
+    text-align:center;
+
+
+}
+
+
+
+
+.about{
+
+
+    width:92%;
+
+
+}
+
+
+
+.about-box{
+
+
+    padding:30px;
+
+
+}
+
+
+
+.about-box h2{
+
+
+    font-size:30px;
+
+
+}
+
+
 
 
 .latest-container{
 
-    width:90%;
-    max-width:1200px;
 
-    margin:50px auto;
+    width:92%;
 
-    padding:35px;
 
-    background:
-    rgba(255,255,255,.03);
+    padding:25px;
 
-    border:1px solid rgba(255,255,255,.1);
 
-    border-radius:35px;
+    border-radius:30px;
+
 
 }
 
@@ -979,49 +2056,34 @@ footer{
 
 .latest-header h3{
 
-    font-size:28px;
 
-    margin-bottom:8px;
+    font-size:25px;
+
 
 }
 
 
-
-.latest-header p{
-
-    color:#888;
-
-    font-size:14px;
-
-    margin-bottom:30px;
-
-}
-
-
-
-.release-slider{
-
-    display:flex;
-
-    gap:25px;
-
-    overflow-x:auto;
-
-}
-
-
-
-.release-slider::-webkit-scrollbar{
-
-    display:none;
-
-}
 
 
 
 .release-item{
 
-    min-width:150px;
+
+    min-width:130px;
+
+
+}
+
+
+
+.release-item img{
+
+
+    width:130px;
+
+
+    height:130px;
+
 
 }
 
@@ -1029,161 +2091,273 @@ footer{
 
 
 
+.music-card{
 
 
-.release-item h4{
+    width:92%;
 
-    margin-top:12px;
 
-    font-size:16px;
+    border-radius:28px;
+
 
 }
 
 
 
-.release-item span{
 
-    color:#888;
+.music-info{
+
+
+    padding:22px;
+
+
+}
+
+
+
+.music-info h3{
+
+
+    font-size:22px;
+
+
+}
+
+
+
+.music-progress{
+
+
+    padding:0 22px 20px;
+
+
+}
+
+
+
+.music-controls{
+
+
+    padding:0 22px 25px;
+
+
+}
+
+
+
+.player{
+
+
+    height:75px;
+
+
+    padding:0 12px;
+
+
+}
+
+
+
+.player-left img{
+
+
+    width:48px;
+
+
+    height:48px;
+
+
+}
+
+
+
+.player-text h4{
+
+
+    font-size:14px;
+
+
+}
+
+
+
+.player-text p{
+
+
+    font-size:12px;
+
+
+}
+
+
+
+.player-center{
+
+
+    gap:8px;
+
+
+}
+
+
+
+.player-center button{
+
+
+    width:38px;
+
+
+    height:38px;
+
+
+    font-size:15px;
+
+
+}
+
+
+
+.latest-slider{
+
+
+    width:92%;
+
+
+}
+
+
+
+.slider img{
+
+
+    width:90px;
+
+
+    height:90px;
+
+
+}
+
+
+
+
+.contact{
+
+
+    width:92%;
+
+
+}
+
+
+
+.contact-box{
+
+
+    padding:30px 20px;
+
+
+}
+
+
+
+.contact-box h2{
+
+
+    font-size:30px;
+
+
+}
+
+
+
+}
+
+
+
+
+/* ===========================
+        SMALL MOBILE
+=========================== */
+
+
+
+@media(max-width:420px){
+
+
+
+.hero h1{
+
+
+    font-size:34px;
+
+
+}
+
+
+
+.logo{
+
+
+    font-size:19px;
+
+
+}
+
+
+
+.player-text{
+
+
+    display:none;
+
+
+}
+
+
+
+.music-controls button{
+
 
     font-size:13px;
 
+
 }
+
+
+
+}
+
+
+
+
+
 /* ===========================
-   RAPHORN LUXURY GLASS HERO
+        SMOOTH EFFECTS
 =========================== */
 
-.hero{
-
-    width:90%;
-    max-width:1200px;
-
-    margin:40px auto;
-
-    min-height:600px;
-
-    border-radius:45px;
 
 
-    background:
-    linear-gradient(
-        135deg,
-        rgba(255,255,255,0.10),
-        rgba(255,255,255,0.02)
-    );
+button,
+a,
+img{
 
 
-    border:1px solid rgba(255,255,255,0.18);
+    -webkit-tap-highlight-color:transparent;
 
-
-    backdrop-filter:blur(35px);
-    -webkit-backdrop-filter:blur(35px);
-
-
-    box-shadow:
-
-    inset 0 1px 20px rgba(255,255,255,.08),
-
-    0 40px 120px rgba(0,0,0,.9);
-
-
-    overflow:hidden;
-
-    position:relative;
 
 }
 
 
-/* نور مخفی داخل شیشه */
-
-.hero::before{
-
-    content:"";
-
-    position:absolute;
-
-    width:500px;
-    height:500px;
 
 
-    background:
-
-    radial-gradient(
-        circle,
-        rgba(255,255,255,.12),
-        transparent 70%
-    );
+::selection{
 
 
-    top:-250px;
-    right:-150px;
+    background:white;
 
 
-    filter:blur(60px);
+    color:black;
+
 
 }
-
-
-/* محتوا روی شیشه */
-
-.hero{
-
-    width:90%;
-    max-width:1200px;
-
-    margin:40px auto;
-
-    min-height:600px;
-
-    border-radius:45px;
-
-    background:
-    linear-gradient(
-        135deg,
-        rgba(255,255,255,.10),
-        rgba(255,255,255,.02)
-    );
-
-    border:1px solid rgba(255,255,255,.18);
-
-    backdrop-filter:blur(35px);
-    -webkit-backdrop-filter:blur(35px);
-
-    box-shadow:
-    inset 0 1px 20px rgba(255,255,255,.08),
-    0 40px 120px rgba(0,0,0,.9);
-
-    overflow:hidden;
-
-    position:relative;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:40px;
-
-}
-
-
-/* FIX LATEST RELEASE COVERS */
-
-.latest-slider .slider img{
-
-    width:110px;
-    height:110px;
-
-    object-fit:cover;
-
-    flex:0 0 auto;
-
-    border-radius:20px;
-
-    border:1px solid rgba(255,255,255,.15);
-
-}
-
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:40px;
