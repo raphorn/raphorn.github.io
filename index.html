@@ -1,391 +1,116 @@
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<!DOCTYPE html>  <html lang="fa" dir="rtl">  <head>  <meta charset="UTF-8">  
+<meta name="viewport" content="width=device-width, initial-scale=1.0">  <title>RAPHORN</title>  <link rel="stylesheet" href="css/style.css">  <link rel="preconnect" href="https://fonts.googleapis.com">  
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">  </head>  <body>  <header>  <button class="menu-btn" id="menu-btn">☰</button>
 
-<head>
+<div class="logo">  
+RAPHORN  
+</div>  <button class="search-btn">🔍</button>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</header>  <div class="sidebar" id="sidebar">  <a href="#">🏠 خانه</a>
 
-<title>RAPHORN</title>
+<a href="#music-list">🎵 ریمیکس‌ها</a>
 
-<link rel="stylesheet" href="css/style.css">
+<a href="#about">ℹ️ درباره ما</a>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<a href="#contact">✉️ ارتباط با ما</a>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+</div>  <section class="hero">  <h1>RAPHORN</h1>  <h3>Official Music Platform</h3>  <p>  
+مرجع رسمی انتشار موزیک و ریمیکس  
+</p>  <div class="hero-buttons">  <a href="#music-list" class="btn">  
+جدیدترین موزیک‌ها  
+</a>  <a href="#contact" class="btn-outline">  
+ارتباط با ما  
+</a>  </div>  </section>  <div class="latest-slider">  <h3>آخرین انتشارها</h3>  
 
-</head>
+<div class="slider">  
 
+    <img src="images/file_000000008164722faab306d6308856f4.png">  
 
-<body>
+    <img src="images/cover2.png">  
 
-
-<!-- HEADER -->
-
-<header>
-
-<button class="menu-btn" id="menu-btn">
-☰
-</button>
-
-
-<div class="logo">
-RAPHORN
-</div>
-
-
-<button class="search-btn">
-🔍
-</button>
-
-
-</header>
-
-
-
-<!-- SIDEBAR -->
-
-<div class="sidebar" id="sidebar">
-
-<a href="#">
-🏠 خانه
-</a>
-
-<a href="#music-list">
-🎵 ریمیکس‌ها
-</a>
-
-<a href="#about">
-ℹ️ درباره ما
-</a>
-
-<a href="#contact">
-✉️ ارتباط با ما
-</a>
-
+    <img src="images/cover3.jpg">  
 
 </div>
 
+</div>  <section class="about" id="about">  <div class="about-box">  
 
+    <span class="title-small">  
+        ABOUT  
+    </span>  
 
+    <h2>  
+        RAPHORN  
+    </h2>  
 
-<!-- HERO -->
+    <p>  
+        به RAPHORN خوش آمدید. اینجا مرجع رسمی انتشار ریمیکس، موزیک و آثار اختصاصی است. می‌توانید موزیک‌ها را آنلاین گوش دهید یا دانلود کنید.  
+    </p>  
 
-<section class="hero">
+</div>
 
+</section>  <main>  <section class="latest">  <h2 class="section-title">  
+    جدیدترین ریمیکس‌ها  
+</h2>  
 
-<h1>
-RAPHORN
-</h1>
+<div class="release-grid" id="music-list">  
 
+</div>
 
-<h3>
-Official Music Platform
-</h3>
+</section>  <section class="contact" id="contact">  <div class="contact-box">  
 
+    <h2>  
+        ارتباط با ما  
+    </h2>  
 
-<p>
-مرجع رسمی انتشار موزیک و ریمیکس
+    <p>  
+        برای همکاری، ارسال موزیک یا ارتباط با RAPHORN از طریق شبکه‌های اجتماعی با ما در ارتباط باشید.  
+    </p>  
+
+</div>
+
+</section>  </main>  
+<footer>  <div class="footer-links">  
+
+    <a href="#">📷 Instagram</a>  
+
+    <a href="#">✈ Telegram</a>  
+
+    <a href="#">▶ YouTube</a>  
+
+</div>  
+
+<p class="copyright">  
+    © 2025 RAPHORN - All Rights Reserved  
 </p>
 
+</footer>  <div class="player">  <div class="player-left">  
 
+    <img id="player-cover" src="images/default.jpg" alt="Cover">  
 
-<div class="hero-buttons">
+    <div class="player-text">  
 
+        <h4 id="player-title">  
+            هنوز موزیکی پخش نشده  
+        </h4>  
 
-<a href="#music-list" class="btn">
-جدیدترین موزیک‌ها
-</a>
+        <p id="player-artist">  
+            RAPHORN  
+        </p>  
 
+    </div>  
 
-<a href="#contact" class="btn-outline">
-ارتباط با ما
-</a>
+</div>  
 
+<div class="player-center">  
 
-</div>
+    <button id="prev-btn">⏮</button>  
 
+    <button id="play-btn">▶</button>  
 
-</section>
-
-
-
-
-
-<!-- ABOUT -->
-
-<section class="about" id="about">
-
-
-<div class="about-box">
-
-
-<span class="title-small">
-ABOUT
-</span>
-
-
-<h2>
-RAPHORN
-</h2>
-
-
-<p>
-به RAPHORN خوش آمدید. اینجا مرجع رسمی انتشار ریمیکس، موزیک و آثار اختصاصی است. می‌توانید موزیک‌ها را آنلاین گوش دهید یا دانلود کنید.
-</p>
-
+    <button id="next-btn">⏭</button>  
 
 </div>
 
+</div>  <audio id="audio"></audio>
 
-</section>
-
-
-
-
-
-
-<!-- MUSIC -->
-
-
-<main>
-
-
-<section class="latest">
-
-
-<h2 class="section-title">
-جدیدترین ریمیکس‌ها
-</h2>
-
-
-
-<div class="release-grid" id="music-list">
-
-</div>
-
-
-
-</section>
-
-
-
-
-
-
-<!-- CONTACT -->
-
-
-<section class="contact" id="contact">
-
-
-<div class="contact-box">
-
-
-<h2>
-ارتباط با ما
-</h2>
-
-
-<p>
-برای همکاری، ارسال موزیک یا ارتباط با RAPHORN از طریق شبکه‌های اجتماعی با ما در ارتباط باشید.
-</p>
-
-
-</div>
-
-
-</section>
-
-
-</main>
-
-
-
-
-
-<!-- FOOTER -->
-
-
-<footer>
-
-
-<div class="footer-links">
-
-
-<a href="#">
-📷 Instagram
-</a>
-
-
-<a href="#">
-✈ Telegram
-</a>
-
-
-<a href="#">
-▶ YouTube
-</a>
-
-
-</div>
-
-
-
-<p class="copyright">
-© 2025 RAPHORN - All Rights Reserved
-</p>
-
-
-</footer>
-
-
-
-
-
-
-
-<!-- PLAYER -->
-
-
-<div class="player">
-
-
-
-<div class="player-cover-box">
-
-
-<img 
-id="player-cover" 
-src="images/default.jpg"
->
-
-
-</div>
-
-
-
-
-<div class="player-info">
-
-
-<h3 id="player-title">
-هنوز موزیکی پخش نشده
-</h3>
-
-
-<p id="player-artist">
-RAPHORN
-</p>
-
-
-</div>
-
-
-
-
-
-<div class="progress-area">
-
-
-<span id="current-time">
-0:00
-</span>
-
-
-
-<input 
-type="range"
-id="main-progress"
-value="0"
-min="0"
-max="100"
->
-
-
-
-
-<span id="total-time">
-0:00
-</span>
-
-
-
-</div>
-
-
-
-
-
-
-
-<div class="player-buttons">
-
-
-
-<button id="prev-btn">
-⏮
-</button>
-
-
-
-<button id="play-btn" class="main-play">
-▶
-</button>
-
-
-
-<button id="next-btn">
-⏭
-</button>
-
-
-
-</div>
-
-
-
-
-
-
-<div class="player-actions">
-
-
-<button onclick="downloadSong(currentSong)">
-⬇ DOWNLOAD
-</button>
-
-
-
-<button onclick="shareSong(currentSong)">
-SHARE
-</button>
-
-
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-
-
-<audio id="audio"></audio>
-
-
-
-
-<script src="js/script.js"></script>
-
-<script src="js/music.js"></script>
-
-
-</body>
-
-</html>
+<script src="js/script.js"></script>  <script src="js/music.js"></script>  </body>  </html>
