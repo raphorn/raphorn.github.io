@@ -222,14 +222,14 @@ let percent =
 document.querySelectorAll(".seek-bar")[currentSong].value = percent;
 
 document.querySelectorAll(".seek-bar")[currentSong].style.background =
-linear-gradient(
+`linear-gradient(
 90deg,
 rgba(220,120,50,0) 0%,
 rgba(220,120,50,.9) 8%,
 rgba(220,120,50,.9) ${percent}%,
 rgba(220,120,50,.18) ${percent + 8}%,
 rgba(220,120,50,0) 100%
-)
+)`;
 
     
 });
