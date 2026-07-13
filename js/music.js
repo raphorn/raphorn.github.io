@@ -114,7 +114,8 @@ if(currentSong === index){
 
         audio.play();  
 
-        buttons[index].innerText = "Pause";  
+        buttons[index].innerText = "⏸";
+buttons[index].classList.add("active");  
 
         document.querySelectorAll(".music-card")[index].classList.add("playing");  
 
@@ -122,7 +123,8 @@ if(currentSong === index){
 
         audio.pause();  
 
-        buttons[index].innerText = "Play";  
+        buttons[index].innerText = "▶";
+buttons[index].classList.remove("active");  
 
         document.querySelectorAll(".music-card")[index].classList.remove("playing");  
 
@@ -134,9 +136,10 @@ if(currentSong === index){
         btn.innerText = "Play";  
     });  
 
-    playSong(index);  
+    playSong(index);
 
-    buttons[index].innerText = "Pause";  
+buttons[index].innerText = "⏸";
+buttons[index].classList.add("active");  
 
 }
 
