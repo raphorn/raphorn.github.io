@@ -542,40 +542,106 @@ RAPHORN PREMIUM GLASS MUSIC CARD
 
 .music-card{
 
-position:relative;  
+    position:relative;
 
-width:100%;  
-max-width:420px;  
+    width:100%;
+    max-width:420px;
 
-margin:auto;  
+    margin:auto;
 
-background:  
-linear-gradient(  
-    145deg,  
-    rgba(255,255,255,.12),  
-    rgba(255,255,255,.03)  
-);  
+    padding-bottom:5px;
 
-backdrop-filter:blur(25px);  
--webkit-backdrop-filter:blur(25px);  
+    background:
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.16),
+        rgba(255,255,255,.04) 40%,
+        rgba(255,255,255,.02)
+    );
 
+    backdrop-filter:blur(35px);
+    -webkit-backdrop-filter:blur(35px);
 
-border-radius:30px;  
+    border-radius:32px;
 
-overflow:hidden;  
-
-
-border:1px solid rgba(255,255,255,.18);  
-
-
-box-shadow:  
-
-0 0 25px rgba(255,255,255,.08),  
-0 0 80px rgba(255,255,255,.05),  
-0 30px 90px rgba(0,0,0,.85);  
+    border:1px solid rgba(255,255,255,.18);
 
 
-transition:.5s ease;
+    box-shadow:
+
+    inset 0 1px 20px rgba(255,255,255,.12),
+
+    inset 0 -20px 40px rgba(0,0,0,.4),
+
+    0 30px 100px rgba(0,0,0,.8);
+
+
+    overflow:hidden;
+
+    transition:.5s ease;
+
+}
+
+.music-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:250px;
+    height:250px;
+
+
+    top:-80px;
+    right:-80px;
+
+
+    background:
+
+    radial-gradient(
+        circle,
+        rgba(255,255,255,.35),
+        transparent 70%
+    );
+
+
+    filter:blur(50px);
+
+    opacity:.45;
+
+    pointer-events:none;
+
+}
+
+
+.music-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+    height:220px;
+
+
+    bottom:-80px;
+    left:-80px;
+
+
+    background:
+
+    radial-gradient(
+        circle,
+        rgba(255,255,255,.18),
+        transparent 70%
+    );
+
+
+    filter:blur(60px);
+
+    opacity:.35;
+
+    pointer-events:none;
 
 }
 
