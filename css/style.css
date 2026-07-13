@@ -503,9 +503,9 @@ font-size:16px;
 
 .music-cover{
 
-width:calc(100% - 24px);  
+width:calc(100% - 24px);
 
-margin-top:12px;  
+margin-top:12px;
 
 border-radius:22px;
 
@@ -517,26 +517,148 @@ border-radius:22px;
 
 }
 
+/* ===========================
+ACTIVE MUSIC EFFECT
+=========================== */
 
+.music-card.playing{
+
+border:1px solid rgba(255,255,255,.4);
+
+box-shadow:
+0 0 40px rgba(255,255,255,.15);
+
+}
+
+/* ===========================
+RAPHORN PREMIUM GLASS MUSIC CARD
+=========================== */
+
+.music-card{
+
+position:relative;
+
+width:100%;
+max-width:420px;
+
+margin:auto;
+
+padding-bottom:5px;
+
+background:
+linear-gradient(
+145deg,
+rgba(255,255,255,.16),
+rgba(255,255,255,.04) 40%,
+rgba(255,255,255,.02)
+);
+
+backdrop-filter:blur(35px);
+-webkit-backdrop-filter:blur(35px);
+
+border-radius:32px;
+
+border:1px solid rgba(255,255,255,.18);
+
+box-shadow:
+
+inset 0 1px 20px rgba(255,255,255,.12),
+
+inset 0 -20px 40px rgba(0,0,0,.4),
+
+0 30px 100px rgba(0,0,0,.8);
+
+overflow:hidden;
+
+transition:.5s ease;
+
+}
+
+.music-card.playing{
+
+transform:translateY(-8px) scale(1.02);
+
+box-shadow:
+
+0 0 60px rgba(255,255,255,.18),
+
+0 40px 120px rgba(0,0,0,.9);
+
+}
+
+.music-card::before{
+
+content:"";
+
+position:absolute;
+
+width:250px;
+height:250px;
+
+top:-80px;
+right:-80px;
+
+background:
+
+radial-gradient(
+circle,
+rgba(255,255,255,.35),
+transparent 70%
+);
+
+filter:blur(50px);
+
+opacity:.45;
+
+pointer-events:none;
+
+}
+
+.music-card::after{
+
+content:"";
+
+position:absolute;
+
+width:220px;
+height:220px;
+
+bottom:-80px;
+left:-80px;
+
+background:
+
+radial-gradient(
+circle,
+rgba(255,255,255,.18),
+transparent 70%
+);
+
+filter:blur(60px);
+
+opacity:.35;
+
+pointer-events:none;
+
+}
 
 /* COVER */
 
 .music-cover{
 
-width:calc(100% - 36px);  
+width:calc(100% - 36px);
 
-aspect-ratio:1;  
+aspect-ratio:1;
 
-margin:18px auto;  
+margin:18px auto;
 
-border-radius:26px;  
+border-radius:26px;
 
-overflow:hidden;  
+overflow:hidden;
 
+box-shadow:
 
-box-shadow:  
-
-0 20px 50px rgba(0,0,0,.6),  
+0 20px 50px rgba(0,0,0,.6),
 
 0 0 40px rgba(255,255,255,.08);
 
@@ -544,15 +666,15 @@ box-shadow:
 
 .music-cover img{
 
-width:100%;  
+width:100%;
 
-height:100%;  
+height:100%;
 
-object-fit:cover;  
+object-fit:cover;
 
-display:block;  
+display:block;
 
-border-radius:24px;  
+border-radius:24px;
 
 transition:.6s ease;
 
@@ -687,7 +809,34 @@ color:black;
 
 }
 
+/* ===========================
+CARD AMBIENT GLOW
+=========================== */
 
+.music-card::after{
+
+content:"";
+
+position:absolute;
+
+inset:-40px;
+
+background:
+radial-gradient(
+circle,
+rgba(255,255,255,.18),
+transparent 65%
+);
+
+filter:blur(45px);
+
+opacity:.35;
+
+z-index:-1;
+
+transition:.5s;
+
+}
 
 /* ===========================
 RAPHORN LATEST RELEASES
@@ -938,7 +1087,6 @@ transform:translateY(-4px);
 RAPHORN PREMIUM HERO GLASS
 =========================== */
 
-
 /* شیشه اصلی کادر */
 
 .hero{
@@ -963,9 +1111,7 @@ rgba(255,255,255,.12),
 rgba(255,255,255,.03)
 ) !important;
 
-
 border:1px solid rgba(255,255,255,.25) !important;
-
 
 box-shadow:
 
@@ -973,14 +1119,11 @@ inset 0 1px 30px rgba(255,255,255,.08),
 
 0 40px 120px rgba(0,0,0,.85) !important;
 
-
 backdrop-filter:blur(40px);
 
 -webkit-backdrop-filter:blur(40px);
 
 }
-
-
 
 /* نور سفید پشت کادر */
 
@@ -994,7 +1137,6 @@ width:450px;
 
 height:450px;
 
-
 background:
 
 radial-gradient(
@@ -1003,26 +1145,19 @@ rgba(255,255,255,.18),
 transparent 65%
 );
 
-
 bottom:-220px;
 
 left:50%;
 
-
 transform:translateX(-50%);
-
 
 filter:blur(70px);
 
-
 opacity:.7;
-
 
 z-index:0;
 
 }
-
-
 
 /* متن روی نور باشد */
 
@@ -1037,8 +1172,6 @@ z-index:2;
 
 }
 
-
-
 /* دکمه اصلی حرفه ای */
 
 .btn{
@@ -1051,17 +1184,13 @@ linear-gradient(
 #d8d8d8
 ) !important;
 
-
 color:#000 !important;
-
 
 box-shadow:
 
 0 15px 40px rgba(255,255,255,.15);
 
 }
-
-
 
 /* دکمه دوم شیشه ای */
 
@@ -1071,18 +1200,16 @@ background:
 
 rgba(255,255,255,.05) !important;
 
-
 border:
 
 1px solid rgba(255,255,255,.25) !important;
-
 
 backdrop-filter:blur(15px);
 
 }
 
 /* ==========================
-   RAPHORN PREMIUM GLASS HERO
+RAPHORN PREMIUM GLASS HERO
 ========================== */
 
 .hero{
@@ -1116,8 +1243,6 @@ overflow:hidden;
 
 }
 
-
-
 /* نور پشت شیشه */
 
 .hero::after{
@@ -1137,18 +1262,14 @@ rgba(255,255,255,.35),
 transparent 65%
 );
 
-
 top:-120px;
 left:-100px;
-
 
 filter:blur(80px);
 
 opacity:.35;
 
 }
-
-
 
 /* حاشیه نور اپلی */
 
@@ -1157,8 +1278,6 @@ opacity:.35;
 position:relative;
 
 }
-
-
 
 .hero::before{
 
@@ -1190,8 +1309,6 @@ mask-composite:exclude;
 
 }
 
-
-
 /* دکمه اصلی */
 
 .hero .btn{
@@ -1204,14 +1321,11 @@ linear-gradient(
 #dcdcdc
 );
 
-
 box-shadow:
 
 0 15px 40px rgba(255,255,255,.15);
 
 }
-
-
 
 /* دکمه دوم */
 
@@ -1224,8 +1338,6 @@ rgba(255,255,255,.08);
 backdrop-filter:blur(20px);
 
 }
-
-
 
 /* متن ها */
 
