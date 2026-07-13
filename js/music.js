@@ -155,3 +155,158 @@ document.querySelectorAll(".card-play")[index].innerText="Play";
 }
 
 }
+
+function downloadSong(index){
+
+const link=document.createElement("a");
+
+link.href=songs[index].file;
+link.download=songs[index].title;
+
+document.body.appendChild(link);
+link.click();
+document.body.removeChild(link);
+
+}
+
+function shareSong(index){
+
+if(navigator.share){
+
+navigator.share({
+
+title:songs[index].title,
+text:songs[index].artist,
+url:window.location.href
+
+});
+
+}else{
+
+alert("مرورگر شما از اشتراک‌گذاری پشتیبانی نمی‌کند.");
+
+}
+
+}
+
+audio.addEventListener("loadedmetadata",()=>{
+
+const duration=audio.duration;
+
+const minutes=Math.floor(duration/60);
+const seconds=Math.floor(duration%60);
+
+const time=
+minutes+":"+(seconds<10?"0"+seconds:seconds);
+
+document.querySelectorAll(".duration")[currentSong].innerText=time;
+
+totalTimeText.innerText=time;
+
+});
+
+audio.addEventListener("timeupdate",()=>{
+
+if(!audio.duration)return;
+
+const current=audio.currentTime;
+
+const minutes=Math.floor(current/60);
+const seconds=Math.floor(current%60);
+
+const currentText=
+minutes+":"+(seconds<10?"0"+seconds:seconds);
+
+document.querySelectorAll(".current-time")[currentSong].innerText=currentText;
+
+currentTimeText.innerText=currentText;
+
+const percent=(audio.currentTime/audio.duration)*100;
+
+mainProgress.value=percent;
+
+document.querySelectorAll(".seek-bar")[currentSong].value=percent;
+
+});
+
+audio.addEventListener("ended",()=>{
+
+currentSong++;
+
+if(currentSong>=songs.length){
+
+currentSong=0;
+
+}
+
+playSong(currentSong);
+
+});
+
+function bindSeekBars(){
+
+document.querySelectorAll(".seek-bar").forEach((bar)=>{
+
+bar.addEventListener("input",()=>{
+
+if(audio.duration){
+
+audio.currentTime=
+(bar.value/100)*audio.duration;
+
+}
+
+});
+
+});
+
+}
+
+mainProgress.addEventListener("input",()=>{
+
+if(audio.duration){
+
+audio.currentTime=
+(mainProgress.value/100)*audio.duration;
+
+}
+
+});
+
+playBtn.onclick=()=>{
+
+togglePlay(currentSong);
+
+};
+
+nextBtn.onclick=()=>{
+
+currentSong++;
+
+if(currentSong>=songs.length){
+
+currentSong=0;
+
+}
+
+playSong(currentSong);
+
+};
+
+prevBtn.onclick=()=>{
+
+currentSong--;
+
+if(currentSong<0){
+
+currentSong=songs.length-1;
+
+}
+
+playSong(currentSong);
+
+};
+
+showSongs();
+
+console.log("RAPHORN PLAYER READY");
