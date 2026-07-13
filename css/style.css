@@ -485,31 +485,6 @@ footer{
 
 .music-card::after{
 
-    content:"";
-
-    position:absolute;
-
-    top:-50%;
-    left:-50%;
-
-    width:200%;
-    height:200%;
-
-    background:
-    linear-gradient(
-        120deg,
-        transparent,
-        rgba(255,255,255,.12),
-        transparent
-    );
-
-    transform:rotate(25deg);
-
-    animation:shine 6s infinite;
-
-    pointer-events:none;
-
-}
 
 
 
