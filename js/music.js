@@ -248,6 +248,8 @@ bar.addEventListener("input",()=>{
 
 });
 
+});
+
     console.log("MUSIC JS OK");
 
 showSongs();
