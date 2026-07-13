@@ -806,3 +806,87 @@ footer{
     pointer-events:none;
 
 }
+
+/* ===========================
+   CARD AMBIENT GLOW
+=========================== */
+
+.music-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-40px;
+
+    background:
+    radial-gradient(
+        circle,
+        rgba(255,255,255,.18),
+        transparent 65%
+    );
+
+    filter:blur(45px);
+
+    opacity:.35;
+
+    z-index:-1;
+
+    transition:.5s;
+
+}
+
+
+.music-card:hover::after{
+
+    opacity:.7;
+
+    transform:scale(1.15);
+
+}
+
+
+
+/* ===========================
+   PLAYING AUDIO PULSE
+=========================== */
+
+.music-card.playing{
+
+    animation:
+    cardPulse 2s infinite ease-in-out;
+
+}
+
+
+
+@keyframes cardPulse{
+
+
+    0%{
+
+        box-shadow:
+        0 0 30px rgba(255,255,255,.15),
+        0 30px 90px rgba(0,0,0,.8);
+
+    }
+
+
+    50%{
+
+        box-shadow:
+        0 0 80px rgba(255,255,255,.35),
+        0 40px 120px rgba(0,0,0,.9);
+
+    }
+
+
+    100%{
+
+        box-shadow:
+        0 0 30px rgba(255,255,255,.15),
+        0 30px 90px rgba(0,0,0,.8);
+
+    }
+
+}
