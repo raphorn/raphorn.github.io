@@ -338,8 +338,9 @@ let seconds = Math.floor(current % 60);
 
 
 
-document.querySelectorAll(".current-time").forEach(el=>{
-
+document.querySelectorAll(".current-time")[currentSong].innerText =
+minutes + ":" +
+(seconds < 10 ? "0" + seconds : seconds);
 el.innerText =
 minutes + ":" +
 (seconds < 10 ? "0" + seconds : seconds);
