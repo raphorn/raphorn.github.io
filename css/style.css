@@ -878,45 +878,110 @@ footer{
 
 }
 
-/* آخرین انتشارها */
+/* ===========================
+   RAPHORN LATEST RELEASES
+=========================== */
 
 .latest-slider{
-    margin:40px 20px;
+
+    margin:60px 20px;
+
 }
 
 
 .latest-slider h3{
-    font-size:22px;
-    margin-bottom:20px;
+
+    font-size:24px;
+
+    margin-bottom:25px;
+
+    text-align:right;
+
+    letter-spacing:1px;
+
 }
 
 
+/* horizontal music rail */
+
 .slider{
+
     display:flex;
-    gap:15px;
+
+    gap:18px;
+
     overflow-x:auto;
+
     direction:ltr;
+
+    padding:10px 5px 20px;
+
+    scroll-behavior:smooth;
+
 }
 
 
 .slider::-webkit-scrollbar{
+
     display:none;
+
+}
+
+
+/* cover cards */
+
+.slider img{
+
+    width:120px !important;
+
+    height:120px !important;
+
+    object-fit:cover;
+
+    flex:none;
+
+    border-radius:22px;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.6);
+
+    transition:.35s ease;
+
+}
+
+
+/* hover / touch effect */
+
+.slider img:hover{
+
+    transform:translateY(-8px) scale(1.05);
+
+    box-shadow:
+    0 20px 50px rgba(255,255,255,.15);
+
+}
+
+
+/* mobile */
+
+@media(max-width:768px){
+
+.latest-slider{
+
+    margin:40px 15px;
+
 }
 
 
 .slider img{
 
-    width:100px !important;
-    height:100px !important;
+    width:105px !important;
 
-    max-width:none;
-
-    object-fit:cover;
-
-    border-radius:18px;
-
-    flex:none;
+    height:105px !important;
 
 }
 
 
+}
