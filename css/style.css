@@ -559,17 +559,7 @@ footer{
 
 
 
-.music-card:hover{
 
-   
-
-    box-shadow:
-
-    0 0 40px rgba(255,255,255,.15),
-    0 0 100px rgba(255,255,255,.08),
-    0 40px 120px rgba(0,0,0,.95);
-
-}
 
 
 
@@ -812,13 +802,6 @@ footer{
 }
 
 
-.music-card:hover::after{
-
-    opacity:.7;
-
-    transform:scale(1.15);
-
-}
 
 /* ===========================
    RAPHORN LATEST RELEASES
