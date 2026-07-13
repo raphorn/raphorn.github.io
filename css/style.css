@@ -907,28 +907,27 @@ font-size:13px;
 
 .hero::before{
 
-content:"";  
+content:"";
+position:absolute;
 
-position:absolute;  
+width:500px;
+height:500px;
 
-width:500px;  
-height:500px;  
+background:
+radial-gradient(
+circle,
+rgba(255,255,255,.12),
+transparent 70%
+);
 
-
-background:  
-
-radial-gradient(  
-    circle,  
-    rgba(255,255,255,.12),  
-    transparent 70%  
-);  
-
-
-top:-250px;  
-right:-150px;  
-
+top:-250px;
+right:-150px;
 
 filter:blur(60px);
+
+opacity:.5;
+
+z-index:0;
 
 }
 
