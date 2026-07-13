@@ -425,7 +425,18 @@ footer{
 
 }
 
+/* ===========================
+   ACTIVE MUSIC EFFECT
+=========================== */
 
+.music-card.playing{
+
+    border:1px solid rgba(255,255,255,.4);
+
+    box-shadow:
+    0 0 40px rgba(255,255,255,.15);
+
+}
 
 /* ===========================
    RAPHORN PREMIUM GLASS MUSIC CARD
