@@ -222,9 +222,13 @@ let percent =
 document.querySelectorAll(".seek-bar")[currentSong].value = percent;
 
 document.querySelectorAll(".seek-bar")[currentSong].style.background =
-`linear-gradient(90deg, white ${percent}%, #333 ${percent}%)`;
-
-});
+`linear-gradient(
+90deg,
+rgba(220,120,50,.9) 0%,
+rgba(220,120,50,.9) ${percent}%,
+rgba(220,120,50,.18) ${percent}%,
+rgba(220,120,50,.18) 100%
+)`;
 
 console.log("MUSIC JS OK");
 
