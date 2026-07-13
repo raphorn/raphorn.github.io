@@ -723,7 +723,6 @@ color:black;
 
 }
 
-/* EQUALIZER */
 
 /* ===========================
 CARD AMBIENT GLOW
@@ -814,32 +813,6 @@ margin:40px 15px;
 
 }
 
-/* نور خیلی ظریف داخل کانتینر */
-
-.hero::before{
-
-content:"";  
-
-position:absolute;  
-
-width:400px;  
-height:400px;  
-
-background:  
-radial-gradient(  
-    circle,  
-    rgba(255,255,255,.12),  
-    transparent 70%  
-);  
-
-top:-150px;  
-left:-100px;  
-
-filter:blur(50px);  
-
-opacity:.5;
-
-}
 
 /* متن بالای نور قرار بگیرد */
 
