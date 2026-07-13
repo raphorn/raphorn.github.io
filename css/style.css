@@ -812,23 +812,32 @@ transition:.6s ease;
 
 .music-info{
 
-padding:25px;
+padding:25px 28px 20px;
 
 }
+
+
 
 .music-info h3{
 
-font-size:24px;
+font-size:22px;
 
-margin-bottom:8px;
+margin-bottom:10px;
+
+font-weight:700;
+
+letter-spacing:.3px;
 
 }
 
+
 .music-info p{
 
-color:#aaa;
+color:rgba(255,255,255,.55);
 
-font-size:15px;
+font-size:14px;
+
+letter-spacing:.5px;
 
 }
 
