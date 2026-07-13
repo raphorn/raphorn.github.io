@@ -191,23 +191,7 @@ audio.src = songs[index].file;
 audio.load();
 
 
-audio.addEventListener("loadedmetadata", function(){
 
-let duration = audio.duration;
-
-let min = Math.floor(duration / 60);
-
-let sec = Math.floor(duration % 60);
-
-
-let durationText =
-min + ":" + (sec < 10 ? "0" + sec : sec);
-
-
-document.querySelectorAll(".duration")[index].innerText = durationText;
-
-
-});
 
     
 audio.play();
@@ -333,13 +317,11 @@ let minutes = Math.floor(duration / 60);
 
 let seconds = Math.floor(duration % 60);
 
-document.querySelectorAll(".duration").forEach(el=>{
 
-el.innerText =
-minutes + ":" + 
+document.querySelectorAll(".duration")[currentSong].innerText =
+minutes + ":" +
 (seconds < 10 ? "0" + seconds : seconds);
 
-});
 
 });
 
