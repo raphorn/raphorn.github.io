@@ -856,26 +856,49 @@ font-size:13px;
 }
 
 .seek-bar{
+
 flex:1;
-height:5px;
+
+height:3px;
+
 appearance:none;
-background:#333;
+
+background:
+
+linear-gradient(
+90deg,
+transparent,
+rgba(220,120,50,.55),
+rgba(220,120,50,.9),
+rgba(220,120,50,.55),
+transparent
+);
+
 border-radius:20px;
+
 cursor:pointer;
-direction:ltr;
+
+direction:rtl;
+
 }
 
 .seek-bar::-webkit-slider-thumb{
 
 appearance:none;
 
-width:17px;
+width:12px;
 
-height:17px;
+height:12px;
 
 border-radius:50%;
 
-background:white;
+background:#fff;
+
+border:none;
+
+box-shadow:
+
+0 0 10px rgba(255,170,80,.45);
 
 }
 
