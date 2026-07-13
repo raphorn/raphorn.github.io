@@ -13,8 +13,7 @@ title: "بیت",
 artist: "RAPHORN",
 file: "music/music/song1.mp3",
 cover: "images/cover2.png"
-},
-
+}
 
 ];
 
