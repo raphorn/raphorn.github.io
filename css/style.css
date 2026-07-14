@@ -23,9 +23,7 @@
 }
 
 
-body{
-    font-family:'Vazirmatn', sans-serif !important;
-}
+font-family:'Vazirmatn',sans-serif;
 
 /* ===========================
 RAPHORN STYLE.CSS
@@ -1692,8 +1690,3 @@ textarea,
 }
 
 
-/* FINAL FONT TEST */
-
-*{
-    font-family:'Vazirmatn', sans-serif !important;
-}
