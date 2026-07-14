@@ -245,7 +245,8 @@ bar.addEventListener("input",()=>{
 
     if(audio.duration){  
 
-        audio.dispatchEvent(new Event("timeupdate"));
+        audio.currentTime =
+        (bar.value / 100) * audio.duration;
     }  
 
 });
