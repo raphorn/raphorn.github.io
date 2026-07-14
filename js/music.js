@@ -29,6 +29,8 @@ const playerCover = document.getElementById("player-cover");
 
 let currentSong = 0;
 
+let isSeeking = false;
+
 function showSongs(){
 
 list.innerHTML = "";
@@ -219,8 +221,11 @@ minutes + ":" +
 let percent =
 (audio.currentTime / audio.duration) * 100 || 0;
 
+if(!isSeeking){
+
 document.querySelectorAll(".seek-bar")[currentSong].value = percent;
 
+}
 document.querySelectorAll(".seek-bar")[currentSong].style.background =
 `linear-gradient(
 90deg,
@@ -241,15 +246,25 @@ showSongs();
 
 document.querySelectorAll(".seek-bar").forEach((bar)=>{
 
-bar.addEventListener("change",()=>{
+bar.addEventListener("touchstart",()=>{
 
-    if(audio.duration){
-
-        audio.currentTime =
-        (bar.value / 100) * audio.duration;
-
-    }
+isSeeking = true;
 
 });
+
+
+bar.addEventListener("change",()=>{
+
+if(audio.duration){
+
+audio.currentTime =
+(bar.value / 100) * audio.duration;
+
+}
+
+isSeeking = false;
+
+});
+
 
 });
