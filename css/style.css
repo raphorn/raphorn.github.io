@@ -1615,8 +1615,23 @@ HOVER + CLICK
     transform:scale(1.05);
 }
 
-/* فشار دادن با کلیک یا لمس */
+/* ===========================
+MOBILE TOUCH FIX
+=========================== */
+
+.music-controls button{
+    transition:transform .2s ease, background .3s ease;
+    -webkit-tap-highlight-color:transparent;
+    touch-action:manipulation;
+}
+
+/* زوم کوچک هنگام فشار */
 .music-controls button:active{
     transform:scale(.96);
 }
 
+/* بعد از لمس برگردد */
+.music-controls button:focus{
+    transform:scale(1);
+    outline:none;
+}
