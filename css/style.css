@@ -1666,3 +1666,12 @@ button,
 .btn-outline{
     font-family:'Manrope','Vazirmatn',sans-serif;
 }
+
+body{
+    font-family:'Vazirmatn' !important;
+}
+
+.hero h1,
+.logo{
+    font-family:'Manrope' !important;
+}
