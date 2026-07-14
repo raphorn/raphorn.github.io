@@ -1702,3 +1702,8 @@ textarea,
 body{
     font-family:'Vazirmatn', sans-serif !important;
 }
+
+body{
+    font-family:'Vazirmatn' !important;
+    font-size:30px !important;
+}
