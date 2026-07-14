@@ -1645,3 +1645,29 @@ MOBILE TOUCH BUTTON FIX
     outline:none;
     transform:scale(1);
 }
+
+/* ===========================
+FONTS
+=========================== */
+
+.logo,
+.hero h1,
+.hero h3,
+.side-logo,
+.title-small,
+.section-title,
+.player-text h4{
+    font-family:'Manrope',sans-serif;
+}
+
+body,
+p,
+a,
+button,
+input,
+textarea,
+.music-info,
+.contact-box,
+.about-box{
+    font-family:'Vazirmatn',sans-serif;
+}
