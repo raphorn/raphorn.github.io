@@ -241,17 +241,15 @@ showSongs();
 
 document.querySelectorAll(".seek-bar").forEach((bar)=>{
 
-bar.addEventListener("input",()=>{  
+bar.addEventListener("change",()=>{
 
-    if(audio.duration){  
+    if(audio.duration){
 
         audio.currentTime =
         (bar.value / 100) * audio.duration;
-    }  
+
+    }
 
 });
 
 });
-
-
-    
