@@ -1623,23 +1623,25 @@ MOBILE TOUCH BUTTON FIX
     transition:transform .2s ease, background .3s ease;
     -webkit-tap-highlight-color:transparent;
     touch-action:manipulation;
+    -webkit-user-select:none;
+    user-select:none;
 }
 
-/* فشار لحظه ای */
+/* هاور لپتاپ */
+.music-controls button:hover{
+    transform:scale(1.05);
+    background:white;
+    color:black;
+}
+
+/* فشار موبایل و کلیک */
 .music-controls button:active{
     transform:scale(.96);
 }
 
-/* بعد از لمس برگشت کامل */
+/* بعد از لمس برگردد */
 .music-controls button:focus,
 .music-controls button:focus-visible{
-    .music-controls button:focus{
     outline:none;
-}
-
-
-/* جلوگیری از گیر کردن حالت لمس در موبایل */
-.music-controls button{
-    -webkit-user-select:none;
-    user-select:none;
+    transform:scale(1);
 }
