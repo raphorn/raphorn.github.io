@@ -1633,9 +1633,10 @@ MOBILE TOUCH BUTTON FIX
 /* بعد از لمس برگشت کامل */
 .music-controls button:focus,
 .music-controls button:focus-visible{
-    transform:scale(1);
+    .music-controls button:focus{
     outline:none;
 }
+
 
 /* جلوگیری از گیر کردن حالت لمس در موبایل */
 .music-controls button{
