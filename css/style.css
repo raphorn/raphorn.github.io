@@ -704,7 +704,7 @@ transition:.5s ease;
 
 .music-card.playing{
 
-transform:translateY(-8px) scale(1.02);
+transform:none;
 
 box-shadow:
 
