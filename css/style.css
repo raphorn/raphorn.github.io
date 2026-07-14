@@ -4,24 +4,22 @@
 
 @font-face{
     font-family:'Vazirmatn';
-    src:url('../fonts/Vazirmatn-Regular.woff2') format('woff2');
+    src:url('../fonts/vazirmatn-regular.woff2') format('woff2');
     font-weight:400;
     font-style:normal;
 }
 
 @font-face{
     font-family:'Vazirmatn';
-    src:url('../fonts/Vazirmatn-Bold.woff2') format('woff2');
+    src:url('../fonts/vazirmatn-bold.woff2') format('woff2');
     font-weight:700;
     font-style:normal;
 }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
 
+body{
+    font-family:'Vazirmatn', sans-serif;
+}
 
 /* ===========================
 RAPHORN STYLE.CSS
