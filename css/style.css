@@ -1687,7 +1687,13 @@ textarea,
 
 
 
+
+
+@font-face{
+    font-family:testfont;
+    src:url('../fonts/vazirmatn-regular.woff2') format('woff2');
+}
+
 body{
-    font-family:'Vazirmatn' !important;
-    font-size:30px !important;
+    font-family:testfont !important;
 }
