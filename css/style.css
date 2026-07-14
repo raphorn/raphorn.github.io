@@ -1647,19 +1647,22 @@ MOBILE TOUCH BUTTON FIX
 }
 
 /* ===========================
-RAPHORN FONTS
+FONT SYSTEM
 =========================== */
 
 body{
     font-family:'Vazirmatn', sans-serif;
 }
 
+
+h1,
+h2,
+h3,
+h4,
 .logo,
-.hero h1,
-.hero h3,
 .side-logo,
-.title-small,
-.section-title,
-.player-text h4{
-    font-family:'Manrope', sans-serif;
+button,
+.btn,
+.btn-outline{
+    font-family:'Manrope','Vazirmatn',sans-serif;
 }
