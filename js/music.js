@@ -130,7 +130,7 @@ buttons[index].classList.add("active");
 
         audio.pause();  
 
-        buttons[index].innerText = "▶";
+        buttons[index].innerText = "play";
 buttons[index].classList.remove("active");  
 
         document.querySelectorAll(".music-card")[index].classList.remove("playing");  
@@ -145,7 +145,12 @@ buttons[index].classList.remove("active");
 
     playSong(index);
 
-buttons[index].innerText = "⏸";
+buttons[index].innerHTML = `
+<svg viewBox="0 0 24 24" width="16" height="16">
+<rect x="6" y="5" width="4" height="14" fill="currentColor"/>
+<rect x="14" y="5" width="4" height="14" fill="currentColor"/>
+</svg>
+`;
 buttons[index].classList.add("active");  
 
 }
