@@ -1595,3 +1595,7 @@ overflow:hidden;
 right:20px;
 
 }
+
+.card-play svg{
+    vertical-align: middle;
+}
