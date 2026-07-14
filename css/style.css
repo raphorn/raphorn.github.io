@@ -1808,17 +1808,3 @@ REMOVE MOBILE TAP BLUE EFFECT
 *{
     -webkit-tap-highlight-color: transparent;
 }
-
-button,
-a,
-input,
-textarea{
-    -webkit-tap-highlight-color: transparent;
-    outline: none;
-}
-button:focus,
-a:focus,
-input:focus,
-textarea:focus{
-    outline:none;
-}
