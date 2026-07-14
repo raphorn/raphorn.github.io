@@ -1647,8 +1647,12 @@ MOBILE TOUCH BUTTON FIX
 }
 
 /* ===========================
-FONTS
+RAPHORN FONTS
 =========================== */
+
+body{
+    font-family:'Vazirmatn', sans-serif;
+}
 
 .logo,
 .hero h1,
@@ -1657,17 +1661,5 @@ FONTS
 .title-small,
 .section-title,
 .player-text h4{
-    font-family:'Manrope',sans-serif;
-}
-
-body,
-p,
-a,
-button,
-input,
-textarea,
-.music-info,
-.contact-box,
-.about-box{
-    font-family:'Vazirmatn',sans-serif;
+    font-family:'Manrope', sans-serif;
 }
