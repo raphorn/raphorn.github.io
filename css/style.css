@@ -1611,3 +1611,33 @@ HOVER + CLICK
 .music-controls button:active{
     transform:scale(.96);
 }
+
+/* ===========================
+PREMIUM MUSIC BUTTON INTERACTION
+=========================== */
+
+.music-controls button{
+    transition:
+    transform .2s ease,
+    background .3s ease,
+    color .3s ease,
+    border .3s ease;
+}
+
+/* حرکت موس در لپتاپ */
+.music-controls button:hover{
+    transform:scale(1.05);
+    background:#fff;
+    color:#000;
+}
+
+/* فشار با کلیک یا لمس */
+.music-controls button:active{
+    transform:scale(.96);
+}
+
+/* حالت پخش */
+.music-controls button.active{
+    background:#fff;
+    color:#000;
+}
