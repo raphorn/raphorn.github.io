@@ -1647,31 +1647,28 @@ MOBILE TOUCH BUTTON FIX
 }
 
 /* ===========================
-FONT SYSTEM
+FINAL FONT SETUP
 =========================== */
 
-body{
-    font-family:'Vazirmatn', sans-serif;
-}
-
-
-h1,
-h2,
-h3,
-h4,
-.logo,
-.side-logo,
+body,
+p,
+a,
 button,
-.btn,
-.btn-outline{
-    font-family:'Manrope','Vazirmatn',sans-serif;
+input,
+textarea,
+.music-info,
+.contact-box,
+.about-box,
+.hero h3{
+    font-family:'Vazirmatn',sans-serif !important;
 }
 
-body{
-    font-family:'Vazirmatn' !important;
-}
 
+.logo,
 .hero h1,
-.logo{
-    font-family:'Manrope' !important;
+.side-logo,
+.title-small,
+.section-title,
+.player-text h4{
+    font-family:'Manrope',sans-serif !important;
 }
