@@ -1616,7 +1616,7 @@ HOVER + CLICK
 }
 
 /* ===========================
-MOBILE TOUCH FIX
+MOBILE TOUCH BUTTON FIX
 =========================== */
 
 .music-controls button{
@@ -1625,13 +1625,20 @@ MOBILE TOUCH FIX
     touch-action:manipulation;
 }
 
-/* زوم کوچک هنگام فشار */
+/* فشار لحظه ای */
 .music-controls button:active{
     transform:scale(.96);
 }
 
-/* بعد از لمس برگردد */
-.music-controls button:focus{
+/* بعد از لمس برگشت کامل */
+.music-controls button:focus,
+.music-controls button:focus-visible{
     transform:scale(1);
     outline:none;
+}
+
+/* جلوگیری از گیر کردن حالت لمس در موبایل */
+.music-controls button{
+    -webkit-user-select:none;
+    user-select:none;
 }
