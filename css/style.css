@@ -1599,3 +1599,24 @@ right:20px;
 .card-play svg{
     vertical-align: middle;
 }
+
+
+
+/* ===========================
+BUTTON INTERACTION EFFECTS
+HOVER + CLICK
+=========================== */
+
+.music-controls button{
+    transition:transform .2s ease, background .3s ease;
+}
+
+/* حرکت با موس */
+.music-controls button:hover{
+    transform:scale(1.05);
+}
+
+/* فشار دادن با کلیک یا لمس */
+.music-controls button:active{
+    transform:scale(.96);
+}
