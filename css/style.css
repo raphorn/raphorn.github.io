@@ -1689,18 +1689,6 @@ textarea,
 
 
 
-@font-face{
-    font-family:'Vazirmatn';
-    src:url('../fonts/vazirmatn-regular.woff2') format('woff2');
-    font-weight:100 500;
-}
-
-@font-face{
-    font-family:'Vazirmatn';
-    src:url('../fonts/vazirmatn-bold.woff2') format('woff2');
-    font-weight:600 900;
-}
-
-html, body, *{
+*{
     font-family:'Vazirmatn', sans-serif !important;
 }
