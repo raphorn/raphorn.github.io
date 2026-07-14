@@ -1684,15 +1684,12 @@ textarea,
 }
 
 
-.logo,
-.hero h1,
-.side-logo,
-.title-small,
-.section-title,
-.player-text h4{
-    font-family:'Manrope',sans-serif !important;
+/* FINAL FONT TEST */
+
+*{
+    font-family:'Vazirmatn', sans-serif !important;
 }
 
 body{
-    font-family:'Vazirmatn' !important;
+    font-family:'Vazirmatn', sans-serif !important;
 }
