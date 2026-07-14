@@ -1,25 +1,4 @@
-/* ===========================
-   RAPHORN LOCAL FONTS
-   =========================== */
 
-@font-face{
-    font-family:'Vazirmatn';
-    src:url('../fonts/vazirmatn-regular.woff2') format('woff2');
-    font-weight:400;
-    font-style:normal;
-}
-
-@font-face{
-    font-family:'Vazirmatn';
-    src:url('../fonts/vazirmatn-bold.woff2') format('woff2');
-    font-weight:700;
-    font-style:normal;
-}
-
-
-body{
-    font-family:'Vazirmatn', sans-serif;
-}
 
 /* ===========================
 RAPHORN STYLE.CSS
