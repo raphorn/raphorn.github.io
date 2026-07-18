@@ -7,7 +7,7 @@ const songs = [
         title: "خوره",
         artist: "RAASHED",
         file: "music/jaanam raft - raashed.mp3",
-        cover: "images/gaaf.jpg"
+        cover: "images/zaal.jpg"
     },
 
 
