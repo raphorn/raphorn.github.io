@@ -15,7 +15,7 @@ const songs = [
         title: "لکه",
         artist: "RAASHED",
         file: "music/lakke.mp3",
-        cover: "images/zaal.jpg"
+        cover: "images/jaan.jpg"
     }
 
 ];
