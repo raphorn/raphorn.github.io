@@ -14,7 +14,7 @@ const songs = [
     {
         title: "لکه",
         artist: "RAASHED",
-        file: "music/lakke.mp3",
+        file: "music/lakke - raashed.mp3",
         cover: "images/jaan.jpg"
     }
 
