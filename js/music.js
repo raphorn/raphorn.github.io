@@ -7,7 +7,7 @@ const songs = [
         title: "خوره",
         artist: "RAASHED",
         file: "music/music/beat_2.mp3 (Remix).mp3",
-        cover: "images/gaaf.png"
+        cover: "images/gaaf.jpg"
     },
 
 
@@ -15,7 +15,7 @@ const songs = [
         title: "لکه",
         artist: "RAASHED",
         file: "music/music/song1.mp3",
-        cover: "images/zaal.png"
+        cover: "images/zaal.jpg"
     }
 
 ];
