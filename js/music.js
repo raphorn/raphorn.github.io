@@ -4,7 +4,7 @@ console.log("music.js loaded");
 const songs = [
 
     {
-        title: "ریمیکس شوم از راشد",
+        title: "خوره",
         artist: "RAASHED",
         file: "music/music/beat_2.mp3 (Remix).mp3",
         cover: "images/gaaf.png"
@@ -12,8 +12,8 @@ const songs = [
 
 
     {
-        title: "بیت",
-        artist: "RAPHORN",
+        title: "لکه",
+        artist: "RAASHED",
         file: "music/music/song1.mp3",
         cover: "images/zaal.png"
     }
