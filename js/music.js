@@ -7,7 +7,7 @@ const songs = [
         title: "ریمیکس شوم از راشد",
         artist: "RAASHED",
         file: "music/music/beat_2.mp3 (Remix).mp3",
-        cover: "images/file_000000008164722faab306d6308856f4.png"
+        cover: "images/gaaf.png"
     },
 
 
@@ -15,7 +15,7 @@ const songs = [
         title: "بیت",
         artist: "RAPHORN",
         file: "music/music/song1.mp3",
-        cover: "images/cover2.png"
+        cover: "images/zaal.png"
     }
 
 ];
